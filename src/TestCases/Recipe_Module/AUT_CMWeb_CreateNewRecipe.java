@@ -1,4 +1,4 @@
-package TestCases;
+package TestCases.Recipe_Module;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
@@ -6,13 +6,13 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import FunctionLibraries.LoginFunction;
-import FunctionLibraries.ManagingRolesFunction;
+import FunctionLibraries.RecipeFunction;
 import ObjectRepository.BaseClass;
 import Utility.Constant;
 import Utility.ExcelUtils;
 import Utility.Utils;
 
-public class AUT_CMWeb_AddRole {
+public class AUT_CMWeb_CreateNewRecipe {
 	public WebDriver driver;
 	private int iTestCaseRow;
 	private String sTestCaseName;
@@ -37,7 +37,7 @@ public class AUT_CMWeb_AddRole {
 			// Setting up the Test Data Excel file using Constants variables
 			// For Constant Variables please see http://www.toolsqa.com/constant-variables/
 			// For setting up Excel for Data driven testing, please see http://www.toolsqa.com/data-driven-testing-excel-poi/
-		  	ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData,"Configuration");
+			ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData,"Recipe");
 			
 			// Fetching the Test Case row number from the Test Data Sheet
 			// This row number will be feed to so many functions, to get the relevant data from the Test Data sheet 
@@ -58,11 +58,14 @@ public class AUT_CMWeb_AddRole {
 		//UserLogin
 		LoginFunction.Execute(iTestCaseRow);
 		
-		// Add Role
-		ManagingRolesFunction.GoToConfiguration(iTestCaseRow);
-		ManagingRolesFunction.GoToRolesTab(iTestCaseRow);
-		ManagingRolesFunction.AddNewRole(iTestCaseRow);
-		ManagingRolesFunction.SaveRole(iTestCaseRow);
+		// Create Recipe
+		RecipeFunction.GoToRecipe(iTestCaseRow);
+		RecipeFunction.CreateRecipeMain(iTestCaseRow);
+		RecipeFunction.AddIngredientProcedure(iTestCaseRow);
+		RecipeFunction.AddNutrient(iTestCaseRow);
+		RecipeFunction.SaveRecipe(iTestCaseRow);
+		RecipeFunction.SearchRecipe(iTestCaseRow);
+		
 		
 		
 		if(BaseClass.bResult==true){
@@ -82,5 +85,4 @@ public class AUT_CMWeb_AddRole {
 		    // Closing the opened driver
 		    //driver.close();
 	  		}
-
 }

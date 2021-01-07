@@ -1,4 +1,4 @@
-package TestCases;
+package TestCases.Configuration_Module.Role_Tab;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
@@ -6,13 +6,13 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import FunctionLibraries.LoginFunction;
-import FunctionLibraries.RecipeFunction;
+import FunctionLibraries.ManagingRolesFunction;
 import ObjectRepository.BaseClass;
 import Utility.Constant;
 import Utility.ExcelUtils;
 import Utility.Utils;
 
-public class AUT_CMWeb_ViewRecipe {
+public class AUT_CMWeb_DeleteRole {
 	public WebDriver driver;
 	private int iTestCaseRow;
 	private String sTestCaseName;
@@ -37,7 +37,7 @@ public class AUT_CMWeb_ViewRecipe {
 			// Setting up the Test Data Excel file using Constants variables
 			// For Constant Variables please see http://www.toolsqa.com/constant-variables/
 			// For setting up Excel for Data driven testing, please see http://www.toolsqa.com/data-driven-testing-excel-poi/
-			ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData,"Recipe");
+			ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData,"Configuration");
 			
 			// Fetching the Test Case row number from the Test Data Sheet
 			// This row number will be feed to so many functions, to get the relevant data from the Test Data sheet 
@@ -58,10 +58,10 @@ public class AUT_CMWeb_ViewRecipe {
 		//UserLogin
 		LoginFunction.Execute(iTestCaseRow);
 		
-		// Create Merchandise
-		RecipeFunction.GoToRecipe(iTestCaseRow);	
-		RecipeFunction.ViewRecentRecipe(iTestCaseRow);
-		
+		// Delete Role -  search specific role to delete
+		ManagingRolesFunction.GoToConfiguration(iTestCaseRow);
+		ManagingRolesFunction.GoToRolesTab(iTestCaseRow);
+		ManagingRolesFunction.DeleteRole(iTestCaseRow);
 		
 		
 		if(BaseClass.bResult==true){
@@ -72,8 +72,6 @@ public class AUT_CMWeb_ViewRecipe {
 			// This is to throw exception in case of fail test, this exception will be caught by catch block below
 			throw new Exception("Test Case Failed because of Verification");
 		}
-	
-	
 	}
 	
 	  @AfterMethod
@@ -83,4 +81,5 @@ public class AUT_CMWeb_ViewRecipe {
 		    // Closing the opened driver
 		    //driver.close();
 	  		}
+
 }

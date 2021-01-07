@@ -1,4 +1,4 @@
-package TestCases;
+package TestCases.Configuration_Module.Site_Tab;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
@@ -7,12 +7,13 @@ import org.testng.annotations.Test;
 
 import FunctionLibraries.LoginFunction;
 import FunctionLibraries.ManagingRolesFunction;
+import FunctionLibraries.ManagingSiteFunction;
 import ObjectRepository.BaseClass;
 import Utility.Constant;
 import Utility.ExcelUtils;
 import Utility.Utils;
 
-public class AUT_CMWeb_DeleteRole {
+public class AUT_CMWeb_EditSite {
 	public WebDriver driver;
 	private int iTestCaseRow;
 	private String sTestCaseName;
@@ -58,10 +59,12 @@ public class AUT_CMWeb_DeleteRole {
 		//UserLogin
 		LoginFunction.Execute(iTestCaseRow);
 		
-		// Delete Role -  search specific role to delete
+		// Edit site - search specific site then change site name
 		ManagingRolesFunction.GoToConfiguration(iTestCaseRow);
-		ManagingRolesFunction.GoToRolesTab(iTestCaseRow);
-		ManagingRolesFunction.DeleteRole(iTestCaseRow);
+		ManagingSiteFunction.GoToAccount(iTestCaseRow);
+		ManagingSiteFunction.GoToSiteTab(iTestCaseRow);
+		ManagingSiteFunction.EditSite(iTestCaseRow);
+		ManagingSiteFunction.SaveSite(iTestCaseRow);
 		
 		
 		if(BaseClass.bResult==true){
@@ -81,5 +84,4 @@ public class AUT_CMWeb_DeleteRole {
 		    // Closing the opened driver
 		    //driver.close();
 	  		}
-
 }
