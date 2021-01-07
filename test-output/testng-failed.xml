@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestCases.AUT_CMWeb_AddRole">
+      <class name="TestCases.AUT_CMWeb_SearchMerchandise">
         <methods>
           <include name="main"/>
           <include name="beforeMethod"/>
           <include name="afterMethod"/>
         </methods>
-      </class> <!-- TestCases.AUT_CMWeb_AddRole -->
+      </class> <!-- TestCases.AUT_CMWeb_SearchMerchandise -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
