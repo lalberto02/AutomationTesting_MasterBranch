@@ -1,18 +1,20 @@
-package TestCases;
+package TestCases.Merchandise_Module;
 
+import org.testng.annotations.Test;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+
 
 import FunctionLibraries.LoginFunction;
-import FunctionLibraries.ManagingRolesFunction;
+import FunctionLibraries.MerchadiseFunction;
+
 import ObjectRepository.BaseClass;
 import Utility.Constant;
 import Utility.ExcelUtils;
 import Utility.Utils;
 
-public class AUT_CMWeb_EditRole {
+public class AUT_CMWeb_SearchMerchandise {
 	public WebDriver driver;
 	private int iTestCaseRow;
 	private String sTestCaseName;
@@ -37,7 +39,7 @@ public class AUT_CMWeb_EditRole {
 			// Setting up the Test Data Excel file using Constants variables
 			// For Constant Variables please see http://www.toolsqa.com/constant-variables/
 			// For setting up Excel for Data driven testing, please see http://www.toolsqa.com/data-driven-testing-excel-poi/
-			ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData,"Configuration");
+			ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData,"Merchandise");
 			
 			// Fetching the Test Case row number from the Test Data Sheet
 			// This row number will be feed to so many functions, to get the relevant data from the Test Data sheet 
@@ -58,12 +60,9 @@ public class AUT_CMWeb_EditRole {
 		//UserLogin
 		LoginFunction.Execute(iTestCaseRow);
 		
-		// Edit Role -  search specific role thet change role name, role level
-		ManagingRolesFunction.GoToConfiguration(iTestCaseRow);
-		ManagingRolesFunction.GoToRolesTab(iTestCaseRow);
-		ManagingRolesFunction.EditRole(iTestCaseRow);
-		ManagingRolesFunction.SaveRole(iTestCaseRow);
-		ManagingRolesFunction.ClearSearch(iTestCaseRow);
+		// Create Merchandise
+		MerchadiseFunction.GoToMerchandise(iTestCaseRow);
+		MerchadiseFunction.SearchMerchandise(iTestCaseRow);
 		
 		
 		if(BaseClass.bResult==true){

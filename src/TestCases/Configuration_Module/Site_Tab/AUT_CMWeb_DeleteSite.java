@@ -1,4 +1,4 @@
-package TestCases;
+package TestCases.Configuration_Module.Site_Tab;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
@@ -6,13 +6,14 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import FunctionLibraries.LoginFunction;
-import FunctionLibraries.RecipeFunction;
+import FunctionLibraries.ManagingRolesFunction;
+import FunctionLibraries.ManagingSiteFunction;
 import ObjectRepository.BaseClass;
 import Utility.Constant;
 import Utility.ExcelUtils;
 import Utility.Utils;
 
-public class AUT_CMWeb_CreateNewRecipe {
+public class AUT_CMWeb_DeleteSite {
 	public WebDriver driver;
 	private int iTestCaseRow;
 	private String sTestCaseName;
@@ -37,7 +38,7 @@ public class AUT_CMWeb_CreateNewRecipe {
 			// Setting up the Test Data Excel file using Constants variables
 			// For Constant Variables please see http://www.toolsqa.com/constant-variables/
 			// For setting up Excel for Data driven testing, please see http://www.toolsqa.com/data-driven-testing-excel-poi/
-			ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData,"Recipe");
+			ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData,"Configuration");
 			
 			// Fetching the Test Case row number from the Test Data Sheet
 			// This row number will be feed to so many functions, to get the relevant data from the Test Data sheet 
@@ -58,14 +59,11 @@ public class AUT_CMWeb_CreateNewRecipe {
 		//UserLogin
 		LoginFunction.Execute(iTestCaseRow);
 		
-		// Create Recipe
-		RecipeFunction.GoToRecipe(iTestCaseRow);
-		RecipeFunction.CreateRecipeMain(iTestCaseRow);
-		RecipeFunction.AddIngredientProcedure(iTestCaseRow);
-		RecipeFunction.AddNutrient(iTestCaseRow);
-		RecipeFunction.SaveRecipe(iTestCaseRow);
-		RecipeFunction.SearchRecipe(iTestCaseRow);
-		
+		// delete site - search specific site to delete
+		ManagingRolesFunction.GoToConfiguration(iTestCaseRow);
+		ManagingSiteFunction.GoToAccount(iTestCaseRow);
+		ManagingSiteFunction.GoToSiteTab(iTestCaseRow);
+		ManagingSiteFunction.DeleteSite(iTestCaseRow);
 		
 		
 		if(BaseClass.bResult==true){
