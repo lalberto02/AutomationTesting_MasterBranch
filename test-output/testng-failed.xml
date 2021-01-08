@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestCases.AUT_CMWeb_SearchRecipe">
+      <class name="TestCases.Configuration_Module.User_Tab.AUT_CMWeb_EditUser">
         <methods>
+          <include name="main"/>
           <include name="beforeMethod"/>
           <include name="afterMethod"/>
-          <include name="main"/>
         </methods>
-      </class> <!-- TestCases.AUT_CMWeb_SearchRecipe -->
+      </class> <!-- TestCases.Configuration_Module.User_Tab.AUT_CMWeb_EditUser -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
