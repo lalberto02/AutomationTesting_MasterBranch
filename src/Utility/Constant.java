@@ -5,7 +5,7 @@ package Utility;
 
 	public class Constant {  
 		public static final String URL = "http://va-server02/CalcmenuWeb_Template_V91/index.aspx";
-		public static final String Path_TestData = "C:\\TestData\\";
+		public static final String Path_TestData = "\\\\egs\\Automation Project\\Selenium\\TestData\\";
 		public static final String File_TestData = "Automation_CMWeb_TestData.xlsx";
 		
 		//Test Data Sheet Columns
