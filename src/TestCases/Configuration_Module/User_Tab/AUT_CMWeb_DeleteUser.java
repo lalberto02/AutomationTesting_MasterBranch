@@ -14,7 +14,7 @@ import Utility.Constant;
 import Utility.ExcelUtils;
 import Utility.Utils;
 
-public class AUT_CMWeb_EditUser {
+public class AUT_CMWeb_DeleteUser {
 	public WebDriver driver;
 	private int iTestCaseRow;
 	private String sTestCaseName;
@@ -48,7 +48,7 @@ public class AUT_CMWeb_EditUser {
 			// Launching the browser, this will take the Browser Type from Test Data Sheet 
 			driver = Utils.OpenBrowser(iTestCaseRow);
 			
-			// Initializing the Base Class for Selenium driver   
+			// Initializing the Base Class for Selenium driver
 			// Now we do need to provide the Selenium driver to any of the Page classes or Module Actions
 			// Will soon write a post on Base Class
 			new BaseClass(driver);  
@@ -60,12 +60,13 @@ public class AUT_CMWeb_EditUser {
 		//UserLogin
 		LoginFunction.Execute(iTestCaseRow);
 		
-		// Edit user - search specific user then change username
+		// Delete user - search specific user to delete
 		ManagingRolesFunction.GoToConfiguration(iTestCaseRow);
 		ManagingSiteFunction.GoToAccount(iTestCaseRow);
 		ManagingUserFunction.GoToUsersTab(iTestCaseRow);
-		ManagingUserFunction.EditUser(iTestCaseRow);
-		ManagingUserFunction.SaveUser(iTestCaseRow);
+		ManagingUserFunction.DeleteUser(iTestCaseRow);
+		
+		
 		
 		if(BaseClass.bResult==true){
 			// If the value of boolean variable is True, then your test is complete pass and do this
