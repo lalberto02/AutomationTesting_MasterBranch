@@ -14,7 +14,7 @@ import Utility.Constant;
 import Utility.ExcelUtils;
 import Utility.Utils;
 
-public class AUT_CMWeb_DeleteUser {
+public class AUT_CMWeb_DeactivateUser {
 	public WebDriver driver;
 	private int iTestCaseRow;
 	private String sTestCaseName;
@@ -60,11 +60,11 @@ public class AUT_CMWeb_DeleteUser {
 		//UserLogin
 		LoginFunction.Execute(iTestCaseRow);
 		
-		// Delete user - search specific user to delete
+		// Deactivate user - search specific user to deactivate
 		ManagingRolesFunction.GoToConfiguration(iTestCaseRow);
 		ManagingSiteFunction.GoToAccount(iTestCaseRow);
 		ManagingUserFunction.GoToUsersTab(iTestCaseRow);
-		ManagingUserFunction.DeleteUser(iTestCaseRow);
+		ManagingUserFunction.DeactivateUser(iTestCaseRow);
 		
 		
 		
@@ -79,7 +79,7 @@ public class AUT_CMWeb_DeleteUser {
 	}
 	
 	  @AfterMethod
-	  public void afterMethod() { 
+	  public void afterMethod() {
 		    // Printing beautiful logs to end the test case
 		   // Log.endTestCase(sTestCaseName);
 		    // Closing the opened driver

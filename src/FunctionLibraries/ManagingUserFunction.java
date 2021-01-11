@@ -1,6 +1,8 @@
 package FunctionLibraries;
 
 import ObjectRepository.CMWeb_ConfigurationPage;
+import Utility.Constant;
+import Utility.ExcelUtils;
 
 public class ManagingUserFunction {
 
@@ -15,20 +17,20 @@ public class ManagingUserFunction {
 		CMWeb_ConfigurationPage.btnNew().click();
 		
 		//input name
-		//	String sName = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Name);
-		CMWeb_ConfigurationPage.txtName().sendKeys("Lois");
+		String sName = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Name);
+		CMWeb_ConfigurationPage.txtName().sendKeys(sName);
 		
 		//enter email address
-		//String sEmail = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Email);
-		CMWeb_ConfigurationPage.txtEmail().sendKeys("loisnicole.alberto@eg-software.com");
+		String sEmail = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Email);
+		CMWeb_ConfigurationPage.txtEmail().sendKeys(sEmail);
 		
 		// enter username
-		//String sUser = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_User);
-		CMWeb_ConfigurationPage.txtUsername().sendKeys("TestUser1");
+		String sUser = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_User);
+		CMWeb_ConfigurationPage.txtUsername().sendKeys(sUser);
 		
 		// enter password
-		//String sPass = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Pass);
-		CMWeb_ConfigurationPage.txtPassword().sendKeys("TestUser1");
+		String sPass = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Pass);
+		CMWeb_ConfigurationPage.txtPassword().sendKeys(sPass);
 		
 		// select role
 		CMWeb_ConfigurationPage.chckboxUserRole().click();
@@ -51,25 +53,25 @@ public class ManagingUserFunction {
 	public static void EditUser(int iTestCaseRow) throws Exception{
 			
 			//search role
-		   // String sRoleName = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Name);
-			CMWeb_ConfigurationPage.txtSearch().sendKeys("Lois");
+		    String sRoleName = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Name);
+			CMWeb_ConfigurationPage.txtSearch().sendKeys(sRoleName);
 			CMWeb_ConfigurationPage.btnSearch().click();
 		
 			// Click Edit button
 			CMWeb_ConfigurationPage.btnEditUser().click();
 			
 			// change user username
-			//String sUser = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_User);
+			String sUser = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_User);
 			CMWeb_ConfigurationPage.txtUsername().clear();
-			CMWeb_ConfigurationPage.txtUsername().sendKeys("Test_01");
+			CMWeb_ConfigurationPage.txtUsername().sendKeys(sUser);
 		}
 	
 	// Delete User
 	public static void DeleteUser(int iTestCaseRow) throws Exception{
 				
 			//search role
-		   // String sRoleName = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Name);
-			CMWeb_ConfigurationPage.txtSearch().sendKeys("Lois");
+		    String sRoleName = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Name);
+			CMWeb_ConfigurationPage.txtSearch().sendKeys(sRoleName);
 			CMWeb_ConfigurationPage.btnSearch().click();
 			
 			// Click Role Checkbox to delete
@@ -87,8 +89,8 @@ public class ManagingUserFunction {
 	public static void DeactivateUser(int iTestCaseRow) throws Exception{
 				
 			//search role
-		   // String sRoleName = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Name);
-			CMWeb_ConfigurationPage.txtSearch().sendKeys("Lois");
+		    String sRoleName = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Name);
+			CMWeb_ConfigurationPage.txtSearch().sendKeys(sRoleName);
 			CMWeb_ConfigurationPage.btnSearch().click();
 			
 			// Click Role Checkbox to delete
