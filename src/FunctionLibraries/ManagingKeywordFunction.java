@@ -109,8 +109,6 @@ public class ManagingKeywordFunction {
 		//validation reporting screenshot
 		Thread.sleep(5000);
 		CMWeb_ConfigurationPage.alertOkay().accept();
-		Thread.sleep(5000);
-		CMWeb_ConfigurationPage.alertOkay().accept();
 	}
 	
 	// Edit Keyword
