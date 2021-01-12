@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestCases.Configuration_Module.User_Tab.AUT_CMWeb_DeactivateUser">
+      <class name="TestCases.Configuration_Module.Keyword_Tab.AUT_CMWeb_Merchandise_NewKeyword">
         <methods>
+          <include name="beforeMethod"/>
           <include name="afterMethod"/>
           <include name="main"/>
-          <include name="beforeMethod"/>
         </methods>
-      </class> <!-- TestCases.Configuration_Module.User_Tab.AUT_CMWeb_DeactivateUser -->
+      </class> <!-- TestCases.Configuration_Module.Keyword_Tab.AUT_CMWeb_Merchandise_NewKeyword -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

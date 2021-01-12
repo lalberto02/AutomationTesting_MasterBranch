@@ -150,6 +150,21 @@ public class CMWeb_ConfigurationPage extends BaseClass {
     	return Element;
     }
     
+ // Menu Keyword button
+    public static WebElement btnKeywordMenu() throws Exception {
+    	Element = null;
+    	try {
+    		// change frame
+    		driver.switchTo().defaultContent();
+    	    WebElement frame  = driver.findElement(By.id("main"));
+    	    	driver.switchTo().frame(frame);
+    	    	Element = driver.findElement(By.xpath("//*[@id=\"ctl00_cphPageContent_ucDLN_Grid_ctl01_hypname\"]"));
+    	} catch (Exception e) {
+    		throw(e);
+    	}
+    	return Element;
+    }
+    
     // Users button
     public static WebElement btnUsers() throws Exception {
     	Element = null;

@@ -2,32 +2,49 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-01-11T13:49:25 SGT" name="Default suite" finished-at="2021-01-11T13:50:25 SGT" duration-ms="60517">
+  <suite started-at="2021-01-12T08:52:55 SGT" name="Default suite" finished-at="2021-01-12T08:53:51 SGT" duration-ms="55402">
     <groups>
     </groups>
-    <test started-at="2021-01-11T13:49:25 SGT" name="Default test" finished-at="2021-01-11T13:50:25 SGT" duration-ms="60517">
-      <class name="TestCases.Configuration_Module.User_Tab.AUT_CMWeb_DeactivateUser">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCases.Configuration_Module.User_Tab.AUT_CMWeb_DeactivateUser@4de4b452]" started-at="2021-01-11T13:49:25 SGT" name="beforeMethod" finished-at="2021-01-11T13:49:35 SGT" duration-ms="9685" status="PASS">
+    <test started-at="2021-01-12T08:52:55 SGT" name="Default test" finished-at="2021-01-12T08:53:51 SGT" duration-ms="55402">
+      <class name="TestCases.Configuration_Module.Keyword_Tab.AUT_CMWeb_Merchandise_NewKeyword">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCases.Configuration_Module.Keyword_Tab.AUT_CMWeb_Merchandise_NewKeyword@4de4b452]" started-at="2021-01-12T08:52:55 SGT" name="beforeMethod" finished-at="2021-01-12T08:53:07 SGT" duration-ms="11770" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="main()[pri:0, instance:TestCases.Configuration_Module.User_Tab.AUT_CMWeb_DeactivateUser@4de4b452]" started-at="2021-01-11T13:49:35 SGT" name="main" finished-at="2021-01-11T13:50:25 SGT" duration-ms="50789" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchFrameException">
+        <test-method signature="main()[pri:0, instance:TestCases.Configuration_Module.Keyword_Tab.AUT_CMWeb_Merchandise_NewKeyword@4de4b452]" started-at="2021-01-12T08:53:07 SGT" name="main" finished-at="2021-01-12T08:53:51 SGT" duration-ms="43537" status="FAIL">
+          <exception class="org.openqa.selenium.NoAlertPresentException">
             <message>
-              <![CDATA[No frame element found by name or id ctl00_cphPageContent_configframe
+              <![CDATA[no such alert
+  (Session info: chrome=87.0.4280.141)
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'WORKSTATION-40', ip: '192.168.1.25', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.9'
-Driver info: driver.version: unknown]]>
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.141, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\LOIS~1.ALB\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:49445}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 603cab09d1b47f3c5be9cac697dbc6e3]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchFrameException: No frame element found by name or id ctl00_cphPageContent_configframe
+              <![CDATA[org.openqa.selenium.NoAlertPresentException: no such alert
+  (Session info: chrome=87.0.4280.141)
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'WORKSTATION-40', ip: '192.168.1.25', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.9'
-Driver info: driver.version: unknown
-at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.frame(RemoteWebDriver.java:885)
-at ObjectRepository.CMWeb_ConfigurationPage.btnDeactivate(CMWeb_ConfigurationPage.java:756)
-at FunctionLibraries.ManagingUserFunction.DeactivateUser(ManagingUserFunction.java:100)
-at TestCases.Configuration_Module.User_Tab.AUT_CMWeb_DeactivateUser.main(AUT_CMWeb_DeactivateUser.java:67)
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.141, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\LOIS~1.ALB\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:49445}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 603cab09d1b47f3c5be9cac697dbc6e3
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:932)
+at ObjectRepository.CMWeb_ConfigurationPage.alertOkay(CMWeb_ConfigurationPage.java:532)
+at FunctionLibraries.ManagingKeywordFunction.SaveKeyword(ManagingKeywordFunction.java:113)
+at TestCases.Configuration_Module.Keyword_Tab.AUT_CMWeb_Merchandise_NewKeyword.main(AUT_CMWeb_Merchandise_NewKeyword.java:67)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -58,15 +75,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchFrameException -->
+          </exception> <!-- org.openqa.selenium.NoAlertPresentException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- main -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:TestCases.Configuration_Module.User_Tab.AUT_CMWeb_DeactivateUser@4de4b452]" started-at="2021-01-11T13:50:25 SGT" name="afterMethod" finished-at="2021-01-11T13:50:25 SGT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:TestCases.Configuration_Module.Keyword_Tab.AUT_CMWeb_Merchandise_NewKeyword@4de4b452]" started-at="2021-01-12T08:53:51 SGT" name="afterMethod" finished-at="2021-01-12T08:53:51 SGT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- TestCases.Configuration_Module.User_Tab.AUT_CMWeb_DeactivateUser -->
+      </class> <!-- TestCases.Configuration_Module.Keyword_Tab.AUT_CMWeb_Merchandise_NewKeyword -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

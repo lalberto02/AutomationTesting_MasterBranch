@@ -26,6 +26,45 @@ public class ManagingKeywordFunction {
 		CMWeb_ConfigurationPage.btnKeyword().click();
 	}
 	
+	public static void GoToKeywordMenu(int iTestCaseRow) throws Exception{
+		// Click Keyword Button
+		CMWeb_ConfigurationPage.btnKeywordMenu().click();
+	}
+	
+	public static void AddNewKeywordMenu(int iTestCaseRow) throws Exception{
+		// Click New Button
+		CMWeb_ConfigurationPage.btnNewKeyword().click();
+		
+		// input parent name
+		// sParent = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Parent);
+		CMWeb_ConfigurationPage.txtParent().sendKeys("");
+		
+		// input English Keyword
+		// sEnglish = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_English);
+		CMWeb_ConfigurationPage.txtEnglish().sendKeys("Test_Keyword1");
+		
+		// input French Keyword
+		// sFrench = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_French);
+		CMWeb_ConfigurationPage.txtFrench().sendKeys("Test_French");
+		
+		// input German Keyword
+		// sGerman = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_German);
+		CMWeb_ConfigurationPage.txtGerman().sendKeys("Test_German");
+		
+		// input Italian Keyword
+		// sItalian = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Italian);
+		CMWeb_ConfigurationPage.txtItalian().sendKeys("Test_Italian");
+		
+		// tick sharing
+		// sSharing = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Sharing);
+		String sSharing = "Global";
+		if (sSharing.equals("Global")) {
+			CMWeb_ConfigurationPage.chckboxGlobal().click();
+		} else if (sSharing.equals("HQ")) {
+			CMWeb_ConfigurationPage.chckboxHQ().click();
+		}	
+	}
+	
 	public static void AddNewKeyword(int iTestCaseRow) throws Exception{
 		// Click New Button
 		CMWeb_ConfigurationPage.btnNewKeyword().click();
