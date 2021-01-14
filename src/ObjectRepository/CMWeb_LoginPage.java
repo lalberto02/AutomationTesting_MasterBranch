@@ -46,4 +46,18 @@ public class CMWeb_LoginPage extends BaseClass {
            		}
            	return element;
         }
+        
+    // user label
+        public static WebElement lblUser() throws Exception {
+        	try {
+        		// change frame
+        		driver.switchTo().defaultContent();
+        	    WebElement frame  = driver.findElement(By.xpath("//*[@id=\"outerFrame\"]/frame[1]"));
+        	    	driver.switchTo().frame(frame);
+        	    	element = driver.findElement(By.xpath("//*[@id=\"lblUser\"]"));
+        	} catch (Exception e) {
+        		throw(e);
+        	}
+        	return element;
+        }
 }

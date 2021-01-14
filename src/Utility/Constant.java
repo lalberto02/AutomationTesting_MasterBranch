@@ -23,6 +23,7 @@ package Utility;
 		public static final int Col_Price = 11;
 		public static final int Col_Unit = 12;
 		public static final int Col_SearchName = 13;
+		public static final int Col_SearchRecipe = 8;
 		public static final int Col_Ingredient = 14;
 		public static final int Col_Determination = 15;
 		public static final int Col_Source = 9;
@@ -42,6 +43,6 @@ package Utility;
 		public static final int Col_German = 8;
 		public static final int Col_Italian = 9;
 		public static final int Col_Sharing = 10;
-		public static final String Path_ScreenShot = "C:\\Users\\lois.alberto\\eclipse-workspace\\Test\\src\\TestEvidence";
+		public static final String Path_ScreenShot = System.getProperty("user.dir")+"/Screenshots/TestEvidence_"+Utils.getCurrentDateTime()+".png";
 	}
 

@@ -19,8 +19,8 @@ public class CMWeb_RecipePage extends BaseClass {
     	Element = null;
     	try {
     		// change frame
-    	    WebElement frame  = driver.findElement(By.name("header"));
-    	    	driver.switchTo().frame(frame);
+    	   /* WebElement frame  = driver.findElement(By.name("header"));
+    	    	driver.switchTo().frame(frame);*/
     	    	Element = driver.findElement(By.xpath("//*[@id=\"RadTabStrip1\"]/div/ul/li[2]/a"));
     	} catch (Exception e) {
     		throw(e);
@@ -33,9 +33,25 @@ public class CMWeb_RecipePage extends BaseClass {
     	Element = null;
     	try {
     		// change frame
-    	   /* WebElement frame  = driver.findElement(By.name("header"));
-    	    	driver.switchTo().frame(frame);*/
+    		driver.switchTo().defaultContent();
+    	    WebElement frame  = driver.findElement(By.name("header"));
+    	    	driver.switchTo().frame(frame);
     	    	Element = driver.findElement(By.xpath("//*[@id=\"ctl11\"]/div/div/div/ul/li[1]"));
+    	} catch (Exception e) {
+    		throw(e);
+    	}
+    	return Element;
+    }
+    
+    // Recipe label
+    public static WebElement lblRecipe() throws Exception {
+    	Element = null;
+    	try {
+    		// change frame
+    		driver.switchTo().defaultContent();
+    	    WebElement frame  = driver.findElement(By.id("main"));
+    	    	driver.switchTo().frame(frame);
+    	    	Element = driver.findElement(By.xpath("//*[@id=\"ctl00_cphPageTitle_lblTitle\"]"));
     	} catch (Exception e) {
     		throw(e);
     	}
@@ -319,8 +335,8 @@ public class CMWeb_RecipePage extends BaseClass {
     	return Element;
     }
     
-    // Search Merchandise textbox
-    public static WebElement txtSearchMerch() throws Exception {
+    // Search Recipe textbox
+    public static WebElement txtSearchRecipe() throws Exception {
     	Element = null;
     	try {
     		// change frame
@@ -334,8 +350,8 @@ public class CMWeb_RecipePage extends BaseClass {
     	return Element;
     }
     
-    // Search Merchandise Button
-    public static WebElement btnSearchMerch() throws Exception {
+    // Search Recipe Button
+    public static WebElement btnSearchRecipe() throws Exception {
     	Element = null;
     	try {
     		// change frame
@@ -349,7 +365,22 @@ public class CMWeb_RecipePage extends BaseClass {
     	return Element;
     }
     
-    // History Merchandise
+    // search recipe link
+    public static WebElement linkSearchedRecipe() throws Exception {
+    	Element = null;
+    	try {
+    		// change frame
+    		/*driver.switchTo().defaultContent();
+    	    WebElement frame  = driver.findElement(By.id("main"));
+    	    	driver.switchTo().frame(frame);*/
+    	    	Element = driver.findElement(By.xpath("//*[@id=\"content\"]/div[3]/div[2]/table/tbody/tr[1]/td[3]/a"));
+    	} catch (Exception e) {
+    		throw(e);
+    	}
+    	return Element;
+    }
+    
+    // History Recipe
     public static WebElement linkHistory() throws Exception {
     	Element = null;
     	try {
