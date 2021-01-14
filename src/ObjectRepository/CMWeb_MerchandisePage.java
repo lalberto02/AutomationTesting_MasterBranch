@@ -17,9 +17,25 @@ public class CMWeb_MerchandisePage extends BaseClass {
     	Element = null;
     	try {
     		// change frame
+    		driver.switchTo().defaultContent();
     	    WebElement frame  = driver.findElement(By.name("header"));
     	    	driver.switchTo().frame(frame);
     	    	Element = driver.findElement(By.xpath("//*[@id=\"RadTabStrip1\"]/div/ul/li[1]/a"));
+    	} catch (Exception e) {
+    		throw(e);
+    	}
+    	return Element;
+    }
+    
+    // Merchandise label
+    public static WebElement lblMerchandise() throws Exception {
+    	Element = null;
+    	try {
+    		// change frame
+    		driver.switchTo().defaultContent();
+    	    WebElement frame  = driver.findElement(By.id("main"));
+    	    	driver.switchTo().frame(frame);
+    	    	Element = driver.findElement(By.xpath("//*[@id=\"ctl00_cphPageTitle_lblTitle\"]"));
     	} catch (Exception e) {
     		throw(e);
     	}
@@ -31,9 +47,10 @@ public class CMWeb_MerchandisePage extends BaseClass {
     	Element = null;
     	try {
     		// change frame
-    	    /*WebElement frame  = driver.findElement(By.name("header"));
-    	    	driver.switchTo().frame(frame);*/
-    	    	Element = driver.findElement(By.xpath("//*[@id=\"ctl09\"]/div/div/div/ul/li[1]"));
+    		driver.switchTo().defaultContent();
+    	    WebElement frame  = driver.findElement(By.name("header"));
+    	    	driver.switchTo().frame(frame);
+    	    	Element = driver.findElement(By.xpath("//*[@id=\"ctl09\"]/div/div/div/ul/li[1]/a/span/span/span/span"));
     	} catch (Exception e) {
     		throw(e);
     	}
@@ -63,7 +80,7 @@ public class CMWeb_MerchandisePage extends BaseClass {
     		driver.switchTo().defaultContent();
     	    WebElement frame  = driver.findElement(By.id("main"));
     	    	driver.switchTo().frame(frame);
-    	    	Element = driver.findElement(By.xpath("//*[@id=\"maintab\"]/div/div[1]/div[2]/div/div[2]/table[2]/tbody/tr[1]/td[2]/input"));
+    	    	Element = driver.findElement(By.xpath("//*[@id=\"maintab\"]/div/div[1]/div[2]/div/div[2]/table[2]/tbody/tr[2]/td[2]/input"));
     	} catch (Exception e) {
     		throw(e);
     	}
@@ -78,14 +95,14 @@ public class CMWeb_MerchandisePage extends BaseClass {
     		driver.switchTo().defaultContent();
     	    WebElement frame  = driver.findElement(By.id("main"));
     	    	driver.switchTo().frame(frame);
-    	    	Element = driver.findElement(By.xpath("//*[@id=\"maintab\"]/div/div[1]/div[2]/div/div[2]/table[2]/tbody/tr[7]/td[2]/select"));
+    	    	Element = driver.findElement(By.xpath("//*[@id=\"maintab\"]/div/div[1]/div[2]/div/div[2]/table[2]/tbody/tr[8]/td[2]/select"));
     	} catch (Exception e) {
     		throw(e);
     	}
     	return Element;
     }
     
-    // branch dropdown
+    // brand dropdown
     public static WebElement drpdownBrand() throws Exception {
     	Element = null;
     	try {
@@ -93,7 +110,7 @@ public class CMWeb_MerchandisePage extends BaseClass {
     		/*driver.switchTo().defaultContent();
     	    WebElement frame  = driver.findElement(By.id("main"));
     	    	driver.switchTo().frame(frame);*/
-    	    	Element = driver.findElement(By.xpath("//*[@id=\"maintab\"]/div/div[1]/div[2]/div/div[2]/table[2]/tbody/tr[6]/td[2]/select"));
+    	    	Element = driver.findElement(By.xpath("//*[@id=\"maintab\"]/div/div[1]/div[2]/div/div[2]/table[2]/tbody/tr[7]/td[2]/select"));
     	} catch (Exception e) {
     		throw(e);
     	}
@@ -108,7 +125,7 @@ public class CMWeb_MerchandisePage extends BaseClass {
     		/*driver.switchTo().defaultContent();
     	    WebElement frame  = driver.findElement(By.id("main"));
     	    	driver.switchTo().frame(frame);*/
-    	    	Element = driver.findElement(By.xpath("//*[@id=\"maintab\"]/div/div[1]/div[2]/div/div[2]/table[2]/tbody/tr[8]/td[2]/select"));
+    	    	Element = driver.findElement(By.xpath("//*[@id=\"maintab\"]/div/div[1]/div[2]/div/div[2]/table[2]/tbody/tr[9]/td[2]/select"));
     	} catch (Exception e) {
     		throw(e);
     	}
@@ -123,7 +140,7 @@ public class CMWeb_MerchandisePage extends BaseClass {
     		/*driver.switchTo().defaultContent();
     	    WebElement frame  = driver.findElement(By.id("main"));
     	    	driver.switchTo().frame(frame);*/
-    	    	Element = driver.findElement(By.xpath("//*[@id=\"maintab\"]/div/div[1]/div[2]/div/div[2]/table[2]/tbody/tr[13]/td[2]/input[1]"));
+    	    	Element = driver.findElement(By.xpath("//*[@id=\"maintab\"]/div/div[1]/div[2]/div/div[2]/table[2]/tbody/tr[14]/td[2]/input[1]"));
     	} catch (Exception e) {
     		throw(e);
     	}
@@ -138,7 +155,7 @@ public class CMWeb_MerchandisePage extends BaseClass {
     		/*driver.switchTo().defaultContent();
     	    WebElement frame  = driver.findElement(By.id("main"));
     	    	driver.switchTo().frame(frame);*/
-    	    	Element = driver.findElement(By.xpath("//*[@id=\"maintab\"]/div/div[1]/div[2]/div/div[2]/table[2]/tbody/tr[16]/td[2]/div[1]/input"));
+    	    	Element = driver.findElement(By.xpath("//*[@id=\"maintab\"]/div/div[1]/div[2]/div/div[2]/table[2]/tbody/tr[17]/td[2]/div[1]/input"));
     	} catch (Exception e) {
     		throw(e);
     	}
@@ -153,7 +170,7 @@ public class CMWeb_MerchandisePage extends BaseClass {
     		/*driver.switchTo().defaultContent();
     	    WebElement frame  = driver.findElement(By.id("main"));
     	    	driver.switchTo().frame(frame);*/
-    	    	Element = driver.findElement(By.xpath("//*[@id=\"maintab\"]/div/div[1]/div[2]/div/div[2]/table[2]/tbody/tr[16]/td[2]/div[1]/select[1]"));
+    	    	Element = driver.findElement(By.xpath("//*[@id=\"maintab\"]/div/div[1]/div[2]/div/div[2]/table[2]/tbody/tr[17]/td[2]/div[1]/select[1]"));
     	} catch (Exception e) {
     		throw(e);
     	}
@@ -168,7 +185,7 @@ public class CMWeb_MerchandisePage extends BaseClass {
     		/*driver.switchTo().defaultContent();
     	    WebElement frame  = driver.findElement(By.id("main"));
     	    	driver.switchTo().frame(frame);*/
-    	    	Element = driver.findElement(By.xpath("//*[@id=\"maintab\"]/div/div[1]/div[2]/div/div[2]/table[2]/tbody/tr[13]/td[2]/a[1]"));
+    	    	Element = driver.findElement(By.xpath("//*[@id=\"maintab\"]/div/div[1]/div[2]/div/div[2]/table[2]/tbody/tr[14]/td[2]/a[1]"));
     	} catch (Exception e) {
     		throw(e);
     	}
@@ -425,6 +442,21 @@ public class CMWeb_MerchandisePage extends BaseClass {
     	return Element;
     }
     
+    // txtEnergy
+    public static WebElement txtEnergy() throws Exception {
+    	Element = null;
+    	try {
+    		// change frame
+    		/*driver.switchTo().defaultContent();
+    	    WebElement frame  = driver.findElement(By.id("main"));
+    	    	driver.switchTo().frame(frame);*/
+    	    	Element = driver.findElement(By.xpath("//*[@id=\"nutrientTab\"]/div/div/div[1]/div[2]/div/div[2]/div[2]/table/tbody/tr[1]/td[2]/input"));
+    	} catch (Exception e) {
+    		throw(e);
+    	}
+    	return Element;
+    }
+    
     // txtSpecification
     public static WebElement txtSpecification() throws Exception {
     	Element = null;
@@ -464,6 +496,36 @@ public class CMWeb_MerchandisePage extends BaseClass {
     	    WebElement frame  = driver.findElement(By.id("main"));
     	    	driver.switchTo().frame(frame);*/
     	    	Element = driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[2]/div[2]/div/div/div/div[2]/div/div[2]/div/table/tbody/tr/td[1]/div/div[1]/input"));
+    	} catch (Exception e) {
+    		throw(e);
+    	}
+    	return Element;
+    }
+    
+    // search merchandise link
+    public static WebElement linkSearchedMerchandise() throws Exception {
+    	Element = null;
+    	try {
+    		// change frame
+    		/*driver.switchTo().defaultContent();
+    	    WebElement frame  = driver.findElement(By.id("main"));
+    	    	driver.switchTo().frame(frame);*/
+    	    	Element = driver.findElement(By.xpath("//*[@id=\"content\"]/div[3]/div[3]/table/tbody/tr[1]/td[5]/a"));
+    	} catch (Exception e) {
+    		throw(e);
+    	}
+    	return Element;
+    }
+    
+    // Merchandise Name label
+    public static WebElement lblMerchandiseName() throws Exception {
+    	Element = null;
+    	try {
+    		// change frame
+    		/*driver.switchTo().defaultContent();
+    	    WebElement frame  = driver.findElement(By.id("main"));
+    	    	driver.switchTo().frame(frame);*/
+    	    	Element = driver.findElement(By.xpath("//*[@id=\"RADSearchListeDetailsMerch1_dgd_ctl03_lblMerchandise\"]"));
     	} catch (Exception e) {
     		throw(e);
     	}
