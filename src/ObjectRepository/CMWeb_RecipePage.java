@@ -58,6 +58,21 @@ public class CMWeb_RecipePage extends BaseClass {
     	return Element;
     }
     
+    // Recipe Name label
+    public static WebElement lblRecipeName() throws Exception {
+    	Element = null;
+    	try {
+    		// change frame
+    		/*driver.switchTo().defaultContent();
+    	    WebElement frame  = driver.findElement(By.id("main"));
+    	    	driver.switchTo().frame(frame);*/
+    	    	Element = driver.findElement(By.xpath("//*[@id=\"RADSearchListDetailsRecipe1_lblRecipeName\"]"));
+    	} catch (Exception e) {
+    		throw(e);
+    	}
+    	return Element;
+    }
+    
     // txtRecipeName
     public static WebElement txtRecipeName() throws Exception {
     	Element = null;

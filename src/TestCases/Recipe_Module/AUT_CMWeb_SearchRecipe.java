@@ -69,18 +69,6 @@ public class AUT_CMWeb_SearchRecipe extends Report {
 		// Create Recipe
 		RecipeFunction.GoToRecipe(iTestCaseRow);
 		RecipeFunction.SearchRecipe(iTestCaseRow);
-
-		if (BaseClass.bResult == true) {
-			// If the value of boolean variable is True, then your test is complete pass and
-			// do this
-			// Log.info("Successfull Login");
-		} else {
-			// If the value of boolean variable is False, then your test is fail, and you
-			// like to report it accordingly
-			// This is to throw exception in case of fail test, this exception will be
-			// caught by catch block below
-			throw new Exception("Test Case Failed because of Verification");
-		}
 	}
 
 	@AfterMethod

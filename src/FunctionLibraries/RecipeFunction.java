@@ -1,6 +1,5 @@
 package FunctionLibraries;
 
-import ObjectRepository.CMWeb_MerchandisePage;
 import ObjectRepository.CMWeb_RecipePage;
 import Utility.Constant;
 import Utility.ExcelUtils;
@@ -19,7 +18,6 @@ public class RecipeFunction extends Report {
 		} else {
 			logger.fail("Recipe button was not clicked");
 		}
-			// screenshot
 		
 	}
 	
@@ -200,9 +198,13 @@ public class RecipeFunction extends Report {
 		
 		// view recent merchandise
 		public static void ViewRecentRecipe(int iTestCaseRow) throws Exception{
-			CMWeb_MerchandisePage.linkHistory().click();
-			 //validation reporting and screenshot
-			
+			CMWeb_RecipePage.linkHistory().click();
+			 //validation reporting 
+			if (CMWeb_RecipePage.lblRecipeName().isDisplayed()) {
+				logger.pass("Successfully viewed Recipe from History");
+			} else {
+				logger.fail("No Records in the history pane");
+			}
 		}
 		
 

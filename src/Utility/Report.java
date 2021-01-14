@@ -14,7 +14,7 @@ public class Report {
 	
 	@BeforeSuite
 	public void setUpReport() {
-		ExtentHtmlReporter extent = new ExtentHtmlReporter(new File(System.getProperty("user.dir")+"/Test_Report/TestResults"+Utils.getCurrentDateTime()+".html"));
+		ExtentHtmlReporter extent = new ExtentHtmlReporter(new File("./Test_report/TestResults.html"));
 				//(new File("./Test_report/TestResults.html"));
 				//(new File(System.getProperty("user.dir")+"/Test_Report/TestResults"+Utils.getCurrentDateTime()+".html"));
 		report = new ExtentReports();
