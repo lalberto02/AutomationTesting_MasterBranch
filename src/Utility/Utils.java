@@ -1,24 +1,26 @@
 package Utility;
 
 
-//import java.io.File;
+import java.io.File;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
-//import org.apache.commons.io.FileUtils;
-//import org.openqa.selenium.By;
-//import org.openqa.selenium.OutputType;
-//import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.edge.EdgeDriver;
-//import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Utils {
+
+public class Utils extends Report {
 		public static WebDriver driver = null;
 	public static WebDriver OpenBrowser(int iTestCaseRow) throws Exception{
 		String sURL;
@@ -35,7 +37,7 @@ public class Utils {
 		    driver.get(sURL);
 		    driver.manage().window().maximize();
 		    Thread.sleep(1000);
-		    //Log.info("Web application launched successfully");
+		    logger.info("Chrome application launched successfully");
 		}
 		
 		else if
@@ -49,7 +51,7 @@ public class Utils {
 		    driver.get(sURL1);
 		    driver.manage().window().maximize();
 		    Thread.sleep(1000);
-		    //Log.info("Web application launched successfully");
+		    logger.info("Edge application launched successfully");
 			}
 		
 		return driver;
@@ -71,45 +73,30 @@ public class Utils {
 					}
 			}
 	
-	 public static void mouseHoverAction(WebElement mainElement, String subElement){
-		
-		 Actions action = new Actions(driver);
-         action.moveToElement(mainElement).perform();
-         if(subElement.equals("lblProfile")){
-        	 action.moveToElement(driver.findElement(By.linkText("lblProfile")));
-        	 //Log.info("Accessories link is found under Product Category");
-         }
-         /*if(subElement.equals("iMacs")){
-        	 action.moveToElement(driver.findElement(By.linkText("iMacs")));
-        	 Log.info("iMacs link is found under Product Category");
-         }
-         if(subElement.equals("iPads")){
-        	 action.moveToElement(driver.findElement(By.linkText("iPads")));
-        	 Log.info("iPads link is found under Product Category");
-         }
-         if(subElement.equals("iPhones")){
-        	 action.moveToElement(driver.findElement(By.linkText("iPhones")));
-        	 Log.info("iPhones link is found under Product Category");
-         }*/
-         action.click();
-         action.perform();
-         //Log.info("Click action is performed on the selected Product Type");
-	 }
+
 	 public static void waitForElement(WebElement element, String string){
 		 
 		 WebDriverWait wait = new WebDriverWait(driver, 10);
 	     wait.until(ExpectedConditions.elementToBeClickable(element));
 	 	}
+	 
+	 public static String getCurrentDateTime() {
+		 DateFormat customFormat = new SimpleDateFormat("MM_dd_yyyy_HH_mm_ss");
+		 Date currentDate = new Date();
+		 return customFormat.format(currentDate);
+	 }
 		
-	/* public static void takeScreenshot(WebDriver driver, String sTestCaseName) throws Exception{
+	 public static String takeScreenshot(WebDriver driver) {
 			try{
 				File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-				FileUtils.copyFile(scrFile, new File(Constant.Path_ScreenShot + sTestCaseName +".jpg"));	
+				FileHandler.copy(scrFile,new File(Constant.Path_ScreenShot ));
+				//new File(Constant.Path_ScreenShot + sTestCaseName +".jpg"
 			} catch (Exception e){
-				Log.error("Class Utils | Method takeScreenshot | Exception occured while capturing ScreenShot : "+e.getMessage());
-				throw new Exception();
+				logger.error("Class Utils | Method takeScreenshot | Exception occured while capturing ScreenShot : "+e.getMessage());
 			}
-		}*/
+			
+			return Constant.Path_ScreenShot;
+		}
 	 
 	 
 	}

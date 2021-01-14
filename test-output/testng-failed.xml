@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestCases.Configuration_Module.Keyword_Tab.AUT_CMWeb_Recipe_NewKeyword">
+      <class name="TestCases.Recipe_Module.AUT_CMWeb_CreateNewRecipe">
         <methods>
-          <include name="beforeMethod"/>
-          <include name="afterMethod"/>
           <include name="main"/>
+          <include name="afterMethod"/>
+          <include name="setUpReport"/>
+          <include name="beforeMethod"/>
         </methods>
-      </class> <!-- TestCases.Configuration_Module.Keyword_Tab.AUT_CMWeb_Recipe_NewKeyword -->
+      </class> <!-- TestCases.Recipe_Module.AUT_CMWeb_CreateNewRecipe -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
