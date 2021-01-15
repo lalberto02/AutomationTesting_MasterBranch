@@ -29,21 +29,6 @@ public class CMWeb_ConfigurationPage extends BaseClass {
     	return Element;	
     }
     
-    // Configuration label
-    public static WebElement lblConfig() throws Exception {
-    	Element = null;
-    	try {
-    		// change frame
-    		driver.switchTo().defaultContent();
-    		WebElement frame  = driver.findElement(By.name("main"));
-	    	driver.switchTo().frame(frame);
-    		Element = driver.findElement(By.xpath("//*[@id=\"ctl00_cphPageTitle_lblTitle\"]"));
-    	} catch (Exception e) {
-    		throw(e);
-    	}
-    	return Element;
-    }
-    
     // system tab
     public static WebElement btnSystem() throws Exception {
     	Element = null;
@@ -166,7 +151,7 @@ public class CMWeb_ConfigurationPage extends BaseClass {
     	return Element;
     }
     
- // Menu Keyword button
+    // Keyword button
     public static WebElement btnKeywordMenu() throws Exception {
     	Element = null;
     	try {
@@ -231,9 +216,9 @@ public class CMWeb_ConfigurationPage extends BaseClass {
     	Element = null;
     	try {
     		// change frame
-    		driver.switchTo().defaultContent();
+    		/*driver.switchTo().defaultContent();
     	    WebElement frame  = driver.findElement(By.id("main"));
-    	    	driver.switchTo().frame(frame);
+    	    	driver.switchTo().frame(frame);*/
     	    	Element = driver.findElement(By.xpath("//*[@id=\"ctl00_cphPageContent_ctl00_ucEditor_tbxField2\"]"));
     	} catch (Exception e) {
     		throw(e);
@@ -786,6 +771,21 @@ public class CMWeb_ConfigurationPage extends BaseClass {
     	    WebElement frame  = driver.findElement(By.id("main"));
     	    	driver.switchTo().frame(frame).switchTo().frame("ctl00_cphPageContent_configframe");
     	    	Element = driver.findElement(By.xpath("//*[@id=\"ctl00_cphPageContent_ctl00_ucMenu_ucCBtnDeactivate_lnkBtn\"]"));
+    	} catch (Exception e) {
+    		throw(e);
+    	}
+    	return Element;
+    }
+    
+    // Configuration label
+    public static WebElement lblConfig() throws Exception {
+    	Element = null;
+    	try {
+    		// change frame
+    		driver.switchTo().defaultContent();
+    		WebElement frame  = driver.findElement(By.name("main"));
+	    	driver.switchTo().frame(frame);
+    		Element = driver.findElement(By.xpath("//*[@id=\"ctl00_cphPageTitle_lblTitle\"]"));
     	} catch (Exception e) {
     		throw(e);
     	}
