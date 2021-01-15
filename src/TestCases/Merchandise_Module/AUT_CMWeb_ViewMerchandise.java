@@ -18,9 +18,6 @@ import ObjectRepository.BaseClass;
 import Utility.Constant;
 import Utility.ExcelUtils;
 import Utility.Report;
-//import Utility.Constant;
-//import Utility.ExcelUtils;
-//import Utility.Log;
 import Utility.Utils;
 
 public class AUT_CMWeb_ViewMerchandise extends Report {

@@ -19,6 +19,7 @@ public class CMWeb_ConfigurationPage extends BaseClass {
     	Element = null;
     	try {
     		// change frame
+    		driver.switchTo().defaultContent();
     	    WebElement frame  = driver.findElement(By.name("header"));
     	    	driver.switchTo().frame(frame);
     	    	Element = driver.findElement(By.xpath("//*[@id=\"RadTabStrip1\"]/div/ul/li[5]/a"));
@@ -26,6 +27,21 @@ public class CMWeb_ConfigurationPage extends BaseClass {
     		throw(e);
     	}
     	return Element;	
+    }
+    
+    // Configuration label
+    public static WebElement lblConfig() throws Exception {
+    	Element = null;
+    	try {
+    		// change frame
+    		driver.switchTo().defaultContent();
+    		WebElement frame  = driver.findElement(By.name("main"));
+	    	driver.switchTo().frame(frame);
+    		Element = driver.findElement(By.xpath("//*[@id=\"ctl00_cphPageTitle_lblTitle\"]"));
+    	} catch (Exception e) {
+    		throw(e);
+    	}
+    	return Element;
     }
     
     // system tab
@@ -215,9 +231,9 @@ public class CMWeb_ConfigurationPage extends BaseClass {
     	Element = null;
     	try {
     		// change frame
-    		/*driver.switchTo().defaultContent();
+    		driver.switchTo().defaultContent();
     	    WebElement frame  = driver.findElement(By.id("main"));
-    	    	driver.switchTo().frame(frame);*/
+    	    	driver.switchTo().frame(frame);
     	    	Element = driver.findElement(By.xpath("//*[@id=\"ctl00_cphPageContent_ctl00_ucEditor_tbxField2\"]"));
     	} catch (Exception e) {
     		throw(e);
