@@ -10,18 +10,18 @@ public class ManagingRolesFunction extends Report {
 	public static void GoToConfiguration(int iTestCaseRow) throws Exception{
 		// click configuration tab
 		CMWeb_ConfigurationPage.btnConfig().click();
-		if (CMWeb_ConfigurationPage.lblConfig().isDisplayed()) {
+		/*if (CMWeb_ConfigurationPage.lblConfig().isDisplayed()) {
 			logger.pass("Configuration tab was displayed.");
 		} else {
 			logger.fail("Configuration Button was not clicked.");
-		}
+		}*/
 		
 	}
 	
 	public static void GoToRolesTab(int iTestCaseRow) throws Exception{
 		// Click Roles Button
 		CMWeb_ConfigurationPage.btnRoles().click();
-		if (CMWeb_ConfigurationPage.txtRoleName().isDisplayed()) {
+		if (CMWeb_ConfigurationPage.btnNew().isDisplayed()) {
 			logger.pass("Role tab was displayed.");		
 		} else {
 			logger.fail("Role button was not clicked.");
@@ -66,7 +66,7 @@ public class ManagingRolesFunction extends Report {
 		
 		// click check all for all tabs
 		CMWeb_ConfigurationPage.btnCheckAll().click();
-		logger.info(" Check all was checked.");
+		logger.info(" Check all was activated.");
 		
 	}
 	

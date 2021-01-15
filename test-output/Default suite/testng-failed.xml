@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestCases.Configuration_Module.Role_Tab.AUT_CMWeb_EditRole">
+      <class name="TestCases.Configuration_Module.Role_Tab.AUT_CMWeb_AddRole">
         <methods>
-          <include name="main"/>
-          <include name="setUpReport"/>
-          <include name="afterMethod"/>
           <include name="beforeMethod"/>
+          <include name="setUpReport"/>
+          <include name="main"/>
+          <include name="afterMethod"/>
         </methods>
-      </class> <!-- TestCases.Configuration_Module.Role_Tab.AUT_CMWeb_EditRole -->
+      </class> <!-- TestCases.Configuration_Module.Role_Tab.AUT_CMWeb_AddRole -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
