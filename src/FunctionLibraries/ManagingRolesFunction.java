@@ -10,11 +10,11 @@ public class ManagingRolesFunction extends Report {
 	public static void GoToConfiguration(int iTestCaseRow) throws Exception{
 		// click configuration tab
 		CMWeb_ConfigurationPage.btnConfig().click();
-		/*if (CMWeb_ConfigurationPage.lblConfig().isDisplayed()) {
+		if (CMWeb_ConfigurationPage.lblConfig().isDisplayed()) {
 			logger.pass("Configuration tab was displayed.");
 		} else {
 			logger.fail("Configuration Button was not clicked.");
-		}*/
+		}
 		
 	}
 	
