@@ -43,6 +43,8 @@ package Utility;
 		public static final int Col_German = 8;
 		public static final int Col_Italian = 9;
 		public static final int Col_Sharing = 10;
+		public static final int Col_NewEnglish = 11;
+		
 		public static final String Path_ScreenShot = System.getProperty("user.dir")+"/Screenshots/TestEvidence_"+Utils.getCurrentDateTime()+".png";
 	}
 
