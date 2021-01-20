@@ -31,9 +31,9 @@ public class ManagingKeywordFunction extends Report {
 		// Click Menu Button
 		CMWeb_ConfigurationPage.btnMenu().click();
 		if (CMWeb_ConfigurationPage.btnKeywordMenu().isDisplayed()) {
-			logger.pass("Recipe tab was displayed.");
+			logger.pass("Menu tab was displayed.");
 		} else {
-			logger.fail("Recipe button was not clicked.");
+			logger.fail("Menu button was not clicked.");
 		}
 	}
 
