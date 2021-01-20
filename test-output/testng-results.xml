@@ -2,35 +2,35 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-01-19T14:09:15 SGT" name="Default suite" finished-at="2021-01-19T14:10:26 SGT" duration-ms="70392">
+  <suite started-at="2021-01-20T10:09:14 SGT" name="Default suite" finished-at="2021-01-20T10:10:25 SGT" duration-ms="71156">
     <groups>
     </groups>
-    <test started-at="2021-01-19T14:09:15 SGT" name="Default test" finished-at="2021-01-19T14:10:26 SGT" duration-ms="70392">
-      <class name="TestCases.Configuration_Module.Keyword_Tab.AUT_CMWeb_Recipe_ModifyKeyword">
-        <test-method is-config="true" signature="setUpReport()[pri:0, instance:TestCases.Configuration_Module.Keyword_Tab.AUT_CMWeb_Recipe_ModifyKeyword@5403f35f]" started-at="2021-01-19T14:09:15 SGT" name="setUpReport" finished-at="2021-01-19T14:09:15 SGT" duration-ms="265" status="PASS">
+    <test started-at="2021-01-20T10:09:14 SGT" name="Default test" finished-at="2021-01-20T10:10:25 SGT" duration-ms="71156">
+      <class name="TestCases.Configuration_Module.Keyword_Tab.AUT_CMWeb_Menu_ModifyKeyword">
+        <test-method is-config="true" signature="setUpReport()[pri:0, instance:TestCases.Configuration_Module.Keyword_Tab.AUT_CMWeb_Menu_ModifyKeyword@5403f35f]" started-at="2021-01-20T10:09:14 SGT" name="setUpReport" finished-at="2021-01-20T10:09:14 SGT" duration-ms="343" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpReport -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCases.Configuration_Module.Keyword_Tab.AUT_CMWeb_Recipe_ModifyKeyword@5403f35f]" started-at="2021-01-19T14:09:15 SGT" name="beforeMethod" finished-at="2021-01-19T14:09:25 SGT" duration-ms="9145" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCases.Configuration_Module.Keyword_Tab.AUT_CMWeb_Menu_ModifyKeyword@5403f35f]" started-at="2021-01-20T10:09:14 SGT" name="beforeMethod" finished-at="2021-01-20T10:09:25 SGT" duration-ms="10706" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="main()[pri:0, instance:TestCases.Configuration_Module.Keyword_Tab.AUT_CMWeb_Recipe_ModifyKeyword@5403f35f]" started-at="2021-01-19T14:09:25 SGT" name="main" finished-at="2021-01-19T14:10:25 SGT" duration-ms="60382" status="PASS">
+        <test-method signature="main()[pri:0, instance:TestCases.Configuration_Module.Keyword_Tab.AUT_CMWeb_Menu_ModifyKeyword@5403f35f]" started-at="2021-01-20T10:09:25 SGT" name="main" finished-at="2021-01-20T10:10:24 SGT" duration-ms="59595" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- main -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:TestCases.Configuration_Module.Keyword_Tab.AUT_CMWeb_Recipe_ModifyKeyword@5403f35f]" started-at="2021-01-19T14:10:25 SGT" name="afterMethod" finished-at="2021-01-19T14:10:26 SGT" duration-ms="825" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:TestCases.Configuration_Module.Keyword_Tab.AUT_CMWeb_Menu_ModifyKeyword@5403f35f]" started-at="2021-01-20T10:10:24 SGT" name="afterMethod" finished-at="2021-01-20T10:10:25 SGT" duration-ms="815" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=main status=SUCCESS method=AUT_CMWeb_Recipe_ModifyKeyword.main()[pri:0, instance:TestCases.Configuration_Module.Keyword_Tab.AUT_CMWeb_Recipe_ModifyKeyword@5403f35f] output={null}]]]>
+                <![CDATA[[TestResult name=main status=SUCCESS method=AUT_CMWeb_Menu_ModifyKeyword.main()[pri:0, instance:TestCases.Configuration_Module.Keyword_Tab.AUT_CMWeb_Menu_ModifyKeyword@5403f35f] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- TestCases.Configuration_Module.Keyword_Tab.AUT_CMWeb_Recipe_ModifyKeyword -->
+      </class> <!-- TestCases.Configuration_Module.Keyword_Tab.AUT_CMWeb_Menu_ModifyKeyword -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
