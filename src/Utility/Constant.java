@@ -23,20 +23,25 @@ package Utility;
 		public static final int Col_Price = 11;
 		public static final int Col_Unit = 12;
 		public static final int Col_SearchName = 13;
+		
 		public static final int Col_SearchRecipe = 8;
+		
 		public static final int Col_Ingredient = 14;
 		public static final int Col_Determination = 15;
+		
 		public static final int Col_Source = 9;
 		public static final int Col_Yield = 10;
 		public static final int Col_Yield2 = 11;
 		public static final int Col_NetQTY = 12;
 		public static final int Col_ImposedNutrient = 13;
+		
 		public static final int Col_RoleType = 6;
 		public static final int Col_RoleLevel = 7;
 		public static final int Col_NewName = 8;
 		public static final int Col_Email = 9;
 		public static final int Col_User = 10;
 		public static final int Col_Pass = 11;
+		
 		public static final int Col_Parent = 5;
 		public static final int Col_English = 6;
 		public static final int Col_French = 7;
