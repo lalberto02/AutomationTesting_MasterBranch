@@ -20,6 +20,7 @@ public class CMWeb_MenuPlanPage extends BaseClass {
     	Element = null;
     	try {
     		// change frame
+    		driver.switchTo().defaultContent();
     	    WebElement frame  = driver.findElement(By.name("header"));
     	    	driver.switchTo().frame(frame);
     	    	Element = driver.findElement(By.xpath("//*[@id=\"RadTabStrip1\"]/div/ul/li[4]/a"));
