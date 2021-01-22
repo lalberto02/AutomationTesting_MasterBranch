@@ -50,6 +50,8 @@ package Utility;
 		public static final int Col_Sharing = 10;
 		public static final int Col_NewEnglish = 11;
 		
+		public static final int Col_MasterPlanGroup = 6;
+		
 		public static final String Path_ScreenShot = System.getProperty("user.dir")+"/Screenshots/TestEvidence_"+Utils.getCurrentDateTime()+".png";
 	}
 
