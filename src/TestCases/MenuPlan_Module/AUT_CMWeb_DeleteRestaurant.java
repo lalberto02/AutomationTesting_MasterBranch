@@ -18,7 +18,7 @@ import Utility.ExcelUtils;
 import Utility.Report;
 import Utility.Utils;
 
-public class AUT_CMWeb_CreateNewRestaurant extends Report{
+public class AUT_CMWeb_DeleteRestaurant extends Report {
 	public WebDriver driver;
 	private int iTestCaseRow;
 	private String sTestCaseName;
@@ -71,8 +71,8 @@ public class AUT_CMWeb_CreateNewRestaurant extends Report{
 		MenuPlanFunction.GoToMenuPlan(iTestCaseRow);
 		MenuPlanFunction.GoToConfiguration(iTestCaseRow);
 		MenuPlanFunction.GoToRestaurant(iTestCaseRow);
-		MenuPlanFunction.CreateRestaurant(iTestCaseRow);
-		MenuPlanFunction.SaveRestaurant(iTestCaseRow);
+		MenuPlanFunction.SearchRestaurant(iTestCaseRow);
+		MenuPlanFunction.DeleteRestaurant(iTestCaseRow);
 		
 		
 		if(BaseClass.bResult==true){

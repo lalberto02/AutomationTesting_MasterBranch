@@ -106,55 +106,56 @@ public class MenuPlanFunction extends Report {
 	
     // Save Master Plan
 	public static void SaveMasterPlan(int iTestCaseRow) throws Exception{
-		// sName = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Name);
+		String sName = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Name);
 		// Click Save
 		CMWeb_MenuPlanPage.btnSaveMasterPlan().click();
 		Thread.sleep(5000);
 		CMWeb_ConfigurationPage.alertOkay().accept();
-		logger.info(" Master Plan was successfully saved");		
+		logger.info(sName + " Master Plan was successfully saved");		
 	}
 	
     // Search Restaurant
 	public static void SearchRestaurant(int iTestCaseRow) throws Exception{
 		
 		// Input search
-		// sName = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Name);
-		CMWeb_MenuPlanPage.txtSearchRestau().sendKeys("Test_NewRestaurant");
-		logger.info(" restaurant name was entered");
+		String sName = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Name);
+		CMWeb_MenuPlanPage.txtSearchRestau().sendKeys(sName);
+		logger.info(sName + " restaurant name was entered");
 		
 		// click search 
 		CMWeb_MenuPlanPage.btnSearch().click();
-		logger.info(" Restaraunt was selected");
+		logger.info(sName + " Restaraunt was selected");
 	}
 	
 	// delete restaurant
 	public static void DeleteRestaurant(int iTestCaseRow) throws Exception{
-		
+		String sName = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Name);
 		//click remove button
 		CMWeb_MenuPlanPage.btnRemoveRestau().click();
 		Thread.sleep(5000);
 		CMWeb_ConfigurationPage.alertOkay().accept();
 		Thread.sleep(5000);
 		CMWeb_ConfigurationPage.alertOkay().accept();
-		logger.info(" Restaurant was successfully deleted");
+		logger.info(sName + " Restaurant was successfully deleted");
 		
 	}
 	
 	// delete masterplan
 	public static void DeleteMasterplan(int iTestCaseRow) throws Exception{
+		String sName = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Name);
 		// click remove button
 		CMWeb_MenuPlanPage.btnRemoveMenuPlan().click();
 		logger.info(" Removed menu plan button was click");
 		
 		// select menu plan
 		CMWeb_MenuPlanPage.chckboxMenuPlan().click();
-		logger.info(" Master Plan was selected");
+		logger.info(sName + " Master Plan was selected");
 		
 		// click delete button
 		CMWeb_MenuPlanPage.btnDeleteMenuPlan().click();
 		Thread.sleep(5000);
 		CMWeb_ConfigurationPage.alertOkay().accept();
-		logger.info(" Master Plan was successfully deleted");
+		logger.info(sName + " Master Plan was successfully deleted");
 		
 	}
 }
