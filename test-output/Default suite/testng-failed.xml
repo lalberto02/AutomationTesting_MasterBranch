@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestCases.MenuPlan_Module.AUT_CMWeb_DeleteRestaurant">
+      <class name="TestCases.MenuPlan_Module.AUT_CMWeb_CreateNewMasterPlan">
         <methods>
-          <include name="beforeMethod"/>
           <include name="setUpReport"/>
+          <include name="beforeMethod"/>
           <include name="afterMethod"/>
           <include name="main"/>
         </methods>
-      </class> <!-- TestCases.MenuPlan_Module.AUT_CMWeb_DeleteRestaurant -->
+      </class> <!-- TestCases.MenuPlan_Module.AUT_CMWeb_CreateNewMasterPlan -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
