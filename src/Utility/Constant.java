@@ -52,6 +52,9 @@ package Utility;
 		
 		public static final int Col_MasterPlanGroup = 6;
 		
+		public static final int Col_WhatToPrint = 12;
+		public static final int Col_PrintStyle = 13;
+		
 		public static final String Path_ScreenShot = System.getProperty("user.dir")+"/Screenshots/TestEvidence_"+Utils.getCurrentDateTime()+".png";
 	}
 
