@@ -109,6 +109,4 @@ public class ManagingPrintProfile extends Report {
 			CMWeb_ConfigurationPage.alertOkay().accept();
 			logger.pass(sName + " Print profile was successfully deleted.");
 		}
-		
-
 }
