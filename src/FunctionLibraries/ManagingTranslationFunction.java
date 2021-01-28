@@ -31,13 +31,13 @@ public class ManagingTranslationFunction extends Report {
 		}
 
 		// select translation
-		 String sDictionary = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Dictionary);
+		String sDictionary = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Dictionary);
 		CMWeb_ConfigurationPage.drpdwnDictionary().click();
 		CMWeb_ConfigurationPage.drpdwnDictionary().sendKeys(sDictionary);
 		logger.info("Language: " + sDictionary + " was selected.");
 
 		// input translation
-		 String sName = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Name);
+		String sName = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Name);
 		CMWeb_ConfigurationPage.txtTranslationName().sendKeys(sName);
 		logger.info(sName + " Translation was entered.");
 	}
@@ -95,11 +95,11 @@ public class ManagingTranslationFunction extends Report {
 		}
 
 		// change role name
-		 String sNewTranslationName = ExcelUtils.getCellData(iTestCaseRow,
-		 Constant.Col_NewName);
+		String sNewTranslationName = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_NewName);
 		CMWeb_ConfigurationPage.txtTranslationName().clear();
 		CMWeb_ConfigurationPage.txtTranslationName().sendKeys(sNewTranslationName);
 		logger.info("Translation name was changed to " + sNewTranslationName);
+
 	}
 
 }
