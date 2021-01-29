@@ -57,6 +57,8 @@ package Utility;
 		
 		public static final int Col_Dictionary = 14;
 		
+		public static final int Col_Database = 15;
+		
 		public static final String Path_ScreenShot = System.getProperty("user.dir")+"/Screenshots/TestEvidence_"+Utils.getCurrentDateTime()+".png";
 	}
 

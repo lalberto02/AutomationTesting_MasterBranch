@@ -19,7 +19,7 @@ import Utility.ExcelUtils;
 import Utility.Report;
 import Utility.Utils;
 
-public class AUT_CMWeb_SearchTranslation extends Report {
+public class AUT_CMWeb_DeleteTranslation extends Report {
 	public WebDriver driver;
 	private int iTestCaseRow;
 	private String sTestCaseName;
@@ -69,10 +69,11 @@ public class AUT_CMWeb_SearchTranslation extends Report {
 		// UserLogin
 		LoginFunction.Execute(iTestCaseRow);
 
-		// Search translation
+		// Delete translation name
 		ManagingRolesFunction.GoToConfiguration(iTestCaseRow);
 		ManagingTranslationFunction.GoToTranslationTab(iTestCaseRow);
 		ManagingTranslationFunction.SearchTranslation(iTestCaseRow);
+		ManagingTranslationFunction.DeleteTranslation(iTestCaseRow);
 		
 
 		if (BaseClass.bResult == true) {
@@ -106,4 +107,5 @@ public class AUT_CMWeb_SearchTranslation extends Report {
 		// Closing the opened driver
 		// driver.close();
 	}
+
 }
