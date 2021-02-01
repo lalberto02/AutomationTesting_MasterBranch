@@ -2,35 +2,35 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-01-29T10:47:02 SGT" name="Default suite" finished-at="2021-01-29T10:48:04 SGT" duration-ms="62254">
+  <suite started-at="2021-02-01T16:27:13 SGT" name="Default suite" finished-at="2021-02-01T16:27:46 SGT" duration-ms="33726">
     <groups>
     </groups>
-    <test started-at="2021-01-29T10:47:02 SGT" name="Default test" finished-at="2021-01-29T10:48:04 SGT" duration-ms="62254">
-      <class name="TestCases.Configuration_Module.Translation_Tab.AUT_CMWeb_DeleteTranslation">
-        <test-method is-config="true" signature="setUpReport()[pri:0, instance:TestCases.Configuration_Module.Translation_Tab.AUT_CMWeb_DeleteTranslation@5403f35f]" started-at="2021-01-29T10:47:01 SGT" name="setUpReport" finished-at="2021-01-29T10:47:02 SGT" duration-ms="351" status="PASS">
+    <test started-at="2021-02-01T16:27:13 SGT" name="Default test" finished-at="2021-02-01T16:27:46 SGT" duration-ms="33726">
+      <class name="TestCases.Configuration_Module.NutrientSet_Tab.AUT_CMWeb_EditPurchasingSetofPrice">
+        <test-method is-config="true" signature="setUpReport()[pri:0, instance:TestCases.Configuration_Module.NutrientSet_Tab.AUT_CMWeb_EditPurchasingSetofPrice@5403f35f]" started-at="2021-02-01T16:27:12 SGT" name="setUpReport" finished-at="2021-02-01T16:27:13 SGT" duration-ms="243" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpReport -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCases.Configuration_Module.Translation_Tab.AUT_CMWeb_DeleteTranslation@5403f35f]" started-at="2021-01-29T10:47:02 SGT" name="beforeMethod" finished-at="2021-01-29T10:47:47 SGT" duration-ms="45090" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCases.Configuration_Module.NutrientSet_Tab.AUT_CMWeb_EditPurchasingSetofPrice@5403f35f]" started-at="2021-02-01T16:27:13 SGT" name="beforeMethod" finished-at="2021-02-01T16:27:28 SGT" duration-ms="15789" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="main()[pri:0, instance:TestCases.Configuration_Module.Translation_Tab.AUT_CMWeb_DeleteTranslation@5403f35f]" started-at="2021-01-29T10:47:47 SGT" name="main" finished-at="2021-01-29T10:48:02 SGT" duration-ms="15214" status="PASS">
+        <test-method signature="main()[pri:0, instance:TestCases.Configuration_Module.NutrientSet_Tab.AUT_CMWeb_EditPurchasingSetofPrice@5403f35f]" started-at="2021-02-01T16:27:28 SGT" name="main" finished-at="2021-02-01T16:27:45 SGT" duration-ms="16934" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- main -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:TestCases.Configuration_Module.Translation_Tab.AUT_CMWeb_DeleteTranslation@5403f35f]" started-at="2021-01-29T10:48:02 SGT" name="afterMethod" finished-at="2021-01-29T10:48:04 SGT" duration-ms="1892" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:TestCases.Configuration_Module.NutrientSet_Tab.AUT_CMWeb_EditPurchasingSetofPrice@5403f35f]" started-at="2021-02-01T16:27:45 SGT" name="afterMethod" finished-at="2021-02-01T16:27:46 SGT" duration-ms="966" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=main status=SUCCESS method=AUT_CMWeb_DeleteTranslation.main()[pri:0, instance:TestCases.Configuration_Module.Translation_Tab.AUT_CMWeb_DeleteTranslation@5403f35f] output={null}]]]>
+                <![CDATA[[TestResult name=main status=SUCCESS method=AUT_CMWeb_EditPurchasingSetofPrice.main()[pri:0, instance:TestCases.Configuration_Module.NutrientSet_Tab.AUT_CMWeb_EditPurchasingSetofPrice@5403f35f] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- TestCases.Configuration_Module.Translation_Tab.AUT_CMWeb_DeleteTranslation -->
+      </class> <!-- TestCases.Configuration_Module.NutrientSet_Tab.AUT_CMWeb_EditPurchasingSetofPrice -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
