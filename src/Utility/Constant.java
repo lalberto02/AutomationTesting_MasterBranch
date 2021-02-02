@@ -59,6 +59,10 @@ package Utility;
 		
 		public static final int Col_Database = 15;
 		
+		public static final int Col_Currency = 5;
+		public static final int Col_PurchasePrice = 6;
+		public static final int Col_Factor = 7;
+		
 		public static final String Path_ScreenShot = System.getProperty("user.dir")+"/Screenshots/TestEvidence_"+Utils.getCurrentDateTime()+".png";
 	}
 
