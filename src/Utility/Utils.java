@@ -29,9 +29,7 @@ public class Utils extends Report {
 		if(sBrowserName.equals("Chrome")){
 			System.setProperty("webdriver.chrome.driver","C:\\Browser driver\\chromedriver.exe");
 			driver = new ChromeDriver();
-			//Log.info("New driver instantiated");
 		    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		    //Log.info("Implicit wait applied on the driver for 10 seconds");
 		    sURL = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_URL);
 		    driver.get(sURL);
 		    driver.manage().window().maximize();

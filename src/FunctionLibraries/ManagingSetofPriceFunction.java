@@ -54,7 +54,7 @@ public class ManagingSetofPriceFunction extends Report {
 
 		// Click save button
 		CMWeb_ConfigurationPage.btnSaveKeyword().click();
-		Thread.sleep(60000);
+		Thread.sleep(45000);
 		CMWeb_ConfigurationPage.alertOkay().accept();
 		/*
 		 * Thread.sleep(5000); CMWeb_ConfigurationPage.alertOkay().accept();
@@ -66,9 +66,9 @@ public class ManagingSetofPriceFunction extends Report {
 	public static void SearchPurchaseSet(int iTestCaseRow) throws Exception {
 
 		// search nutrient set
-		 String sCurrency = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Currency);
-		CMWeb_ConfigurationPage.txtSearchKeyword().sendKeys(sCurrency);
-		logger.info("Purchasing set name: " + sCurrency + " was entered");
+		String sPurchasePrice = ExcelUtils.getCellData(iTestCaseRow,Constant.Col_PurchasePrice);
+		CMWeb_ConfigurationPage.txtSearchKeyword().sendKeys(sPurchasePrice);
+		logger.info("Purchasing set name: " + sPurchasePrice + " was entered");
 		CMWeb_ConfigurationPage.btnSearchKeyword().click();
 		if (CMWeb_ConfigurationPage.chckboxPurchasingSet().isDisplayed()) {
 			logger.pass("Purchasing set was successfully searched");
