@@ -98,9 +98,9 @@ public class ManagingSetofPriceFunction extends Report {
 
 	// Delete Purchasing Set
 	public static void DeletePurchasingSet(int iTestCaseRow) throws Exception {
-		String sCurrency = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Currency);
+		String sPurchasePrice = ExcelUtils.getCellData(iTestCaseRow,Constant.Col_PurchasePrice);
 		CMWeb_ConfigurationPage.chckboxPurchasingSet().click();
-		logger.info("Purchasing Set: " + sCurrency + " to delete was selected");
+		logger.info("Purchasing Set: " + sPurchasePrice + " to delete was selected");
 
 		// click delete button
 		CMWeb_ConfigurationPage.btnDeleteKeyword().click();
@@ -108,7 +108,7 @@ public class ManagingSetofPriceFunction extends Report {
 		CMWeb_ConfigurationPage.alertOkay().accept();
 		Thread.sleep(30000);
 		CMWeb_ConfigurationPage.alertOkay().accept();
-		logger.pass(sCurrency + " Purchasing Set was successfully deleted.");
+		logger.pass(sPurchasePrice + " Purchasing Set was successfully deleted.");
 
 	}
 }
