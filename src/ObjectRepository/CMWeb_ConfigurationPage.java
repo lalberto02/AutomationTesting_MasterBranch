@@ -1105,7 +1105,7 @@ public class CMWeb_ConfigurationPage extends BaseClass {
 		return Element;
 	}
 
-	// Edit Nutrient Set button 
+	// Edit Nutrient Set button
 	public static WebElement btnEditNutrientSet() throws Exception {
 		Element = null;
 		try {
@@ -1200,7 +1200,7 @@ public class CMWeb_ConfigurationPage extends BaseClass {
 		return Element;
 	}
 
-	// Edit purchasing set button 
+	// Edit purchasing set button
 	public static WebElement btnEditPurchasingSet() throws Exception {
 		Element = null;
 		try {
@@ -1210,6 +1210,310 @@ public class CMWeb_ConfigurationPage extends BaseClass {
 			 * driver.findElement(By.id("main")); driver.switchTo().frame(frame);
 			 */
 			Element = driver.findElement(By.xpath("//*[@id=\"tblSetPrice\"]/tbody/tr/td[6]/span/img"));
+		} catch (Exception e) {
+			throw (e);
+		}
+		return Element;
+	}
+
+
+	// Tax Rates button
+	public static WebElement btnTaxRates() throws Exception {
+		Element = null;
+		try {
+			// change frame
+			driver.switchTo().defaultContent();
+			WebElement frame = driver.findElement(By.id("main"));
+			driver.switchTo().frame(frame);
+			Element = driver.findElement(By.xpath("//*[@id=\"ctl00_cphPageContent_ucDLN_Grid_ctl09_hypname\"]"));
+		} catch (Exception e) {
+			throw (e);
+		}
+		return Element;
+	}
+
+	// txtTaxName
+	public static WebElement txtTaxName() throws Exception {
+		Element = null;
+		try {
+			// change frame
+			/*
+			 * driver.switchTo().defaultContent(); WebElement frame =
+			 * driver.findElement(By.id("main")); driver.switchTo().frame(frame);
+			 */
+			Element = driver.findElement(By.xpath("//*[@id=\"managetplrow2\"]/div[2]/div/div/div/div[1]/div/input"));
+		} catch (Exception e) {
+			throw (e);
+		}
+		return Element;
+	}
+
+	// txtTaxRate
+	public static WebElement txtTaxRate() throws Exception {
+		Element = null;
+		try {
+			// change frame
+			/*
+			 * driver.switchTo().defaultContent(); WebElement frame =
+			 * driver.findElement(By.id("main")); driver.switchTo().frame(frame);
+			 */
+			Element = driver.findElement(By.xpath("//*[@id=\"managetplrow2\"]/div[2]/div/div/div/div[2]/div/input"));
+		} catch (Exception e) {
+			throw (e);
+		}
+		return Element;
+	}
+
+	// Global sharing Tax rate checkbox
+	public static WebElement chckboxGlobalTax() throws Exception {
+		Element = null;
+		try {
+			// change frame
+			/*
+			 * driver.switchTo().defaultContent(); WebElement frame =
+			 * driver.findElement(By.id("main")); driver.switchTo().frame(frame);
+			 */
+			Element = driver.findElement(By.xpath("//*[@id=\"managetplrow2\"]/div[3]/div[1]/div[1]/label/input"));
+		} catch (Exception e) {
+			throw (e);
+		}
+		return Element;
+	}
+
+	// HQ sharing Tax rate checkbox
+	public static WebElement chckboxHQTax() throws Exception {
+		Element = null;
+		try {
+			// change frame
+			/*
+			 * driver.switchTo().defaultContent(); WebElement frame =
+			 * driver.findElement(By.id("main")); driver.switchTo().frame(frame);
+			 */
+			Element = driver.findElement(
+					By.xpath("//*[@id=\"managetplrow2\"]/div[3]/div[1]/div[2]/ul/li/div[1]/div/ul/li/span/input"));
+		} catch (Exception e) {
+			throw (e);
+		}
+		return Element;
+	}
+
+	// tax rate checkbox
+	public static WebElement chckboxTaxRate() throws Exception {
+		Element = null;
+		try {
+			// change frame
+			/*
+			 * driver.switchTo().defaultContent(); WebElement frame =
+			 * driver.findElement(By.id("main")); driver.switchTo().frame(frame);
+			 */
+			Element = driver.findElement(By.xpath("//*[@id=\"tblTax\"]/tbody/tr/td[1]/input"));
+		} catch (Exception e) {
+			throw (e);
+		}
+		return Element;
+	}
+
+	// Merchandise Brand button
+	public static WebElement btnMerchBrand() throws Exception {
+		Element = null;
+		try {
+			// change frame
+			driver.switchTo().defaultContent();
+			WebElement frame = driver.findElement(By.id("main"));
+			driver.switchTo().frame(frame);
+			Element = driver.findElement(By.xpath("//*[@id=\"ctl00_cphPageContent_ucDLN_Grid_ctl00_hypname\"]"));
+		} catch (Exception e) {
+			throw (e);
+		}
+		return Element;
+	}
+
+	// parent brand dropdown
+	public static WebElement drpdwnParentBrand() throws Exception {
+		Element = null;
+		try {
+			// change frame
+			/*
+			 * driver.switchTo().defaultContent(); WebElement frame =
+			 * driver.findElement(By.id("main")); driver.switchTo().frame(frame);
+			 */
+			Element = driver.findElement(By.xpath("//*[@id=\"ParentDropDownManageBrand\"]"));
+		} catch (Exception e) {
+			throw (e);
+		}
+		return Element;
+	}
+
+	// txtFrenchBrand
+	public static WebElement txtFrenchBrand() throws Exception {
+		Element = null;
+		try {
+			// change frame
+			/*
+			 * driver.switchTo().defaultContent(); WebElement frame =
+			 * driver.findElement(By.id("main")); driver.switchTo().frame(frame);
+			 */
+			Element = driver.findElement(By.xpath("//*[@id=\"managetplrow2\"]/div[2]/div/div/div/div[3]/div/input"));
+		} catch (Exception e) {
+			throw (e);
+		}
+		return Element;
+	}
+
+	// txtGermanBrand
+	public static WebElement txtGermanBrand() throws Exception {
+		Element = null;
+		try {
+			// change frame
+			/*
+			 * driver.switchTo().defaultContent(); WebElement frame =
+			 * driver.findElement(By.id("main")); driver.switchTo().frame(frame);
+			 */
+			Element = driver.findElement(By.xpath("//*[@id=\"managetplrow2\"]/div[2]/div/div/div/div[4]/div/input"));
+		} catch (Exception e) {
+			throw (e);
+		}
+		return Element;
+	}
+
+	// txtItalianBrand
+	public static WebElement txtItalianBrand() throws Exception {
+		Element = null;
+		try {
+			// change frame
+			/*
+			 * driver.switchTo().defaultContent(); WebElement frame =
+			 * driver.findElement(By.id("main")); driver.switchTo().frame(frame);
+			 */
+			Element = driver.findElement(By.xpath("//*[@id=\"managetplrow2\"]/div[2]/div/div/div/div[5]/div/input"));
+		} catch (Exception e) {
+			throw (e);
+		}
+		return Element;
+	}
+
+	// parent brand checkbox
+	public static WebElement chckboxParentBrand() throws Exception {
+		Element = null;
+		try {
+			// change frame
+			/*
+			 * driver.switchTo().defaultContent(); WebElement frame =
+			 * driver.findElement(By.id("main")); driver.switchTo().frame(frame);
+			 */
+			Element = driver.findElement(By.xpath("//*[@id=\"managetplrow2\"]/div[2]/div/div/div/div[6]/label/input"));
+		} catch (Exception e) {
+			throw (e);
+		}
+		return Element;
+	}
+
+	// Brand checkbox
+	public static WebElement chckboxBrand() throws Exception {
+		Element = null;
+		try {
+			// change frame
+			/*
+			 * driver.switchTo().defaultContent(); WebElement frame =
+			 * driver.findElement(By.id("main")); driver.switchTo().frame(frame);
+			 */
+			Element = driver.findElement(By
+					.xpath("//*[@id=\"manageOptions\"]/div/div[4]/div/div/div[2]/div/ul/li/div/div/ul/li/span/input"));
+		} catch (Exception e) {
+			throw (e);
+		}
+		return Element;
+	}
+
+	// Merchandise Category button
+	public static WebElement btnCategory() throws Exception {
+		Element = null;
+		try {
+			// change frame
+			driver.switchTo().defaultContent();
+			WebElement frame = driver.findElement(By.id("main"));
+			driver.switchTo().frame(frame);
+			Element = driver.findElement(By.xpath("//*[@id=\"ctl00_cphPageContent_ucDLN_Grid_ctl01_hypname\"]"));
+		} catch (Exception e) {
+			throw (e);
+		}
+		return Element;
+	}
+
+	// txtEnglishCategory
+	public static WebElement txtEnglishCategory() throws Exception {
+		Element = null;
+		try {
+			// change frame
+			/*
+			 * driver.switchTo().defaultContent(); WebElement frame =
+			 * driver.findElement(By.id("main")); driver.switchTo().frame(frame);
+			 */
+			Element = driver.findElement(By.xpath("//*[@id=\"DeutschTextfield\"]"));
+		} catch (Exception e) {
+			throw (e);
+		}
+		return Element;
+	}
+
+	// txtFrenchCategory
+	public static WebElement txtFrenchCategory() throws Exception {
+		Element = null;
+		try {
+			// change frame
+			/*
+			 * driver.switchTo().defaultContent(); WebElement frame =
+			 * driver.findElement(By.id("main")); driver.switchTo().frame(frame);
+			 */
+			Element = driver.findElement(By.xpath("//*[@id=\"Text1\"]"));
+		} catch (Exception e) {
+			throw (e);
+		}
+		return Element;
+	}
+
+	// Menu Category button
+	public static WebElement btnMenuCategory() throws Exception {
+		Element = null;
+		try {
+			// change frame
+			driver.switchTo().defaultContent();
+			WebElement frame = driver.findElement(By.id("main"));
+			driver.switchTo().frame(frame);
+			Element = driver.findElement(By.xpath("//*[@id=\"ctl00_cphPageContent_ucDLN_Grid_ctl00_hypname\"]"));
+		} catch (Exception e) {
+			throw (e);
+		}
+		return Element;
+	}
+
+	// HQ sharing menu category checkbox
+	public static WebElement chckboxHQCategory() throws Exception {
+		Element = null;
+		try {
+			// change frame
+			/*
+			 * driver.switchTo().defaultContent(); WebElement frame =
+			 * driver.findElement(By.id("main")); driver.switchTo().frame(frame);
+			 */
+			Element = driver.findElement(
+					By.xpath("//*[@id=\"managetplrow2\"]/div[3]/div[1]/div[3]/ul/li/div[1]/div/ul/li/span/input"));
+		} catch (Exception e) {
+			throw (e);
+		}
+		return Element;
+	}
+
+	// category checkbox
+	public static WebElement chckboxCategory() throws Exception {
+		Element = null;
+		try {
+			// change frame
+			/*
+			 * driver.switchTo().defaultContent(); WebElement frame =
+			 * driver.findElement(By.id("main")); driver.switchTo().frame(frame);
+			 */
+			Element = driver.findElement(By.xpath("//*[@id=\"tblCategory\"]/tbody/tr/td[1]/input"));
 		} catch (Exception e) {
 			throw (e);
 		}
