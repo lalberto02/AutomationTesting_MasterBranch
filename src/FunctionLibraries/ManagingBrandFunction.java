@@ -65,7 +65,7 @@ public class ManagingBrandFunction extends Report {
 		}
 
 		// tick sharing
-		String sSharing = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_RoleLevel);
+		String sSharing = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Sharing);
 		if (sSharing.equals("Global")) {
 			CMWeb_ConfigurationPage.chckboxGlobalTax().click();
 			logger.info("Global Sharing was ticked.");
@@ -105,7 +105,7 @@ public class ManagingBrandFunction extends Report {
 		}
 		
 		// Edit brand
-		public static void EditTaxRate(int iTestCaseRow) throws Exception {
+		public static void EditBrand(int iTestCaseRow) throws Exception {
 
 			// tick brand to edit
 			CMWeb_ConfigurationPage.chckboxBrand().click();

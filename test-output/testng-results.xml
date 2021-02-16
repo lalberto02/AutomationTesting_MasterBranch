@@ -2,35 +2,35 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-02-11T15:54:03 SGT" name="Default suite" finished-at="2021-02-11T15:55:27 SGT" duration-ms="84045">
+  <suite started-at="2021-02-16T16:14:33 SGT" name="Default suite" finished-at="2021-02-16T16:15:49 SGT" duration-ms="76041">
     <groups>
     </groups>
-    <test started-at="2021-02-11T15:54:03 SGT" name="Default test" finished-at="2021-02-11T15:55:27 SGT" duration-ms="84045">
-      <class name="TestCases.Configuration_Module.Brand_Tab.AUT_CMWeb_DeleteMerchandiseBrand">
-        <test-method is-config="true" signature="setUpReport()[pri:0, instance:TestCases.Configuration_Module.Brand_Tab.AUT_CMWeb_DeleteMerchandiseBrand@5403f35f]" started-at="2021-02-11T15:54:02 SGT" name="setUpReport" finished-at="2021-02-11T15:54:03 SGT" duration-ms="229" status="PASS">
+    <test started-at="2021-02-16T16:14:33 SGT" name="Default test" finished-at="2021-02-16T16:15:49 SGT" duration-ms="76041">
+      <class name="TestCases.Configuration_Module.Category_Tab.AUT_CMWeb_Recipe_NewCategory">
+        <test-method is-config="true" signature="setUpReport()[pri:0, instance:TestCases.Configuration_Module.Category_Tab.AUT_CMWeb_Recipe_NewCategory@5403f35f]" started-at="2021-02-16T16:14:32 SGT" name="setUpReport" finished-at="2021-02-16T16:14:33 SGT" duration-ms="239" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpReport -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCases.Configuration_Module.Brand_Tab.AUT_CMWeb_DeleteMerchandiseBrand@5403f35f]" started-at="2021-02-11T15:54:03 SGT" name="beforeMethod" finished-at="2021-02-11T15:54:18 SGT" duration-ms="15133" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCases.Configuration_Module.Category_Tab.AUT_CMWeb_Recipe_NewCategory@5403f35f]" started-at="2021-02-16T16:14:33 SGT" name="beforeMethod" finished-at="2021-02-16T16:14:49 SGT" duration-ms="16193" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="main()[pri:0, instance:TestCases.Configuration_Module.Brand_Tab.AUT_CMWeb_DeleteMerchandiseBrand@5403f35f]" started-at="2021-02-11T15:54:18 SGT" name="main" finished-at="2021-02-11T15:55:26 SGT" duration-ms="67976" status="PASS">
+        <test-method signature="main()[pri:0, instance:TestCases.Configuration_Module.Category_Tab.AUT_CMWeb_Recipe_NewCategory@5403f35f]" started-at="2021-02-16T16:14:49 SGT" name="main" finished-at="2021-02-16T16:15:48 SGT" duration-ms="58848" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- main -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:TestCases.Configuration_Module.Brand_Tab.AUT_CMWeb_DeleteMerchandiseBrand@5403f35f]" started-at="2021-02-11T15:55:26 SGT" name="afterMethod" finished-at="2021-02-11T15:55:27 SGT" duration-ms="902" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:TestCases.Configuration_Module.Category_Tab.AUT_CMWeb_Recipe_NewCategory@5403f35f]" started-at="2021-02-16T16:15:48 SGT" name="afterMethod" finished-at="2021-02-16T16:15:49 SGT" duration-ms="961" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=main status=SUCCESS method=AUT_CMWeb_DeleteMerchandiseBrand.main()[pri:0, instance:TestCases.Configuration_Module.Brand_Tab.AUT_CMWeb_DeleteMerchandiseBrand@5403f35f] output={null}]]]>
+                <![CDATA[[TestResult name=main status=SUCCESS method=AUT_CMWeb_Recipe_NewCategory.main()[pri:0, instance:TestCases.Configuration_Module.Category_Tab.AUT_CMWeb_Recipe_NewCategory@5403f35f] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- TestCases.Configuration_Module.Brand_Tab.AUT_CMWeb_DeleteMerchandiseBrand -->
+      </class> <!-- TestCases.Configuration_Module.Category_Tab.AUT_CMWeb_Recipe_NewCategory -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

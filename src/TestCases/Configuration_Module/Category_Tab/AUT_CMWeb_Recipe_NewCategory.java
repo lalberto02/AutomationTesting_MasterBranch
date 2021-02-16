@@ -1,4 +1,4 @@
-package TestCases.Configuration_Module.Brand_Tab;
+package TestCases.Configuration_Module.Category_Tab;
 
 import java.io.IOException;
 
@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.MediaEntityBuilder;
 
 import FunctionLibraries.LoginFunction;
-import FunctionLibraries.ManagingBrandFunction;
+import FunctionLibraries.ManagingCategoryFunction;
 import FunctionLibraries.ManagingKeywordFunction;
 import FunctionLibraries.ManagingRolesFunction;
 import ObjectRepository.BaseClass;
@@ -20,7 +20,7 @@ import Utility.ExcelUtils;
 import Utility.Report;
 import Utility.Utils;
 
-public class AUT_CMWeb_EditMerchandiseBrand extends Report {
+public class AUT_CMWeb_Recipe_NewCategory extends Report {
 	public WebDriver driver;
 	private int iTestCaseRow;
 	private String sTestCaseName;
@@ -45,7 +45,7 @@ public class AUT_CMWeb_EditMerchandiseBrand extends Report {
 		// For setting up Excel for Data driven testing, please see
 		// http://www.toolsqa.com/data-driven-testing-excel-poi/
 		 ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData,
-		 "Merchandise");
+		 "Category");
 
 		// Fetching the Test Case row number from the Test Data Sheet
 		// This row number will be feed to so many functions, to get the relevant data
@@ -70,13 +70,12 @@ public class AUT_CMWeb_EditMerchandiseBrand extends Report {
 		// UserLogin
 		LoginFunction.Execute(iTestCaseRow);
 
-		// edit merchandise brand - change german translation
+		// Create recipe category
 		ManagingRolesFunction.GoToConfiguration(iTestCaseRow);
-		ManagingKeywordFunction.GoToMerchandiseTab(iTestCaseRow);
-		ManagingBrandFunction.GoToBrandTab(iTestCaseRow);
-		ManagingBrandFunction.SearchBrand(iTestCaseRow);
-		ManagingBrandFunction.EditBrand(iTestCaseRow);
-		ManagingBrandFunction.SaveBrand(iTestCaseRow);
+		ManagingKeywordFunction.GoToRecipeTab(iTestCaseRow);
+		ManagingCategoryFunction.GoToCategory(iTestCaseRow);
+		ManagingCategoryFunction.AddNewCategory(iTestCaseRow);
+		ManagingCategoryFunction.SaveCategory(iTestCaseRow);
 		
 
 		if (BaseClass.bResult == true) {
