@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestCases.Configuration_Module.Brand_Tab.AUT_CMWeb_EditMerchandiseBrand">
+      <class name="TestCases.Configuration_Module.Category_Tab.AUT_CMWeb_Merchandise_NewCategory">
         <methods>
-          <include name="setUpReport"/>
           <include name="afterMethod"/>
           <include name="main"/>
+          <include name="setUpReport"/>
           <include name="beforeMethod"/>
         </methods>
-      </class> <!-- TestCases.Configuration_Module.Brand_Tab.AUT_CMWeb_EditMerchandiseBrand -->
+      </class> <!-- TestCases.Configuration_Module.Category_Tab.AUT_CMWeb_Merchandise_NewCategory -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
