@@ -16,6 +16,16 @@ public class ManagingCategoryFunction extends Report {
 			logger.fail("Category button was not clicked.");
 		}
 	}
+	
+	public static void GoToMenuCategory(int iTestCaseRow) throws Exception {
+		// Click Keyword Button
+		CMWeb_ConfigurationPage.btnMenuCategory().click();
+		if (CMWeb_ConfigurationPage.btnNewKeyword().isDisplayed()) {
+			logger.pass("Category tab was displayed.");
+		} else {
+			logger.fail("Category button was not clicked.");
+		}
+	}
 
 	public static void AddNewCategory(int iTestCaseRow) throws Exception {
 		// Click New Button
@@ -49,37 +59,6 @@ public class ManagingCategoryFunction extends Report {
 		}
 	}
 
-/*	public static void AddNewCategoryMenu(int iTestCaseRow) throws Exception {
-		// Click New Button
-		CMWeb_ConfigurationPage.btnNewKeyword().click();
-		if (CMWeb_ConfigurationPage.txtEnglishCategory().isDisplayed()) {
-			logger.pass("Category create page was displayed");
-		} else {
-			logger.fail("New Button was not clicked.");
-		}
-
-		// input English Keyword
-		 String sEnglish = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_English);
-		CMWeb_ConfigurationPage.txtEnglishCategory().sendKeys(sEnglish);
-		logger.info("English tab was populated " + sEnglish );
-
-		// input French Keyword
-		 String sFrench = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_French);
-		CMWeb_ConfigurationPage.txtFrenchCategory().sendKeys(sFrench);
-		logger.info("French tab was populated " + sFrench);
-
-		// tick sharing
-		 String sSharing = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Sharing);
-		if (sSharing.equals("Global")) {
-			CMWeb_ConfigurationPage.chckboxGlobalTax().click();
-			logger.info("Global sharing was ticked");
-		} else if (sSharing.equals("HQ")) {
-			CMWeb_ConfigurationPage.chckboxHQCategory().click();
-			CMWeb_ConfigurationPage.chckboxHQCategory().click();
-			logger.info("HQ sharing was ticked");
-		}
-	}*/
-
 	// save Category
 	public static void SaveCategory(int iTestCaseRow) throws Exception {
 		 String sEnglish = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_English);
@@ -91,34 +70,10 @@ public class ManagingCategoryFunction extends Report {
 		logger.pass(sEnglish + " Category was successfully saved");
 	}
 
-	// Edit Category
+
+
+	// Edit  Category
 	public static void EditCategory(int iTestCaseRow) throws Exception {
-		// tick category to edit
-		CMWeb_ConfigurationPage.chckboxKeyword().click();
-		if (CMWeb_ConfigurationPage.txtParent().isDisplayed()) {
-			logger.pass("Category was able to edit.");
-		} else {
-			logger.fail("Edit button was not clicked.");
-		}
-
-		// change English Translation
-		 String sEnglish = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_English);
-		 String sNewEnglish = ExcelUtils.getCellData(iTestCaseRow,
-		 Constant.Col_NewEnglish);
-		CMWeb_ConfigurationPage.txtEnglish().clear();
-		CMWeb_ConfigurationPage.txtEnglish().sendKeys(sNewEnglish);
-		logger.info(sEnglish + " was changed to " + sNewEnglish);
-
-		// Change German Translation
-		 String sGerman = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_German);
-		CMWeb_ConfigurationPage.txtGerman().clear();
-		CMWeb_ConfigurationPage.txtGerman().sendKeys(sGerman);
-		logger.info("German translation was changed to " + sGerman);
-
-	}
-
-	// Edit Menu Category
-	public static void EditMenuCategory(int iTestCaseRow) throws Exception {
 		// tick category to edit
 		CMWeb_ConfigurationPage.chckboxCategory().click();
 		if (CMWeb_ConfigurationPage.txtEnglishCategory().isDisplayed()) {
@@ -128,32 +83,18 @@ public class ManagingCategoryFunction extends Report {
 		}
 
 		// change English Translation
-		 String sEnglish = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_English);
-		 String sNewEnglish = ExcelUtils.getCellData(iTestCaseRow,
+		 String sFrench = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_French);
+		 String sNewFrench = ExcelUtils.getCellData(iTestCaseRow,
 		 Constant.Col_NewEnglish);
-		CMWeb_ConfigurationPage.txtEnglishCategory().clear();
-		CMWeb_ConfigurationPage.txtEnglishCategory().sendKeys(sNewEnglish);
-		logger.info(sEnglish + " was changed to " + sNewEnglish);
+		CMWeb_ConfigurationPage.txtFrenchCategory().clear();
+		CMWeb_ConfigurationPage.txtFrenchCategory().sendKeys(sNewFrench);
+		logger.info(sFrench + " was changed to " + sNewFrench);
 
 	}
+
 
 	// Search category
 	public static void SearchCategory(int iTestCaseRow) throws Exception {
-
-		// search role
-		 String sEnglish = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_English);
-		CMWeb_ConfigurationPage.txtSearchKeyword().sendKeys(sEnglish);
-		CMWeb_ConfigurationPage.btnSearchKeyword().click();
-		if (CMWeb_ConfigurationPage.chckboxKeyword().isDisplayed()) {
-			logger.pass("Category: " + sEnglish + " was successfully searched");
-		} else {
-			logger.fail("No records existing");
-		}
-
-	}
-
-	// Search Menu category
-	public static void SearchMenuCategory(int iTestCaseRow) throws Exception {
 
 		// search role
 		 String sEnglish = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_English);
@@ -167,24 +108,9 @@ public class ManagingCategoryFunction extends Report {
 
 	}
 
-	// Delete category
-	public static void DeleteCategory(int iTestCaseRow) throws Exception {
-		 String sEnglish = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_English);
-
-		// tick category to delete
-		CMWeb_ConfigurationPage.chckboxKeyword().click();
-		logger.pass("Category to delete was ticked");
-
-		Thread.sleep(5000);
-		CMWeb_ConfigurationPage.alertOkay().accept();
-		Thread.sleep(5000);
-		CMWeb_ConfigurationPage.alertOkay().accept();
-		logger.pass(sEnglish + " was successfully deleted.");
-
-	}
 
 	// Delete Menu category
-	public static void DeleteMenuCategory(int iTestCaseRow) throws Exception {
+	public static void DeleteCategory(int iTestCaseRow) throws Exception {
 		 String sEnglish = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_English);
 
 		// tick category to delete
