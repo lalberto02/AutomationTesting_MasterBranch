@@ -20,7 +20,7 @@ import Utility.ExcelUtils;
 import Utility.Report;
 import Utility.Utils;
 
-public class AUT_CMWeb_Merchandise_ModifyCategory extends Report {
+public class AUT_CMWeb_Recipe_ModifyCategory extends Report {
 	public WebDriver driver;
 	private int iTestCaseRow;
 	private String sTestCaseName;
@@ -70,9 +70,9 @@ public class AUT_CMWeb_Merchandise_ModifyCategory extends Report {
 		// UserLogin
 		LoginFunction.Execute(iTestCaseRow);
 
-		// edit merchandise category - change french translation
+		// edit recipe category - change french translation
 		ManagingRolesFunction.GoToConfiguration(iTestCaseRow);
-		ManagingKeywordFunction.GoToMerchandiseTab(iTestCaseRow);
+		ManagingKeywordFunction.GoToRecipeTab(iTestCaseRow);
 		ManagingCategoryFunction.GoToCategory(iTestCaseRow);
 		ManagingCategoryFunction.SearchCategory(iTestCaseRow);
 		ManagingCategoryFunction.EditCategory(iTestCaseRow);
