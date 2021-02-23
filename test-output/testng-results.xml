@@ -2,35 +2,35 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-02-19T16:10:49 SGT" name="Default suite" finished-at="2021-02-19T16:11:51 SGT" duration-ms="61998">
+  <suite started-at="2021-02-23T13:30:56 SGT" name="Default suite" finished-at="2021-02-23T13:32:07 SGT" duration-ms="71772">
     <groups>
     </groups>
-    <test started-at="2021-02-19T16:10:49 SGT" name="Default test" finished-at="2021-02-19T16:11:51 SGT" duration-ms="61998">
-      <class name="TestCases.Configuration_Module.Category_Tab.AUT_CMWeb_Menu_SearchCategory">
-        <test-method is-config="true" signature="setUpReport()[pri:0, instance:TestCases.Configuration_Module.Category_Tab.AUT_CMWeb_Menu_SearchCategory@5403f35f]" started-at="2021-02-19T16:10:49 SGT" name="setUpReport" finished-at="2021-02-19T16:10:49 SGT" duration-ms="225" status="PASS">
+    <test started-at="2021-02-23T13:30:56 SGT" name="Default test" finished-at="2021-02-23T13:32:07 SGT" duration-ms="71772">
+      <class name="TestCases.Configuration_Module.Category_Tab.AUT_CMWeb_Menu_DeleteCategory">
+        <test-method is-config="true" signature="setUpReport()[pri:0, instance:TestCases.Configuration_Module.Category_Tab.AUT_CMWeb_Menu_DeleteCategory@5403f35f]" started-at="2021-02-23T13:30:55 SGT" name="setUpReport" finished-at="2021-02-23T13:30:56 SGT" duration-ms="227" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpReport -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCases.Configuration_Module.Category_Tab.AUT_CMWeb_Menu_SearchCategory@5403f35f]" started-at="2021-02-19T16:10:49 SGT" name="beforeMethod" finished-at="2021-02-19T16:11:05 SGT" duration-ms="16131" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCases.Configuration_Module.Category_Tab.AUT_CMWeb_Menu_DeleteCategory@5403f35f]" started-at="2021-02-23T13:30:56 SGT" name="beforeMethod" finished-at="2021-02-23T13:31:11 SGT" duration-ms="15726" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="main()[pri:0, instance:TestCases.Configuration_Module.Category_Tab.AUT_CMWeb_Menu_SearchCategory@5403f35f]" started-at="2021-02-19T16:11:05 SGT" name="main" finished-at="2021-02-19T16:11:50 SGT" duration-ms="44973" status="PASS">
+        <test-method signature="main()[pri:0, instance:TestCases.Configuration_Module.Category_Tab.AUT_CMWeb_Menu_DeleteCategory@5403f35f]" started-at="2021-02-23T13:31:11 SGT" name="main" finished-at="2021-02-23T13:32:06 SGT" duration-ms="54991" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- main -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:TestCases.Configuration_Module.Category_Tab.AUT_CMWeb_Menu_SearchCategory@5403f35f]" started-at="2021-02-19T16:11:50 SGT" name="afterMethod" finished-at="2021-02-19T16:11:51 SGT" duration-ms="863" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:TestCases.Configuration_Module.Category_Tab.AUT_CMWeb_Menu_DeleteCategory@5403f35f]" started-at="2021-02-23T13:32:06 SGT" name="afterMethod" finished-at="2021-02-23T13:32:07 SGT" duration-ms="1016" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=main status=SUCCESS method=AUT_CMWeb_Menu_SearchCategory.main()[pri:0, instance:TestCases.Configuration_Module.Category_Tab.AUT_CMWeb_Menu_SearchCategory@5403f35f] output={null}]]]>
+                <![CDATA[[TestResult name=main status=SUCCESS method=AUT_CMWeb_Menu_DeleteCategory.main()[pri:0, instance:TestCases.Configuration_Module.Category_Tab.AUT_CMWeb_Menu_DeleteCategory@5403f35f] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- TestCases.Configuration_Module.Category_Tab.AUT_CMWeb_Menu_SearchCategory -->
+      </class> <!-- TestCases.Configuration_Module.Category_Tab.AUT_CMWeb_Menu_DeleteCategory -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
