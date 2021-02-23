@@ -1519,4 +1519,109 @@ public class CMWeb_ConfigurationPage extends BaseClass {
 		}
 		return Element;
 	}
+	
+    // Recipe publication button
+    public static WebElement btnPublication() throws Exception {
+    	Element = null;
+    	try {
+    		// change frame
+    		driver.switchTo().defaultContent();
+    	    WebElement frame  = driver.findElement(By.id("main"));
+    	    	driver.switchTo().frame(frame);
+    	    	Element = driver.findElement(By.xpath("//*[@id=\"ctl00_cphPageContent_ucDLN_Grid_ctl03_hypname\"]"));
+    	} catch (Exception e) {
+    		throw(e);
+    	}
+    	return Element;
+    }
+    
+    //  new publication button
+    public static WebElement btnNewPublication() throws Exception {
+    	Element = null;
+    	try {
+    		// change frame
+    		driver.switchTo().defaultContent();
+    	    WebElement frame  = driver.findElement(By.id("main"));
+    	    	driver.switchTo().frame(frame).switchTo().frame("ctl00_cphPageContent_configframe");
+    	    	Element = driver.findElement(By.xpath("//*[@id=\"managetplclearfix\"]/span[1]/a"));
+    	} catch (Exception e) {
+    		throw(e);
+    	}
+    	return Element;
+    }
+    
+    //drpdwnPubParent
+    public static WebElement drpdwnPubParent() throws Exception {
+    	Element = null;
+    	try {
+    		// change frame
+    		/*driver.switchTo().defaultContent();
+    	    WebElement frame  = driver.findElement(By.id("main"));
+    	    	driver.switchTo().frame(frame);*/
+    	    	Element = driver.findElement(By.xpath("//*[@id=\"managetplrow2\"]/div[2]/div/div/div/div[1]/div/select"));
+    	} catch (Exception e) {
+    		throw(e);
+    	}
+    	return Element;
+    }
+    
+    // txtPubName
+    public static WebElement txtPubName() throws Exception {
+    	Element = null;
+    	try {
+    		// change frame
+    		/*driver.switchTo().defaultContent();
+    	    WebElement frame  = driver.findElement(By.id("main"));
+    	    	driver.switchTo().frame(frame);*/
+    	    	Element = driver.findElement(By.xpath("//*[@id=\"managetplrow2\"]/div[2]/div/div/div/div[2]/div/input"));
+    	} catch (Exception e) {
+    		throw(e);
+    	}
+    	return Element;
+    }
+    
+    // parent publication checkbox
+    public static WebElement chckboxParentPub() throws Exception {
+    	Element = null;
+    	try {
+    		// change frame
+    		/*driver.switchTo().defaultContent();
+    	    WebElement frame  = driver.findElement(By.id("main"));
+    	    	driver.switchTo().frame(frame);*/
+    	    	Element = driver.findElement(By.xpath("//*[@id=\"managetplrow2\"]/div[2]/div/div/div/div[3]/label/input"));
+    	} catch (Exception e) {
+    		throw(e);
+    	}
+    	return Element;
+    }
+    
+    // HQ sharing publication checkbox
+    public static WebElement chckboxHQPub() throws Exception {
+    	Element = null;
+    	try {
+    		// change frame
+    		/*driver.switchTo().defaultContent();
+    	    WebElement frame  = driver.findElement(By.id("main"));
+    	    	driver.switchTo().frame(frame);*/
+    	    	Element = driver.findElement(By.xpath("//*[@id=\"managetplrow2\"]/div[3]/div[1]/div[1]/ul/li/div[1]/div/ul/li/span/input"));
+    	} catch (Exception e) {
+    		throw(e);
+    	}
+    	return Element;
+    }
+    
+    // publication checkbox
+    public static WebElement chckboxPublication() throws Exception {
+    	Element = null;
+    	try {
+    		// change frame
+    		/*driver.switchTo().defaultContent();
+    	    WebElement frame  = driver.findElement(By.id("main"));
+    	    	driver.switchTo().frame(frame);*/
+    	    	Element = driver.findElement(By.xpath("//*[@id=\"manageOptions\"]/div/div[4]/div/div/div/div[1]/ul/li/span/input"));
+    	} catch (Exception e) {
+    		throw(e);
+    	}
+    	return Element;
+    }
 }

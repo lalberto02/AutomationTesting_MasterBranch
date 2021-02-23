@@ -65,6 +65,10 @@ package Utility;
 		
 		public static final int Col_UseParent = 12;
 		
+		public static final int Col_UseParentPub = 7;
+		public static final int Col_SharingPub = 8;
+		public static final int Col_NewPubName = 9;
+		
 		public static final String Path_ScreenShot = System.getProperty("user.dir")+"/Screenshots/TestEvidence_"+Utils.getCurrentDateTime()+".png";
 	}
 
