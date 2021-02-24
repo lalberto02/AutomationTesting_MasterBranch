@@ -96,7 +96,7 @@ public class ManagingTaxRatesFunction extends Report {
 	}
 	
 	// Delete tax rate
-	public static void DeleteNutrientSet(int iTestCaseRow) throws Exception {
+	public static void DeleteTaxRate(int iTestCaseRow) throws Exception {
 		// select print profile
 		 String sName = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Name);
 		CMWeb_ConfigurationPage.chckboxTaxRate().click();

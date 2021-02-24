@@ -1,4 +1,4 @@
-package TestCases.Configuration_Module.TaxRates_Tab;
+package TestCases.Configuration_Module.Publication_Tab;
 
 import java.io.IOException;
 
@@ -11,15 +11,16 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.MediaEntityBuilder;
 
 import FunctionLibraries.LoginFunction;
+import FunctionLibraries.ManagingKeywordFunction;
+import FunctionLibraries.ManagingPublicationFunction;
 import FunctionLibraries.ManagingRolesFunction;
-import FunctionLibraries.ManagingTaxRatesFunction;
 import ObjectRepository.BaseClass;
 import Utility.Constant;
 import Utility.ExcelUtils;
 import Utility.Report;
 import Utility.Utils;
 
-public class AUT_CMWeb_DeleteTaxRates extends Report {
+public class AUT_CMWeb_SearchRecipePublication extends Report {
 	public WebDriver driver;
 	private int iTestCaseRow;
 	private String sTestCaseName;
@@ -44,7 +45,7 @@ public class AUT_CMWeb_DeleteTaxRates extends Report {
 		// For setting up Excel for Data driven testing, please see
 		// http://www.toolsqa.com/data-driven-testing-excel-poi/
 		 ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData,
-		 "Configuration");
+		 "Recipe");
 
 		// Fetching the Test Case row number from the Test Data Sheet
 		// This row number will be feed to so many functions, to get the relevant data
@@ -69,12 +70,11 @@ public class AUT_CMWeb_DeleteTaxRates extends Report {
 		// UserLogin
 		LoginFunction.Execute(iTestCaseRow);
 
-		// Delete tax rate
+		// search specific recipe publication
 		ManagingRolesFunction.GoToConfiguration(iTestCaseRow);
-		ManagingTaxRatesFunction.GoToTaxRatesTab(iTestCaseRow);
-		ManagingTaxRatesFunction.SearchTaxRate(iTestCaseRow);
-		ManagingTaxRatesFunction.DeleteTaxRate(iTestCaseRow);
-		
+		ManagingKeywordFunction.GoToRecipeTab(iTestCaseRow);
+		ManagingPublicationFunction.GoToPublicationTab(iTestCaseRow);
+		ManagingPublicationFunction.SearchPublication(iTestCaseRow);
 		
 
 		if (BaseClass.bResult == true) {
@@ -108,4 +108,5 @@ public class AUT_CMWeb_DeleteTaxRates extends Report {
 		// Closing the opened driver
 		// driver.close();
 	}
+
 }
