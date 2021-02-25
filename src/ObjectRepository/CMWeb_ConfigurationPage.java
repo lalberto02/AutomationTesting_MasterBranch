@@ -1624,4 +1624,109 @@ public class CMWeb_ConfigurationPage extends BaseClass {
     	}
     	return Element;
     }
+    
+    // recipe time button
+    public static WebElement btnRecipeTime() throws Exception {
+    	Element = null;
+    	try {
+    		// change frame
+    		driver.switchTo().defaultContent();
+    	    WebElement frame  = driver.findElement(By.id("main"));
+    	    	driver.switchTo().frame(frame);
+    	    	Element = driver.findElement(By.xpath("//*[@id=\"ctl00_cphPageContent_ucDLN_Grid_ctl05_hypname\"]"));
+    	} catch (Exception e) {
+    		throw(e);
+    	}
+    	return Element;
+    }
+    
+    // txtTimeName
+    public static WebElement txtTimeName() throws Exception {
+    	Element = null;
+    	try {
+    		// change frame
+    		/*driver.switchTo().defaultContent();
+    	    WebElement frame  = driver.findElement(By.id("main"));
+    	    	driver.switchTo().frame(frame);*/
+    	    	Element = driver.findElement(By.xpath("//*[@id=\"managetplrow2\"]/div[2]/div/div[1]/div/div/div[2]/input"));
+    	} catch (Exception e) {
+    		throw(e);
+    	}
+    	return Element;
+    }
+    
+    // txtTimeFrench
+    public static WebElement txtTimeFrench() throws Exception {
+    	Element = null;
+    	try {
+    		// change frame
+    		/*driver.switchTo().defaultContent();
+    	    WebElement frame  = driver.findElement(By.id("main"));
+    	    	driver.switchTo().frame(frame);*/
+    	    	Element = driver.findElement(By.xpath("//*[@id=\"managetplrow2\"]/div[2]/div/div[2]/div/div/div/input"));
+    	} catch (Exception e) {
+    		throw(e);
+    	}
+    	return Element;
+    }
+    
+    // total time checkbox
+    public static WebElement chckboxTotalTime() throws Exception {
+    	Element = null;
+    	try {
+    		// change frame
+    		/*driver.switchTo().defaultContent();
+    	    WebElement frame  = driver.findElement(By.id("main"));
+    	    	driver.switchTo().frame(frame);*/
+    	    	Element = driver.findElement(By.xpath("//*[@id=\"managetplrow2\"]/div[3]/div[2]/div/div[2]/label/input"));
+    	} catch (Exception e) {
+    		throw(e);
+    	}
+    	return Element;
+    }
+    
+    // global time sharing checkbox
+    public static WebElement chckboxGlobalTime() throws Exception {
+    	Element = null;
+    	try {
+    		// change frame
+    		/*driver.switchTo().defaultContent();
+    	    WebElement frame  = driver.findElement(By.id("main"));
+    	    	driver.switchTo().frame(frame);*/
+    	    	Element = driver.findElement(By.xpath("//*[@id=\"managetplrow2\"]/div[4]/div[1]/div[1]/label/input"));
+    	} catch (Exception e) {
+    		throw(e);
+    	}
+    	return Element;
+    }
+    
+    // HQ time sharing checkbox
+    public static WebElement chckboxHQTime() throws Exception {
+    	Element = null;
+    	try {
+    		// change frame
+    		/*driver.switchTo().defaultContent();
+    	    WebElement frame  = driver.findElement(By.id("main"));
+    	    	driver.switchTo().frame(frame);*/
+    	    	Element = driver.findElement(By.xpath("//*[@id=\"managetplrow2\"]/div[4]/div[1]/div[2]/ul/li/div[1]/div/ul/li/span/input"));
+    	} catch (Exception e) {
+    		throw(e);
+    	}
+    	return Element;
+    }
+    
+    // Recipe time checkbox
+    public static WebElement chckboxRecipeTime() throws Exception {
+    	Element = null;
+    	try {
+    		// change frame
+    		/*driver.switchTo().defaultContent();
+    	    WebElement frame  = driver.findElement(By.id("main"));
+    	    	driver.switchTo().frame(frame);*/
+    	    	Element = driver.findElement(By.xpath("//*[@id=\"tblTime\"]/tbody/tr/td[1]/div/input"));
+    	} catch (Exception e) {
+    		throw(e);
+    	}
+    	return Element;
+    }
 }
