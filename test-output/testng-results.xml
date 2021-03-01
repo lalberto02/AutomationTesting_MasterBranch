@@ -2,35 +2,35 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-02-26T16:54:15 SGT" name="Default suite" finished-at="2021-02-26T16:55:22 SGT" duration-ms="67257">
+  <suite started-at="2021-03-01T16:43:08 SGT" name="Default suite" finished-at="2021-03-01T16:44:31 SGT" duration-ms="82185">
     <groups>
     </groups>
-    <test started-at="2021-02-26T16:54:15 SGT" name="Default test" finished-at="2021-02-26T16:55:22 SGT" duration-ms="67257">
-      <class name="TestCases.Configuration_Module.RecipeTime_Tab.AUT_CMWeb_SearchRecipeTime">
-        <test-method is-config="true" signature="setUpReport()[pri:0, instance:TestCases.Configuration_Module.RecipeTime_Tab.AUT_CMWeb_SearchRecipeTime@5403f35f]" started-at="2021-02-26T16:54:15 SGT" name="setUpReport" finished-at="2021-02-26T16:54:15 SGT" duration-ms="225" status="PASS">
+    <test started-at="2021-03-01T16:43:08 SGT" name="Default test" finished-at="2021-03-01T16:44:31 SGT" duration-ms="82185">
+      <class name="TestCases.Configuration_Module.RecipeTime_Tab.AUT_CMWeb_EditRecipeTime">
+        <test-method is-config="true" signature="setUpReport()[pri:0, instance:TestCases.Configuration_Module.RecipeTime_Tab.AUT_CMWeb_EditRecipeTime@5403f35f]" started-at="2021-03-01T16:43:08 SGT" name="setUpReport" finished-at="2021-03-01T16:43:08 SGT" duration-ms="368" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpReport -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCases.Configuration_Module.RecipeTime_Tab.AUT_CMWeb_SearchRecipeTime@5403f35f]" started-at="2021-02-26T16:54:15 SGT" name="beforeMethod" finished-at="2021-02-26T16:54:32 SGT" duration-ms="16560" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCases.Configuration_Module.RecipeTime_Tab.AUT_CMWeb_EditRecipeTime@5403f35f]" started-at="2021-03-01T16:43:09 SGT" name="beforeMethod" finished-at="2021-03-01T16:43:31 SGT" duration-ms="22576" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="main()[pri:0, instance:TestCases.Configuration_Module.RecipeTime_Tab.AUT_CMWeb_SearchRecipeTime@5403f35f]" started-at="2021-02-26T16:54:32 SGT" name="main" finished-at="2021-02-26T16:55:22 SGT" duration-ms="49864" status="PASS">
+        <test-method signature="main()[pri:0, instance:TestCases.Configuration_Module.RecipeTime_Tab.AUT_CMWeb_EditRecipeTime@5403f35f]" started-at="2021-03-01T16:43:31 SGT" name="main" finished-at="2021-03-01T16:44:29 SGT" duration-ms="58184" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- main -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:TestCases.Configuration_Module.RecipeTime_Tab.AUT_CMWeb_SearchRecipeTime@5403f35f]" started-at="2021-02-26T16:55:22 SGT" name="afterMethod" finished-at="2021-02-26T16:55:22 SGT" duration-ms="800" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:TestCases.Configuration_Module.RecipeTime_Tab.AUT_CMWeb_EditRecipeTime@5403f35f]" started-at="2021-03-01T16:44:29 SGT" name="afterMethod" finished-at="2021-03-01T16:44:31 SGT" duration-ms="1358" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=main status=SUCCESS method=AUT_CMWeb_SearchRecipeTime.main()[pri:0, instance:TestCases.Configuration_Module.RecipeTime_Tab.AUT_CMWeb_SearchRecipeTime@5403f35f] output={null}]]]>
+                <![CDATA[[TestResult name=main status=SUCCESS method=AUT_CMWeb_EditRecipeTime.main()[pri:0, instance:TestCases.Configuration_Module.RecipeTime_Tab.AUT_CMWeb_EditRecipeTime@5403f35f] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- TestCases.Configuration_Module.RecipeTime_Tab.AUT_CMWeb_SearchRecipeTime -->
+      </class> <!-- TestCases.Configuration_Module.RecipeTime_Tab.AUT_CMWeb_EditRecipeTime -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
