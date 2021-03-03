@@ -41,7 +41,7 @@ public class ManagingSourceFunction extends Report {
 				logger.info("Global Sharing was ticked.");
 			} else if (sSharing.equals("HQ")) {
 				CMWeb_ConfigurationPage.chckboxHQTax().click();
-				CMWeb_ConfigurationPage.chckboxHQTax().click();
+				CMWeb_ConfigurationPage.chckboxHQTax().click(); 
 				logger.info("HQ Sharing was ticked.");
 			}
 
