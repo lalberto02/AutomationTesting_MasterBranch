@@ -2,35 +2,35 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-03-03T15:14:28 SGT" name="Default suite" finished-at="2021-03-03T15:15:36 SGT" duration-ms="67578">
+  <suite started-at="2021-03-04T17:00:44 SGT" name="Default suite" finished-at="2021-03-04T17:02:19 SGT" duration-ms="95188">
     <groups>
     </groups>
-    <test started-at="2021-03-03T15:14:28 SGT" name="Default test" finished-at="2021-03-03T15:15:36 SGT" duration-ms="67578">
-      <class name="TestCases.Configuration_Module.Source_Tab.AUT_CMWeb_SearchRecipeSource">
-        <test-method is-config="true" signature="setUpReport()[pri:0, instance:TestCases.Configuration_Module.Source_Tab.AUT_CMWeb_SearchRecipeSource@5403f35f]" started-at="2021-03-03T15:14:28 SGT" name="setUpReport" finished-at="2021-03-03T15:14:28 SGT" duration-ms="232" status="PASS">
+    <test started-at="2021-03-04T17:00:44 SGT" name="Default test" finished-at="2021-03-04T17:02:19 SGT" duration-ms="95188">
+      <class name="TestCases.Configuration_Module.Source_Tab.AUT_CMWeb_DeleteRecipeSource">
+        <test-method is-config="true" signature="setUpReport()[pri:0, instance:TestCases.Configuration_Module.Source_Tab.AUT_CMWeb_DeleteRecipeSource@5403f35f]" started-at="2021-03-04T17:00:44 SGT" name="setUpReport" finished-at="2021-03-04T17:00:44 SGT" duration-ms="270" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpReport -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCases.Configuration_Module.Source_Tab.AUT_CMWeb_SearchRecipeSource@5403f35f]" started-at="2021-03-03T15:14:28 SGT" name="beforeMethod" finished-at="2021-03-03T15:14:43 SGT" duration-ms="15013" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCases.Configuration_Module.Source_Tab.AUT_CMWeb_DeleteRecipeSource@5403f35f]" started-at="2021-03-04T17:00:44 SGT" name="beforeMethod" finished-at="2021-03-04T17:00:59 SGT" duration-ms="15008" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="main()[pri:0, instance:TestCases.Configuration_Module.Source_Tab.AUT_CMWeb_SearchRecipeSource@5403f35f]" started-at="2021-03-03T15:14:43 SGT" name="main" finished-at="2021-03-03T15:15:35 SGT" duration-ms="51665" status="PASS">
+        <test-method signature="main()[pri:0, instance:TestCases.Configuration_Module.Source_Tab.AUT_CMWeb_DeleteRecipeSource@5403f35f]" started-at="2021-03-04T17:00:59 SGT" name="main" finished-at="2021-03-04T17:02:18 SGT" duration-ms="79282" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- main -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:TestCases.Configuration_Module.Source_Tab.AUT_CMWeb_SearchRecipeSource@5403f35f]" started-at="2021-03-03T15:15:35 SGT" name="afterMethod" finished-at="2021-03-03T15:15:36 SGT" duration-ms="867" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:TestCases.Configuration_Module.Source_Tab.AUT_CMWeb_DeleteRecipeSource@5403f35f]" started-at="2021-03-04T17:02:18 SGT" name="afterMethod" finished-at="2021-03-04T17:02:19 SGT" duration-ms="861" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=main status=SUCCESS method=AUT_CMWeb_SearchRecipeSource.main()[pri:0, instance:TestCases.Configuration_Module.Source_Tab.AUT_CMWeb_SearchRecipeSource@5403f35f] output={null}]]]>
+                <![CDATA[[TestResult name=main status=SUCCESS method=AUT_CMWeb_DeleteRecipeSource.main()[pri:0, instance:TestCases.Configuration_Module.Source_Tab.AUT_CMWeb_DeleteRecipeSource@5403f35f] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- TestCases.Configuration_Module.Source_Tab.AUT_CMWeb_SearchRecipeSource -->
+      </class> <!-- TestCases.Configuration_Module.Source_Tab.AUT_CMWeb_DeleteRecipeSource -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
