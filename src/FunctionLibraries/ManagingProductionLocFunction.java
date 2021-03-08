@@ -1,6 +1,8 @@
 package FunctionLibraries;
 
 import ObjectRepository.CMWeb_ConfigurationPage;
+import Utility.Constant;
+import Utility.ExcelUtils;
 import Utility.Report;
 
 public class ManagingProductionLocFunction extends Report {
@@ -28,13 +30,12 @@ public class ManagingProductionLocFunction extends Report {
 		}
 
 		// input production location name
-		// String sName = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Name);
-		CMWeb_ConfigurationPage.txtSourceName().sendKeys("Recipe Prod Loc");
-		logger.info("Production location name was entered.");
+		String sName = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Name);
+		CMWeb_ConfigurationPage.txtSourceName().sendKeys(sName);
+		logger.info("Production location name: " + sName + " was entered.");
 
 		// tick sharing
-		// sSharing = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_RoleLevel);
-		String sSharing = "HQ";
+		String sSharing = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_RoleLevel);
 		if (sSharing.equals("Global")) {
 			CMWeb_ConfigurationPage.chckboxGlobalTax().click();
 			logger.info("Global Sharing was ticked.");
@@ -47,21 +48,21 @@ public class ManagingProductionLocFunction extends Report {
 
 	// Save Production Location
 	public static void SaveProductionLoc(int iTestCaseRow) throws Exception {
-		// sName = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Name);
+		String sName = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Name);
 		// Click Save
 		CMWeb_ConfigurationPage.btnSaveKeyword().click();
 		Thread.sleep(5000);
 		CMWeb_ConfigurationPage.alertOkay().accept();
-		logger.pass(" Production Location was successfully saved");
+		logger.pass(sName + " Production Location was successfully saved");
 	}
 
 	// Search production location
 	public static void SearchProductionLoc(int iTestCaseRow) throws Exception {
 
-		// search tax rate
-		// String sName = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Name);
-		CMWeb_ConfigurationPage.txtSearchKeyword().sendKeys("Recipe Prod Loc");
-		logger.info("Nutrient set name: " + "Recipe Prod Loc" + " was entered");
+		// search Production Location
+		 String sName = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Name);
+		CMWeb_ConfigurationPage.txtSearchKeyword().sendKeys(sName);
+		logger.info("Production Location name: " + sName + " was entered");
 		CMWeb_ConfigurationPage.btnSearchKeyword().click();
 		if (CMWeb_ConfigurationPage.chckboxProductionLoc().isDisplayed()) {
 			logger.pass("Production Location was successfully searched");
@@ -74,7 +75,7 @@ public class ManagingProductionLocFunction extends Report {
 	// Edit production location
 	public static void EditProductionLoc(int iTestCaseRow) throws Exception {
 
-		// tick source to edit
+		// tick production location to edit
 		CMWeb_ConfigurationPage.chckboxProductionLoc().click();
 		if (CMWeb_ConfigurationPage.txtSourceName().isDisplayed()) {
 			logger.pass("Production Location was able to edit.");
@@ -83,8 +84,7 @@ public class ManagingProductionLocFunction extends Report {
 		}
 
 		// tick sharing
-		// sSharing = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_RoleType);
-		String sSharing = "HQ";
+		String sSharing = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_RoleType);
 		if (sSharing.equals("Global")) {
 			CMWeb_ConfigurationPage.chckboxGlobalTax().click();
 			logger.info("Global Sharing was ticked.");
@@ -97,9 +97,9 @@ public class ManagingProductionLocFunction extends Report {
 	// Delete production location
 	public static void DeleteProductionLoc(int iTestCaseRow) throws Exception {
 		// select production location
-		// String sName = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Name);
+		 String sName = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Name);
 		CMWeb_ConfigurationPage.chckboxProductionLoc().click();
-		logger.info(" Prouction Location to delete was selected");
+		logger.info(sName + " Production Location to delete was selected");
 
 		// click delete button
 		CMWeb_ConfigurationPage.btnDeleteKeyword().click();
