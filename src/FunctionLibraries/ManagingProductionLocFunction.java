@@ -82,7 +82,8 @@ public class ManagingProductionLocFunction extends Report {
 		} else {
 			logger.fail("Edit button was not clicked.");
 		}
-
+		Thread.sleep(5000);
+		
 		// tick sharing
 		String sSharing = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_RoleType);
 		if (sSharing.equals("Global")) {
@@ -97,6 +98,7 @@ public class ManagingProductionLocFunction extends Report {
 	// Delete production location
 	public static void DeleteProductionLoc(int iTestCaseRow) throws Exception {
 		// select production location
+		Thread.sleep(5000);
 		 String sName = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Name);
 		CMWeb_ConfigurationPage.chckboxProductionLoc().click();
 		logger.info(sName + " Production Location to delete was selected");
