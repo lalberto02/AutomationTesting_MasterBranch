@@ -2,35 +2,35 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-03-09T15:39:48 SGT" name="Default suite" finished-at="2021-03-09T15:41:15 SGT" duration-ms="86511">
+  <suite started-at="2021-03-10T17:05:01 SGT" name="Default suite" finished-at="2021-03-10T17:06:06 SGT" duration-ms="65471">
     <groups>
     </groups>
-    <test started-at="2021-03-09T15:39:48 SGT" name="Default test" finished-at="2021-03-09T15:41:15 SGT" duration-ms="86511">
-      <class name="TestCases.Configuration_Module.ProductionLoc_Tab.AUT_CMWeb_DeleteProductionLocation">
-        <test-method is-config="true" signature="setUpReport()[pri:0, instance:TestCases.Configuration_Module.ProductionLoc_Tab.AUT_CMWeb_DeleteProductionLocation@5403f35f]" started-at="2021-03-09T15:39:48 SGT" name="setUpReport" finished-at="2021-03-09T15:39:48 SGT" duration-ms="219" status="PASS">
+    <test started-at="2021-03-10T17:05:01 SGT" name="Default test" finished-at="2021-03-10T17:06:06 SGT" duration-ms="65471">
+      <class name="TestCases.Configuration_Module.Notes_Tab.AUT_CMWeb_SearchRecipeNotes">
+        <test-method is-config="true" signature="setUpReport()[pri:0, instance:TestCases.Configuration_Module.Notes_Tab.AUT_CMWeb_SearchRecipeNotes@5403f35f]" started-at="2021-03-10T17:05:00 SGT" name="setUpReport" finished-at="2021-03-10T17:05:01 SGT" duration-ms="249" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpReport -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCases.Configuration_Module.ProductionLoc_Tab.AUT_CMWeb_DeleteProductionLocation@5403f35f]" started-at="2021-03-09T15:39:48 SGT" name="beforeMethod" finished-at="2021-03-09T15:40:05 SGT" duration-ms="16341" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCases.Configuration_Module.Notes_Tab.AUT_CMWeb_SearchRecipeNotes@5403f35f]" started-at="2021-03-10T17:05:01 SGT" name="beforeMethod" finished-at="2021-03-10T17:05:16 SGT" duration-ms="15012" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="main()[pri:0, instance:TestCases.Configuration_Module.ProductionLoc_Tab.AUT_CMWeb_DeleteProductionLocation@5403f35f]" started-at="2021-03-09T15:40:05 SGT" name="main" finished-at="2021-03-09T15:41:14 SGT" duration-ms="69183" status="PASS">
+        <test-method signature="main()[pri:0, instance:TestCases.Configuration_Module.Notes_Tab.AUT_CMWeb_SearchRecipeNotes@5403f35f]" started-at="2021-03-10T17:05:16 SGT" name="main" finished-at="2021-03-10T17:06:05 SGT" duration-ms="49593" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- main -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:TestCases.Configuration_Module.ProductionLoc_Tab.AUT_CMWeb_DeleteProductionLocation@5403f35f]" started-at="2021-03-09T15:41:14 SGT" name="afterMethod" finished-at="2021-03-09T15:41:15 SGT" duration-ms="953" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:TestCases.Configuration_Module.Notes_Tab.AUT_CMWeb_SearchRecipeNotes@5403f35f]" started-at="2021-03-10T17:06:05 SGT" name="afterMethod" finished-at="2021-03-10T17:06:06 SGT" duration-ms="831" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=main status=SUCCESS method=AUT_CMWeb_DeleteProductionLocation.main()[pri:0, instance:TestCases.Configuration_Module.ProductionLoc_Tab.AUT_CMWeb_DeleteProductionLocation@5403f35f] output={null}]]]>
+                <![CDATA[[TestResult name=main status=SUCCESS method=AUT_CMWeb_SearchRecipeNotes.main()[pri:0, instance:TestCases.Configuration_Module.Notes_Tab.AUT_CMWeb_SearchRecipeNotes@5403f35f] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- TestCases.Configuration_Module.ProductionLoc_Tab.AUT_CMWeb_DeleteProductionLocation -->
+      </class> <!-- TestCases.Configuration_Module.Notes_Tab.AUT_CMWeb_SearchRecipeNotes -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
