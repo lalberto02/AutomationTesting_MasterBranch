@@ -20,7 +20,7 @@ import Utility.ExcelUtils;
 import Utility.Report;
 import Utility.Utils;
 
-public class AUT_CMWeb_CreateNewRecipeNotes extends Report {
+public class AUT_CMWeb_DeleteRecipeNotes extends Report {
 	public WebDriver driver;
 	private int iTestCaseRow;
 	private String sTestCaseName;
@@ -70,13 +70,12 @@ public class AUT_CMWeb_CreateNewRecipeNotes extends Report {
 		// UserLogin
 		LoginFunction.Execute(iTestCaseRow);
 
-		// Create recipe notes 
+		// Delete recipe notes
 		ManagingRolesFunction.GoToConfiguration(iTestCaseRow);
 		ManagingKeywordFunction.GoToRecipeTab(iTestCaseRow);
 		ManagingNotesFunction.GoToNotesTab(iTestCaseRow);
-		ManagingNotesFunction.AddNewNotes(iTestCaseRow);
-		ManagingNotesFunction.SaveRecipeNotes(iTestCaseRow);
 		ManagingNotesFunction.SearchRecipeNotes(iTestCaseRow);
+		ManagingNotesFunction.DeleteRecipeNotes(iTestCaseRow);
 		
 		
 
