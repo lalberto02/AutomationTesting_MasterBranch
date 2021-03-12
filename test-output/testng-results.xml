@@ -2,35 +2,35 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-03-11T15:53:28 SGT" name="Default suite" finished-at="2021-03-11T15:55:14 SGT" duration-ms="106407">
+  <suite started-at="2021-03-12T15:40:16 SGT" name="Default suite" finished-at="2021-03-12T15:42:21 SGT" duration-ms="125201">
     <groups>
     </groups>
-    <test started-at="2021-03-11T15:53:28 SGT" name="Default test" finished-at="2021-03-11T15:55:14 SGT" duration-ms="106407">
-      <class name="TestCases.Configuration_Module.Notes_Tab.AUT_CMWeb_DeleteRecipeNotes">
-        <test-method is-config="true" signature="setUpReport()[pri:0, instance:TestCases.Configuration_Module.Notes_Tab.AUT_CMWeb_DeleteRecipeNotes@5403f35f]" started-at="2021-03-11T15:53:28 SGT" name="setUpReport" finished-at="2021-03-11T15:53:28 SGT" duration-ms="240" status="PASS">
+    <test started-at="2021-03-12T15:40:16 SGT" name="Default test" finished-at="2021-03-12T15:42:21 SGT" duration-ms="125201">
+      <class name="TestCases.Configuration_Module.PackagingMethod_Tab.AUT_CMWeb_CreateNewPackagingMethod">
+        <test-method is-config="true" signature="setUpReport()[pri:0, instance:TestCases.Configuration_Module.PackagingMethod_Tab.AUT_CMWeb_CreateNewPackagingMethod@5403f35f]" started-at="2021-03-12T15:40:16 SGT" name="setUpReport" finished-at="2021-03-12T15:40:16 SGT" duration-ms="273" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpReport -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCases.Configuration_Module.Notes_Tab.AUT_CMWeb_DeleteRecipeNotes@5403f35f]" started-at="2021-03-11T15:53:28 SGT" name="beforeMethod" finished-at="2021-03-11T15:53:50 SGT" duration-ms="22383" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCases.Configuration_Module.PackagingMethod_Tab.AUT_CMWeb_CreateNewPackagingMethod@5403f35f]" started-at="2021-03-12T15:40:16 SGT" name="beforeMethod" finished-at="2021-03-12T15:40:36 SGT" duration-ms="19665" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="main()[pri:0, instance:TestCases.Configuration_Module.Notes_Tab.AUT_CMWeb_DeleteRecipeNotes@5403f35f]" started-at="2021-03-11T15:53:50 SGT" name="main" finished-at="2021-03-11T15:55:13 SGT" duration-ms="83043" status="PASS">
+        <test-method signature="main()[pri:0, instance:TestCases.Configuration_Module.PackagingMethod_Tab.AUT_CMWeb_CreateNewPackagingMethod@5403f35f]" started-at="2021-03-12T15:40:36 SGT" name="main" finished-at="2021-03-12T15:42:21 SGT" duration-ms="104689" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- main -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:TestCases.Configuration_Module.Notes_Tab.AUT_CMWeb_DeleteRecipeNotes@5403f35f]" started-at="2021-03-11T15:55:13 SGT" name="afterMethod" finished-at="2021-03-11T15:55:14 SGT" duration-ms="945" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:TestCases.Configuration_Module.PackagingMethod_Tab.AUT_CMWeb_CreateNewPackagingMethod@5403f35f]" started-at="2021-03-12T15:42:21 SGT" name="afterMethod" finished-at="2021-03-12T15:42:21 SGT" duration-ms="813" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=main status=SUCCESS method=AUT_CMWeb_DeleteRecipeNotes.main()[pri:0, instance:TestCases.Configuration_Module.Notes_Tab.AUT_CMWeb_DeleteRecipeNotes@5403f35f] output={null}]]]>
+                <![CDATA[[TestResult name=main status=SUCCESS method=AUT_CMWeb_CreateNewPackagingMethod.main()[pri:0, instance:TestCases.Configuration_Module.PackagingMethod_Tab.AUT_CMWeb_CreateNewPackagingMethod@5403f35f] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- TestCases.Configuration_Module.Notes_Tab.AUT_CMWeb_DeleteRecipeNotes -->
+      </class> <!-- TestCases.Configuration_Module.PackagingMethod_Tab.AUT_CMWeb_CreateNewPackagingMethod -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
