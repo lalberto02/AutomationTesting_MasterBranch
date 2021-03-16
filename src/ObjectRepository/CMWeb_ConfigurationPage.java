@@ -1880,4 +1880,34 @@ public class CMWeb_ConfigurationPage extends BaseClass {
     	}
     	return Element;
     }
+    
+ // recipe certification tab
+    public static WebElement btnRecipeCertification() throws Exception {
+    	Element = null;
+    	try {
+    		// change frame
+    		driver.switchTo().defaultContent();
+    		WebElement frame  = driver.findElement(By.name("main"));
+	    	driver.switchTo().frame(frame);
+    		Element = driver.findElement(By.xpath("//*[@id=\"ctl00_cphPageContent_ucDLN_Grid_ctl11_hypname\"]"));
+    	} catch (Exception e) {
+    		throw(e);
+    	}
+    	return Element;
+    }
+    
+    // txtFrenchRecipeCert
+    public static WebElement txtFrenchRecipeCert() throws Exception {
+    	Element = null;
+    	try {
+    		// change frame
+    		/*driver.switchTo().defaultContent();
+    	    WebElement frame  = driver.findElement(By.id("main"));
+    	    	driver.switchTo().frame(frame);*/
+    	    	Element = driver.findElement(By.xpath("//*[@id=\"EnglishTextfield\"]"));
+    	} catch (Exception e) {
+    		throw(e);
+    	}
+    	return Element;
+    }
 }
