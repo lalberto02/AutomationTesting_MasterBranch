@@ -69,6 +69,10 @@ package Utility;
 		public static final int Col_SharingPub = 8;
 		public static final int Col_NewPubName = 9;
 		
+
+		public static final int Col_Prefix = 5;
+		public static final int Col_StartsWith = 6;
+		
 		public static final String Path_ScreenShot = System.getProperty("user.dir")+"/Screenshots/TestEvidence_"+Utils.getCurrentDateTime()+".png";
 	}
 
