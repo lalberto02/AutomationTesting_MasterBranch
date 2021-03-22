@@ -6,9 +6,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class CMWeb_ConfigurationPage extends BaseClass {
+
 	private static WebElement Element;
 	private static Alert alert;
-
+	
 	public CMWeb_ConfigurationPage(WebDriver driver) {
 		super(driver);
 		// TODO Auto-generated constructor stub
@@ -37,8 +38,7 @@ public class CMWeb_ConfigurationPage extends BaseClass {
 			driver.switchTo().defaultContent();
 			WebElement frame = driver.findElement(By.name("main"));
 			driver.switchTo().frame(frame);
-			Element = driver
-					.findElement(By.xpath("//*[@id=\"ctl00_cphPageContent_mnu_mnuMainn0\"]/table/tbody/tr/td/a"));
+			Element = driver.findElement(By.xpath("//*[@id=\"ctl00_cphPageContent_mnu_mnuMainn0\"]/table/tbody/tr/td/a"));
 		} catch (Exception e) {
 			throw (e);
 		}
