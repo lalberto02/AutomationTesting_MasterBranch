@@ -2,35 +2,35 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-03-24T17:03:14 SGT" name="Default suite" finished-at="2021-03-24T17:03:51 SGT" duration-ms="36876">
+  <suite started-at="2021-03-26T15:19:54 SGT" name="Default suite" finished-at="2021-03-26T15:20:17 SGT" duration-ms="22760">
     <groups>
     </groups>
-    <test started-at="2021-03-24T17:03:14 SGT" name="Default test" finished-at="2021-03-24T17:03:51 SGT" duration-ms="36876">
-      <class name="TestCases.Configuration_Module.Property_Tab.AUT_CMWeb_DeleteProperty">
-        <test-method is-config="true" signature="setUpReport()[pri:0, instance:TestCases.Configuration_Module.Property_Tab.AUT_CMWeb_DeleteProperty@5403f35f]" started-at="2021-03-24T17:03:14 SGT" name="setUpReport" finished-at="2021-03-24T17:03:14 SGT" duration-ms="223" status="PASS">
+    <test started-at="2021-03-26T15:19:54 SGT" name="Default test" finished-at="2021-03-26T15:20:17 SGT" duration-ms="22760">
+      <class name="TestCases.Menu_Module.AUT_CMWeb_SearchMenu">
+        <test-method is-config="true" signature="setUpReport()[pri:0, instance:TestCases.Menu_Module.AUT_CMWeb_SearchMenu@5403f35f]" started-at="2021-03-26T15:19:54 SGT" name="setUpReport" finished-at="2021-03-26T15:19:54 SGT" duration-ms="287" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpReport -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCases.Configuration_Module.Property_Tab.AUT_CMWeb_DeleteProperty@5403f35f]" started-at="2021-03-24T17:03:14 SGT" name="beforeMethod" finished-at="2021-03-24T17:03:26 SGT" duration-ms="11707" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCases.Menu_Module.AUT_CMWeb_SearchMenu@5403f35f]" started-at="2021-03-26T15:19:54 SGT" name="beforeMethod" finished-at="2021-03-26T15:20:07 SGT" duration-ms="12695" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="main()[pri:0, instance:TestCases.Configuration_Module.Property_Tab.AUT_CMWeb_DeleteProperty@5403f35f]" started-at="2021-03-24T17:03:26 SGT" name="main" finished-at="2021-03-24T17:03:50 SGT" duration-ms="24202" status="PASS">
+        <test-method signature="main()[pri:0, instance:TestCases.Menu_Module.AUT_CMWeb_SearchMenu@5403f35f]" started-at="2021-03-26T15:20:07 SGT" name="main" finished-at="2021-03-26T15:20:16 SGT" duration-ms="9158" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- main -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:TestCases.Configuration_Module.Property_Tab.AUT_CMWeb_DeleteProperty@5403f35f]" started-at="2021-03-24T17:03:50 SGT" name="afterMethod" finished-at="2021-03-24T17:03:51 SGT" duration-ms="936" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:TestCases.Menu_Module.AUT_CMWeb_SearchMenu@5403f35f]" started-at="2021-03-26T15:20:16 SGT" name="afterMethod" finished-at="2021-03-26T15:20:17 SGT" duration-ms="859" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=main status=SUCCESS method=AUT_CMWeb_DeleteProperty.main()[pri:0, instance:TestCases.Configuration_Module.Property_Tab.AUT_CMWeb_DeleteProperty@5403f35f] output={null}]]]>
+                <![CDATA[[TestResult name=main status=SUCCESS method=AUT_CMWeb_SearchMenu.main()[pri:0, instance:TestCases.Menu_Module.AUT_CMWeb_SearchMenu@5403f35f] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- TestCases.Configuration_Module.Property_Tab.AUT_CMWeb_DeleteProperty -->
+      </class> <!-- TestCases.Menu_Module.AUT_CMWeb_SearchMenu -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
