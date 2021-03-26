@@ -4,7 +4,7 @@ package Utility;
 
 
 	public class Constant {  
-		public static final String URL = "http://va-server02/CalcmenuWeb_Template_V91/index.aspx";
+		//public static final String URL = "http://va-server02/CalcmenuWeb_Template_V91/index.aspx";
 		public static final String Path_TestData = "\\\\egs\\Automation Project\\Selenium\\TestData\\";
 		public static final String File_TestData = "Automation_CMWeb_TestData.xlsx";
 		
@@ -72,6 +72,14 @@ package Utility;
 
 		public static final int Col_Prefix = 5;
 		public static final int Col_StartsWith = 6;
+		
+		public static final int Col_MenuCategory = 6;
+		public static final int Col_MenuSource = 7;
+		public static final int Col_MenuPortion = 8;
+		public static final int Col_MenuItem = 9;
+		public static final int Col_MenuNeyQTY = 10;
+		public static final int Col_MenuImposedNutrient = 13;
+		
 		
 		public static final String Path_ScreenShot = System.getProperty("user.dir")+"/Screenshots/TestEvidence_"+Utils.getCurrentDateTime()+".png";
 	}

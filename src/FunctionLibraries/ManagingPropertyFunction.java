@@ -29,9 +29,9 @@ public class ManagingPropertyFunction extends Report {
 		}
 
 		// input name
-		// String sName = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Name);
+		String sName = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Name);
 		CMWeb_ConfigurationPage.txtPropertyName().sendKeys("EGS Test Property");
-		logger.info(" Property name was entered.");
+		logger.info(sName + " Property name was entered.");
 
 		// assign site
 		CMWeb_ConfigurationPage.txtUnassigned().click();
