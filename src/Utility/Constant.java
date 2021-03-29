@@ -80,6 +80,12 @@ package Utility;
 		public static final int Col_MenuNeyQTY = 10;
 		public static final int Col_MenuImposedNutrient = 13;
 		
+		public static final int Col_Restaurant = 7;
+		public static final int Col_PlanningDate = 8;
+		public static final int Col_StartDate = 9;
+		public static final int Col_Duration = 10;
+		public static final int Col_Recurrence = 11;
+		
 		
 		public static final String Path_ScreenShot = System.getProperty("user.dir")+"/Screenshots/TestEvidence_"+Utils.getCurrentDateTime()+".png";
 	}

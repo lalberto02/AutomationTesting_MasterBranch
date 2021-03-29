@@ -4,9 +4,11 @@ package ObjectRepository;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 public class CMWeb_MenuPlanPage extends BaseClass {
 	private static WebElement Element;
+	private static Select select;
     
 	public CMWeb_MenuPlanPage(WebDriver driver) {
 		super(driver);
@@ -290,4 +292,274 @@ public class CMWeb_MenuPlanPage extends BaseClass {
     	}
     	return Element;
     }
+    
+	// New Menu Plan Button
+	public static WebElement btnNewMenuPlan() throws Exception {
+		Element = null;
+		try {
+			// change frame
+			driver.switchTo().defaultContent();
+			WebElement frame = driver.findElement(By.name("header"));
+			driver.switchTo().frame(frame);
+			Element = driver.findElement(By.xpath("//*[@id=\"ctl15\"]/div/div/div/ul/li[1]/a/span/span/span/span"));
+		} catch (Exception e) {
+			throw (e);
+		}
+		return Element;
+	}
+	
+	// txtMenuPlanName
+	public static WebElement txtMenuPlanName() throws Exception {
+		Element = null;
+		try {
+			// change frame
+			driver.switchTo().defaultContent();
+		    WebElement frame  = driver.findElement(By.id("main"));
+		    	driver.switchTo().frame(frame);
+		    	Element = driver.findElement(By.xpath("//*[@id=\"txtName\"]"));
+		} catch (Exception e) {
+			throw(e);
+		}
+		return Element;
+	}
+	
+    // category dropdown
+    public static WebElement drpdownCategory() throws Exception {
+    	Element = null;
+    	try {
+    		// change frame
+    		/*driver.switchTo().defaultContent();
+    	    WebElement frame  = driver.findElement(By.id("main"));
+    	    	driver.switchTo().frame(frame);*/
+    	    	Element = driver.findElement(By.xpath("//*[@id=\"drpCategory\"]"));
+    	} catch (Exception e) {
+    		throw(e);
+    	}
+    	return Element;
+    }
+    
+    // restaurant dropdown
+    public static WebElement drpdownRestaurant() throws Exception {
+    	Element = null;
+    	try {
+    		// change frame
+    		/*driver.switchTo().defaultContent();
+    	    WebElement frame  = driver.findElement(By.id("main"));
+    	    	driver.switchTo().frame(frame);*/
+    	    	Element = driver.findElement(By.xpath("//*[@id=\"drpRestaurantNameVal\"]"));
+    	} catch (Exception e) {
+    		throw(e);
+    	}
+    	return Element;
+    }
+    
+	// txtPlanDate
+	public static WebElement txtPlanDate() throws Exception {
+		Element = null;
+		try {
+			// change frame
+			/*driver.switchTo().defaultContent();
+		    WebElement frame  = driver.findElement(By.id("main"));
+		    	driver.switchTo().frame(frame);*/
+		    	Element = driver.findElement(By.xpath("//*[@id=\"txtPlanungBis\"]"));
+		} catch (Exception e) {
+			throw(e);
+		}
+		return Element;
+	}
+	
+	// txtStartDate
+	public static WebElement txtStartDate() throws Exception {
+		Element = null;
+		try {
+			// change frame
+			/*driver.switchTo().defaultContent();
+		    WebElement frame  = driver.findElement(By.id("main"));
+		    	driver.switchTo().frame(frame);*/
+		    	Element = driver.findElement(By.xpath("//*[@id=\"txtStartDate\"]"));
+		} catch (Exception e) {
+			throw(e);
+		}
+		return Element;
+	}
+	
+	// txtDuration
+	public static WebElement txtDuration() throws Exception {
+		Element = null;
+		try {
+			// change frame
+			/*driver.switchTo().defaultContent();
+		    WebElement frame  = driver.findElement(By.id("main"));
+		    	driver.switchTo().frame(frame);*/
+		    	Element = driver.findElement(By.xpath("//*[@id=\"txtDuration\"]"));
+		} catch (Exception e) {
+			throw(e);
+		}
+		return Element;
+	}
+	
+	// txtRecurrence
+	public static WebElement txtRecurrence() throws Exception {
+		Element = null;
+		try {
+			// change frame
+			/*driver.switchTo().defaultContent();
+		    WebElement frame  = driver.findElement(By.id("main"));
+		    	driver.switchTo().frame(frame);*/
+		    	Element = driver.findElement(By.xpath("//*[@id=\"txtRecurrence\"]"));
+		} catch (Exception e) {
+			throw(e);
+		}
+		return Element;
+	}
+	
+    // save menu plan button
+	public static WebElement btnSaveMenuPlan() throws Exception {
+		Element = null;
+		try {
+			// change frame
+		    /*WebElement frame  = driver.findElement(By.name("main"));
+		    	driver.switchTo().frame(frame);*/
+		    	Element = driver.findElement(By.xpath("//*[@id=\"btnSave\"]"));
+		} catch (Exception e) {
+			throw(e);
+		}
+		return Element;
+	}
+	
+    // edit item button
+	public static WebElement btnEditItem() throws Exception {
+		Element = null;
+		try {
+			// change frame
+		    /*WebElement frame  = driver.findElement(By.name("main"));
+		    	driver.switchTo().frame(frame);*/
+		    	Element = driver.findElement(By.xpath("//*[@id=\"DL_Monday_ctl00_BTN_EDIT_Monday\"]/img"));
+		} catch (Exception e) {
+			throw(e);
+		}
+		return Element;
+	}
+	
+    // add item button
+	public static WebElement btnAddItem() throws Exception {
+		Element = null;
+		try {
+			//change frame
+			//driver.switchTo().defaultContent();
+			driver.switchTo().activeElement();
+		    Element = driver.findElement(By.id("BTN_ADD"));
+		               
+		} catch (Exception e) {
+			throw(e);
+		}
+		return Element;
+	}
+	
+    // History Menu plan
+    public static WebElement linkHistory() throws Exception {
+    	Element = null;
+    	try {
+    		// change frame
+    		driver.switchTo().defaultContent();
+    	    WebElement frame  = driver.findElement(By.id("main"));
+    	    	driver.switchTo().frame(frame);
+    	    	Element = driver.findElement(By.xpath("//*[@id=\"ctl00_cphPageDescription_ucDLHistory_Grid_ctl00_lnkBtnName\"]"));
+    	} catch (Exception e) {
+    		throw(e);
+    	}
+    	return Element;
+    }
+    
+    // List button
+    public static WebElement btnList() throws Exception {
+    	Element = null;
+    	try {
+    		// change frame
+    		driver.switchTo().defaultContent();
+    		WebElement frame  = driver.findElement(By.name("header"));
+	    	driver.switchTo().frame(frame);
+    		Element = driver.findElement(By.xpath("//*[@id=\"ctl15\"]/div/div/div/ul/li[2]/a/span/span/span/span"));
+    	} catch (Exception e) {
+    		throw(e);
+    	}
+    	return Element;
+    }
+    
+    // Search Menu plan textbox
+    public static WebElement txtSearchMenuPlan() throws Exception {
+    	Element = null;
+    	try {
+    		// change frame
+    		driver.switchTo().defaultContent();
+    	    WebElement frame  = driver.findElement(By.id("main"));
+    	    	driver.switchTo().frame(frame);
+    	    	Element = driver.findElement(By.id("txRecipe"));
+    	} catch (Exception e) {
+    		throw(e);
+    	}
+    	return Element;
+    }
+    
+    // Search Menu plan Button
+    public static WebElement btnSearchMenuPlan() throws Exception {
+    	Element = null;
+    	try {
+    		// change frame
+    		/*driver.switchTo().defaultContent();
+    	    WebElement frame  = driver.findElement(By.id("main"));
+    	    	driver.switchTo().frame(frame);*/
+    	    	Element = driver.findElement(By.xpath("//*[@id=\"sidebar\"]/div/div/div/div/div[1]/button[1]"));
+    	} catch (Exception e) {
+    		throw(e);
+    	}
+    	return Element;
+    }
+    
+    // search menu plan link
+    public static WebElement linkSearchedMenuPlan() throws Exception {
+    	Element = null;
+    	try {
+    		// change frame
+    		/*driver.switchTo().defaultContent();
+    	    WebElement frame  = driver.findElement(By.id("main"));
+    	    	driver.switchTo().frame(frame);*/
+    	    	Element = driver.findElement(By.xpath("//*[@id=\"content\"]/div[3]/div[2]/table/tbody/tr/td[3]/a"));
+    	} catch (Exception e) {
+    		throw(e);
+    	}
+    	return Element;
+    }
+    
+    // more actions dropdown
+    public static WebElement drpdownMoreAction() throws Exception {
+    	Element = null;
+    	try {
+    		// change frame
+    		/*driver.switchTo().defaultContent();
+    	    WebElement frame  = driver.findElement(By.id("main"));
+    	    	driver.switchTo().frame(frame);*/
+    	    	Element = driver.findElement(By.xpath("//*[@id=\"menuReport\"]/ul/li/a"));
+    	} catch (Exception e) {
+    		throw(e);
+    	}
+    	return Element;
+    }
+    
+    // Export dropdown
+    public static Select drpdownExport() throws Exception {
+    	select = null;
+    	try {
+    		// change frame
+    		/*driver.switchTo().defaultContent();
+    	    WebElement frame  = driver.findElement(By.id("main"));
+    	    	driver.switchTo().frame(frame);*/
+    	    	select = (Select) driver.findElement(By.xpath("//*[@id=\"menuReport\"]/ul/li/a/span"));
+    	} catch (Exception e) {
+    		throw(e);
+    	}
+    	return select;
+    }
+    
+    
 }
