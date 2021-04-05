@@ -19,7 +19,7 @@ import Utility.ExcelUtils;
 import Utility.Report;
 import Utility.Utils;
 
-public class AUT_CMWeb_EditPurchasingSetofPrice extends Report {
+public class AUT_CMWeb_SearchNutrientSet extends Report {
 	public WebDriver driver;
 	private int iTestCaseRow;
 	private String sTestCaseName;
@@ -69,12 +69,10 @@ public class AUT_CMWeb_EditPurchasingSetofPrice extends Report {
 		// UserLogin
 		LoginFunction.Execute(iTestCaseRow);
 
-		// Edit nutrient set - nutrient set name
+		// search nutrient set
 		ManagingRolesFunction.GoToConfiguration(iTestCaseRow);
 		ManagingNutrientSetFunction.GoToNutrientSetTab(iTestCaseRow);
 		ManagingNutrientSetFunction.SearchNutrientSet(iTestCaseRow);
-		ManagingNutrientSetFunction.EditNutrientSet(iTestCaseRow);
-		ManagingNutrientSetFunction.SaveNutrientSet(iTestCaseRow);
 		
 
 		if (BaseClass.bResult == true) {

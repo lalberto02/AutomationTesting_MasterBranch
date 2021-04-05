@@ -355,5 +355,95 @@ public class CMWeb_MenuPage extends BaseClass {
     	}
     	return Element;
     }
+    
+ // more action dropdown
+    public static WebElement drpdownMoreAction() throws Exception {
+    	Element = null;
+    	try {
+    		// change frame
+    		/*driver.switchTo().defaultContent();
+    	    WebElement frame  = driver.findElement(By.id("main"));
+    	    	driver.switchTo().frame(frame);*/
+    	    	Element = driver.findElement(By.xpath("//*[@id=\"RADmnuMain\"]/ul/li/a"));
+    	} catch (Exception e) {
+    		throw(e);
+    	}
+    	return Element;
+    }
+    
+    // print export dropdown
+    public static WebElement drpdownPrintExport() throws Exception {
+    	Element = null;
+    	try {
+    		// change frame
+    		/*driver.switchTo().defaultContent();
+    	    WebElement frame  = driver.findElement(By.id("main"));
+    	    	driver.switchTo().frame(frame);*/
+    	    	Element = driver.findElement(By.xpath("//*[@id=\"RADmnuMain\"]/ul/li/div/ul/li[4]/a/span"));
+    	} catch (Exception e) {
+    		throw(e);
+    	}
+    	return Element;
+    }
+    
+    //add to shopping list button
+    public static WebElement btnShoppingList() throws Exception {
+    	Element = null;
+    	try {
+    		// change frame
+    		/*driver.switchTo().defaultContent();
+    	    WebElement frame  = driver.findElement(By.id("main"));
+    	    	driver.switchTo().frame(frame);*/
+    	    	Element = driver.findElement(By.xpath("//*[@id=\"RADmnuMain\"]/ul/li/div/ul/li[4]/div/ul/li[5]/a/span"));
+    	} catch (Exception e) {
+    		throw(e);
+    	}
+    	return Element;
+    }
+    
+    // Shopping list name textbox
+    public static WebElement txtShoppingListName() throws Exception {
+    	Element = null;
+    	try {
+    		// change frame
+    		/*driver.switchTo().defaultContent();
+    	    WebElement frame  = driver.findElement(By.id("main"));
+    	    	driver.switchTo().frame(frame);*/
+    	    	Element = driver.findElement(By.xpath("//*[@id=\"ctl00_cphPageContent_ctl00_ctl09_tbxNewShopList\"]"));
+    	} catch (Exception e) {
+    		throw(e);
+    	}
+    	return Element;
+    }
+    
+    //Continue button
+    public static WebElement btnContinue() throws Exception {
+    	Element = null;
+    	try {
+    		// change frame
+    		/*driver.switchTo().defaultContent();
+    	    WebElement frame  = driver.findElement(By.id("main"));
+    	    	driver.switchTo().frame(frame);*/
+    	    	Element = driver.findElement(By.xpath("//*[@id=\"ctl00_cphPageContent_ctl00_lnkBtnProcess\"]"));
+    	} catch (Exception e) {
+    		throw(e);
+    	}
+    	return Element;
+    }
+    
+    //print button
+    public static WebElement btnPrint() throws Exception {
+    	Element = null;
+    	try {
+    		// change frame
+    		/*driver.switchTo().defaultContent();
+    	    WebElement frame  = driver.findElement(By.id("main"));
+    	    	driver.switchTo().frame(frame);*/
+    	    	Element = driver.findElement(By.xpath("//*[@id=\"ctl00_cphPageContent_ctl00_lnkBtnPrint\"]"));
+    	} catch (Exception e) {
+    		throw(e);
+    	}
+    	return Element;
+    }
 
 }
