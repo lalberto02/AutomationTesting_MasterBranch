@@ -29,6 +29,21 @@ public class CMWeb_ConfigurationPage extends BaseClass {
 		}
 		return Element;
 	}
+	
+	// configuration tab
+	public static WebElement btnConfig2() throws Exception {
+		Element = null;
+		try {
+			// change frame
+			driver.switchTo().defaultContent();
+			WebElement frame = driver.findElement(By.name("header"));
+			driver.switchTo().frame(frame);
+			Element = driver.findElement(By.xpath("//*[@id=\"RadTabStrip1\"]/div/ul/li[3]/a/span/span/span"));
+		} catch (Exception e) {
+			throw (e);
+		}
+		return Element;
+	}
 
 	// system tab
 	public static WebElement btnSystem() throws Exception {

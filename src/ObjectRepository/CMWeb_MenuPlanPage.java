@@ -561,5 +561,4 @@ public class CMWeb_MenuPlanPage extends BaseClass {
     	return select;
     }
     
-    
 }

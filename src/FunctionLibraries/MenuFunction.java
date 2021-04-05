@@ -141,6 +141,7 @@ public class MenuFunction extends Report {
 				CMWeb_MenuPage.txtSearchMenu().sendKeys(sMenuName);
 				CMWeb_MenuPage.btnSearchMenu().click();
 				if (CMWeb_MenuPage.linkSearchedMenu().isDisplayed()) {
+					CMWeb_MenuPage.linkSearchedMenu().click();
 					logger.pass(sMenuName + " was successfully created");
 				} else {
 					logger.fail(sMenuName + " was not included in the menu list.");
@@ -162,5 +163,50 @@ public class MenuFunction extends Report {
 				logger.fail("No Records in the history pane");
 			}
 		}
+		
+		// Generate Shopping List
+		public static void GenerateShoppingList(int iTestCaseRow) throws Exception {
+					
+			//click more action
+			CMWeb_MenuPage.drpdownMoreAction().click();
+			logger.info("More Action was successfully clicked");
+					
+			CMWeb_MenuPage.drpdownPrintExport().click();
+			logger.info("Print / Export was successfully clicked");
+					
+			// click add to shopping list
+			CMWeb_MenuPage.btnShoppingList().click();
+			if (CMWeb_MenuPage.txtShoppingListName().isDisplayed()) {
+				logger.pass("Shopping List page was displayed.");
+			} else {
+				logger.fail("Add to shopping list button was not click.");
+			}
+					
+			// insert shopping list name
+			String sShoppingList = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_MenuCategory);
+			CMWeb_MenuPage.txtShoppingListName().sendKeys(sShoppingList);
+			logger.info(" shopping list name was entered.");
+					
+			// click continue btn
+			CMWeb_MenuPage.btnContinue().click();
+			if (CMWeb_MenuPage.btnPrint().isDisplayed()) {
+				logger.pass("Continue Button was clicked.");
+			} else {
+				logger.fail("Continue Button was not clicked.");
+			}
+					
+			// click print btn
+			CMWeb_MenuPage.btnPrint().click();
+			logger.info("Print Button was clicked.");
+					
+			// click continue btn
+			CMWeb_MenuPage.btnContinue().click();
+			Thread.sleep(5000);
+			CMWeb_MenuPage.alertOkay().accept();
+			logger.pass(" Successfully generated shopping list");
+				
+		}
+		
+		
 
 }
