@@ -539,7 +539,7 @@ public class CMWeb_MenuPlanPage extends BaseClass {
     		/*driver.switchTo().defaultContent();
     	    WebElement frame  = driver.findElement(By.id("main"));
     	    	driver.switchTo().frame(frame);*/
-    	    	Element = driver.findElement(By.xpath("//*[@id=\"menuReport\"]/ul/li/a"));
+    	    	Element = driver.findElement(By.xpath("//*[@id=\"menuReport\"]/ul/li/a/span"));
     	} catch (Exception e) {
     		throw(e);
     	}
@@ -547,18 +547,48 @@ public class CMWeb_MenuPlanPage extends BaseClass {
     }
     
     // Export dropdown
-    public static Select drpdownExport() throws Exception {
-    	select = null;
+    public static WebElement drpdownExport() throws Exception {
+    	Element = null;
     	try {
     		// change frame
     		/*driver.switchTo().defaultContent();
     	    WebElement frame  = driver.findElement(By.id("main"));
     	    	driver.switchTo().frame(frame);*/
-    	    	select = (Select) driver.findElement(By.xpath("//*[@id=\"menuReport\"]/ul/li/a/span"));
+    	    	Element = driver.findElement(By.xpath("//*[@id=\"menuReport\"]/ul/li/div/ul/li[2]/a/span"));
     	} catch (Exception e) {
     		throw(e);
     	}
-    	return select;
+    	return Element;
+    }
+    
+    // Recipe and keyword button
+    public static WebElement btnRecipeKeyword() throws Exception {
+    	Element = null;
+    	try {
+    		// change frame
+    		/*driver.switchTo().defaultContent();
+    	    WebElement frame  = driver.findElement(By.id("main"));
+    	    	driver.switchTo().frame(frame);*/
+    	    	Element = driver.findElement(By.xpath("//*[@id=\"menuReport\"]/ul/li/div/ul/li[2]/div/ul/li[1]/a/span"));
+    	} catch (Exception e) {
+    		throw(e);
+    	}
+    	return Element;
+    }
+    
+    // Recipe and cost button
+    public static WebElement btnRecipeCost() throws Exception {
+    	Element = null;
+    	try {
+    		// change frame
+    		/*driver.switchTo().defaultContent();
+    	    WebElement frame  = driver.findElement(By.id("main"));
+    	    	driver.switchTo().frame(frame);*/
+    	    	Element = driver.findElement(By.xpath("//*[@id=\"menuReport\"]/ul/li/div/ul/li[2]/div/ul/li[4]/a/span"));
+    	} catch (Exception e) {
+    		throw(e);
+    	}
+    	return Element;
     }
     
 }
