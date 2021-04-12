@@ -279,13 +279,28 @@ public class MenuPlanFunction extends Report {
 	}
 
 	// Export menu plan
-	public static void ExportMenuPlan(int iTestCaseRow) throws Exception {
-
-		// click more actions
-		CMWeb_MenuPlanPage.drpdownMoreAction().click();
-		CMWeb_MenuPlanPage.drpdownMoreAction().sendKeys("Recipe and Cost");
-		// CMWeb_MenuPlanPage.drpdownExport().deselectAll();
-		// CMWeb_MenuPlanPage.drpdownExport().selectByVisibleText("Export");
-
-	}
+			public static void ExportMenuPlan(int iTestCaseRow) throws Exception {
+				
+				// click more actions
+				CMWeb_MenuPlanPage.drpdownMoreAction().click();
+				logger.info("More Action was successfully clicked");
+				
+				// click export
+				CMWeb_MenuPlanPage.drpdownExport().click();
+				logger.info("Export was successfully clicked");
+				
+				// choose selection to export
+				String sExportSelection = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_MenuCategory);
+				if (sExportSelection.equals("Recipe and Cost")){
+					CMWeb_MenuPlanPage.btnRecipeCost().click();
+					logger.pass("Recipe and Cost export was successfully downloaded.");						
+				} else if (sExportSelection.equals("Recipe and Keywords")) {
+					CMWeb_MenuPlanPage.btnRecipeKeyword().click();
+					logger.pass("Recipe and Keywords export was successfully downloaded.");
+				} else {
+					logger.fail("No file was exported.");
+				}
+				
+				
+			}
 }
