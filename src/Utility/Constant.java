@@ -86,6 +86,9 @@ package Utility;
 		public static final int Col_Duration = 10;
 		public static final int Col_Recurrence = 11;
 		
+		public static final int Col_State = 6;
+		public static final int Col_Language = 7;
+		
 		
 		public static final String Path_ScreenShot = System.getProperty("user.dir")+"/Screenshots/TestEvidence_"+Utils.getCurrentDateTime()+".png";
 	}
