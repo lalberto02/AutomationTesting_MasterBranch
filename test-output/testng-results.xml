@@ -2,35 +2,35 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-04-05T16:44:22 SGT" name="Default suite" finished-at="2021-04-05T16:45:27 SGT" duration-ms="64348">
+  <suite started-at="2021-04-16T16:12:39 SGT" name="Default suite" finished-at="2021-04-16T16:13:51 SGT" duration-ms="71551">
     <groups>
     </groups>
-    <test started-at="2021-04-05T16:44:22 SGT" name="Default test" finished-at="2021-04-05T16:45:27 SGT" duration-ms="64348">
-      <class name="TestCases.Menu_Module.AUT_CMWeb_ShoppingListMenu">
-        <test-method is-config="true" signature="setUpReport()[pri:0, instance:TestCases.Menu_Module.AUT_CMWeb_ShoppingListMenu@5403f35f]" started-at="2021-04-05T16:44:22 SGT" name="setUpReport" finished-at="2021-04-05T16:44:22 SGT" duration-ms="238" status="PASS">
+    <test started-at="2021-04-16T16:12:39 SGT" name="Default test" finished-at="2021-04-16T16:13:51 SGT" duration-ms="71551">
+      <class name="TestCases.Configuration_Module.MerchandisePrefix_Tab.AUT_CMWeb_DeleteMerchPrefix">
+        <test-method is-config="true" signature="setUpReport()[pri:0, instance:TestCases.Configuration_Module.MerchandisePrefix_Tab.AUT_CMWeb_DeleteMerchPrefix@5403f35f]" started-at="2021-04-16T16:12:39 SGT" name="setUpReport" finished-at="2021-04-16T16:12:39 SGT" duration-ms="232" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpReport -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCases.Menu_Module.AUT_CMWeb_ShoppingListMenu@5403f35f]" started-at="2021-04-05T16:44:22 SGT" name="beforeMethod" finished-at="2021-04-05T16:44:34 SGT" duration-ms="12011" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestCases.Configuration_Module.MerchandisePrefix_Tab.AUT_CMWeb_DeleteMerchPrefix@5403f35f]" started-at="2021-04-16T16:12:39 SGT" name="beforeMethod" finished-at="2021-04-16T16:12:50 SGT" duration-ms="11111" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="main()[pri:0, instance:TestCases.Menu_Module.AUT_CMWeb_ShoppingListMenu@5403f35f]" started-at="2021-04-05T16:44:34 SGT" name="main" finished-at="2021-04-05T16:45:26 SGT" duration-ms="51395" status="PASS">
+        <test-method signature="main()[pri:0, instance:TestCases.Configuration_Module.MerchandisePrefix_Tab.AUT_CMWeb_DeleteMerchPrefix@5403f35f]" started-at="2021-04-16T16:12:50 SGT" name="main" finished-at="2021-04-16T16:13:50 SGT" duration-ms="59762" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- main -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:TestCases.Menu_Module.AUT_CMWeb_ShoppingListMenu@5403f35f]" started-at="2021-04-05T16:45:26 SGT" name="afterMethod" finished-at="2021-04-05T16:45:27 SGT" duration-ms="909" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:TestCases.Configuration_Module.MerchandisePrefix_Tab.AUT_CMWeb_DeleteMerchPrefix@5403f35f]" started-at="2021-04-16T16:13:50 SGT" name="afterMethod" finished-at="2021-04-16T16:13:51 SGT" duration-ms="633" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=main status=SUCCESS method=AUT_CMWeb_ShoppingListMenu.main()[pri:0, instance:TestCases.Menu_Module.AUT_CMWeb_ShoppingListMenu@5403f35f] output={null}]]]>
+                <![CDATA[[TestResult name=main status=SUCCESS method=AUT_CMWeb_DeleteMerchPrefix.main()[pri:0, instance:TestCases.Configuration_Module.MerchandisePrefix_Tab.AUT_CMWeb_DeleteMerchPrefix@5403f35f] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- TestCases.Menu_Module.AUT_CMWeb_ShoppingListMenu -->
+      </class> <!-- TestCases.Configuration_Module.MerchandisePrefix_Tab.AUT_CMWeb_DeleteMerchPrefix -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

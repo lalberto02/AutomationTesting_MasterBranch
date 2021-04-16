@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestCases.Menu_Module.AUT_CMWeb_ShoppingListMenu">
+      <class name="TestCases.Configuration_Module.MerchandiseSupplier_Tab.AUT_CMWeb_DeleteMerchSupplier">
         <methods>
-          <include name="beforeMethod"/>
           <include name="setUpReport"/>
-          <include name="main"/>
           <include name="afterMethod"/>
+          <include name="main"/>
+          <include name="beforeMethod"/>
         </methods>
-      </class> <!-- TestCases.Menu_Module.AUT_CMWeb_ShoppingListMenu -->
+      </class> <!-- TestCases.Configuration_Module.MerchandiseSupplier_Tab.AUT_CMWeb_DeleteMerchSupplier -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
