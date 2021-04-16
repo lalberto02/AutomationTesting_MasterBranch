@@ -40,12 +40,14 @@ public class ManagingAutoNumberingFunction extends Report {
 
 		// input prefix
 		String sPrefix = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Prefix);
+		CMWeb_ConfigurationPage.txtMerchPrefix().clear();
 		CMWeb_ConfigurationPage.txtMerchPrefix().sendKeys(sPrefix);
 		logger.info("Prefix: " + sPrefix + " was entered.");
 		
 		// input Start with
 		String sStartWith = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_StartsWith);
 		CMWeb_ConfigurationPage.txtMerchStartWith().click();
+		CMWeb_ConfigurationPage.txtMerchStartWith().clear();
 		CMWeb_ConfigurationPage.txtMerchStartWith().sendKeys(sStartWith);
 		logger.info("Starts with: " + sStartWith + " was entered.");
 	}
@@ -59,12 +61,14 @@ public class ManagingAutoNumberingFunction extends Report {
 
 		// input prefix
 		String sPrefix = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Prefix);
+		CMWeb_ConfigurationPage.txtRecipePrefix().clear();
 		CMWeb_ConfigurationPage.txtRecipePrefix().sendKeys(sPrefix);
 		logger.info("Prefix: " + sPrefix + " was entered.");
 		
 		// input Start with
 		String sStartWith = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_StartsWith);
 		CMWeb_ConfigurationPage.txtRecipeStartWith().click();
+		CMWeb_ConfigurationPage.txtRecipeStartWith().clear();
 		CMWeb_ConfigurationPage.txtRecipeStartWith().sendKeys(sStartWith);
 		logger.info("Starts with: " + sStartWith + " was entered.");
 	}
@@ -78,12 +82,14 @@ public class ManagingAutoNumberingFunction extends Report {
 
 		// input prefix
 		String sPrefix = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Prefix);
+		CMWeb_ConfigurationPage.txtMenuPrefix().clear();
 		CMWeb_ConfigurationPage.txtMenuPrefix().sendKeys(sPrefix);
 		logger.info("Prefix: " + sPrefix + " was entered.");
 		
 		// input Start with
 		String sStartWith = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_StartsWith);
 		CMWeb_ConfigurationPage.txtMenuStartWith().click();
+		CMWeb_ConfigurationPage.txtMenuStartWith().clear();
 		CMWeb_ConfigurationPage.txtMenuStartWith().sendKeys(sStartWith);
 		logger.info("Starts with: " + sStartWith + " was entered.");
 	}
@@ -98,12 +104,14 @@ public class ManagingAutoNumberingFunction extends Report {
 		// input prefix
 		String sPrefix = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Prefix);
 		CMWeb_ConfigurationPage.txtMenuPlanPrefix().click();
+		CMWeb_ConfigurationPage.txtMenuPlanPrefix().clear();
 		CMWeb_ConfigurationPage.txtMenuPlanPrefix().sendKeys(sPrefix);
 		logger.info("Prefix: " + sPrefix + " was entered.");
 		
 		// input Start with
 		String sStartWith = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_StartsWith);
 		CMWeb_ConfigurationPage.txtMenuPlanStartWith().click();
+		CMWeb_ConfigurationPage.txtMenuPlanStartWith().clear();
 		CMWeb_ConfigurationPage.txtMenuPlanStartWith().sendKeys(sStartWith);
 		logger.info("Starts with: " + sStartWith + " was entered.");
 	}

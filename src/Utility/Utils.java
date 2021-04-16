@@ -20,7 +20,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 public class Utils extends Report {
-		public static WebDriver driver = null;
+	public static WebDriver driver = null;
+		
 	public static WebDriver OpenBrowser(int iTestCaseRow) throws Exception{
 		String sURL;
 		String sBrowserName;
