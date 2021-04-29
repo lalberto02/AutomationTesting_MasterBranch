@@ -303,4 +303,97 @@ public class MenuPlanFunction extends Report {
 				
 				
 			}
+			
+		    //Go to Category
+			public static void GoToMenuPlanCategoryTab(int iTestCaseRow) throws Exception{
+				
+				// Click Category
+				CMWeb_MenuPlanPage.btnMPCategory().click();
+				if (CMWeb_MenuPlanPage.btnNewMPConfig().isDisplayed()) {
+					logger.pass("Menu Plan Category tab is displayed");
+				} else {
+					logger.fail("Menu Plan Category button was not click");
+				}				
+			}
+			
+			//Create new Category
+			public static void CreateNewCategory(int iTestCaseRow) throws Exception{
+				 
+				// Click add category
+				CMWeb_MenuPlanPage.btnNewMPConfig().click();
+				if (CMWeb_MenuPlanPage.txtEnglishName().isDisplayed()) {
+					logger.pass("Category create page was displayed");
+				} else {
+					logger.fail("New Button was not clicked.");
+				}	
+				
+				// Input Category name
+				 String sName = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Name);
+				CMWeb_MenuPlanPage.txtEnglishName().sendKeys(sName);
+				logger.info("Category name: " + sName + " was entered");
+
+			}
+			
+		    // Save Configuration
+			public static void SaveConfiguration(int iTestCaseRow) throws Exception{
+				String sName = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Name);
+				// Click Save
+				CMWeb_MenuPlanPage.btnSaveMPConfig().click();
+				Thread.sleep(5000);
+				CMWeb_ConfigurationPage.alertOkay().accept();
+				logger.info(sName + " was successfully saved");		
+			}
+			
+		    // Search Config
+			public static void SearchConfigCategory(int iTestCaseRow) throws Exception{
+
+				// search config
+				String sName = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Name);
+				CMWeb_MenuPlanPage.txtSearchMPConfig().sendKeys(sName);
+				logger.info(sName + " was entered");
+				CMWeb_MenuPlanPage.btnSearchMPConfig().click();
+				Thread.sleep(5000);
+					if (CMWeb_MenuPlanPage.chckboxMPCategory().isDisplayed()) {
+						logger.pass(sName + " category was successfully searched");
+					} else {
+						logger.fail("No records existing");
+					}
+			}
+			
+			// delete config category
+			public static void DeleteConfigCategory(int iTestCaseRow) throws Exception{
+				String sName = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Name);
+				// tick item to delete
+				CMWeb_MenuPlanPage.chckboxMPCategory().click();
+				logger.info("Item to delete was selected");
+					
+				//click delete button
+				CMWeb_MenuPlanPage.btnDeleteMPConfig().click();
+				Thread.sleep(5000);
+				CMWeb_ConfigurationPage.alertOkay().accept();
+				Thread.sleep(5000);
+				CMWeb_ConfigurationPage.alertOkay().accept();
+				logger.info(sName + " was successfully deleted");
+				
+			}
+			
+			// Edit Category
+			public static void EditCategory(int iTestCaseRow) throws Exception {
+
+				// tick category to edit
+				CMWeb_MenuPlanPage.chckboxMPCategory().click();
+				if (CMWeb_MenuPlanPage.txtFrenchName().isDisplayed()) {
+					logger.pass("Category was able to edit.");
+				} else {
+					logger.fail("Edit button was not clicked.");
+				}
+
+				// add french Translation
+				 String sFrench = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_French);
+				CMWeb_MenuPlanPage.txtFrenchName().sendKeys(sFrench);
+				logger.info("Category french: " + sFrench + " translation was added");
+
+			}
+			
+			
 }
