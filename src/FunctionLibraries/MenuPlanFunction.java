@@ -391,9 +391,90 @@ public class MenuPlanFunction extends Report {
 				// add french Translation
 				 String sFrench = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_French);
 				CMWeb_MenuPlanPage.txtFrenchName().sendKeys(sFrench);
-				logger.info("Category french: " + sFrench + " translation was added");
+				logger.info("Category french translation " + sFrench + " was added");
 
 			}
 			
+		    //Go to Season
+			public static void GoToMenuPlanSeasonTab(int iTestCaseRow) throws Exception{
+				
+				// Click Category
+				CMWeb_MenuPlanPage.btnMPSeason().click();
+				if (CMWeb_MenuPlanPage.btnNewMPConfig().isDisplayed()) {
+					logger.pass("Menu Plan Season tab is displayed");
+				} else {
+					logger.fail("Menu Plan Season button was not click");
+				}				
+			}
+			
+			//Create new season
+			public static void CreateNewSeason(int iTestCaseRow) throws Exception{
+				 
+				// Click add season
+				CMWeb_MenuPlanPage.btnNewMPConfig().click();
+				if (CMWeb_MenuPlanPage.txtEnglishName().isDisplayed()) {
+					logger.pass("Season create page was displayed");
+				} else {
+					logger.fail("New Button was not clicked.");
+				}	
+				
+				// Input Category name
+				 String sName = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Name);
+				CMWeb_MenuPlanPage.txtEnglishName().sendKeys(sName);
+				logger.info("Season name: " + sName + " was entered");
+
+			}
+			
+			// Edit Season
+			public static void EditSeason(int iTestCaseRow) throws Exception {
+
+				// tick category to edit
+				CMWeb_MenuPlanPage.chckboxMPSeason().click();
+				if (CMWeb_MenuPlanPage.txtFrenchSeasonName().isDisplayed()) {
+					logger.pass("Season was able to edit.");
+				} else {
+					logger.fail("Edit button was not clicked.");
+				}
+
+				// add french Translation
+				 String sFrench = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_French);
+				CMWeb_MenuPlanPage.txtFrenchSeasonName().sendKeys(sFrench);
+				logger.info("Season french translation: " + sFrench + " was added");
+			}
+			
+		    // Search Config season
+			public static void SearchConfigSeason(int iTestCaseRow) throws Exception{
+
+				// search config
+				String sName = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Name);
+				CMWeb_MenuPlanPage.txtSearchMPConfig().sendKeys(sName);
+				logger.info(sName + " was entered");
+				CMWeb_MenuPlanPage.btnSearchMPConfig().click();
+				Thread.sleep(5000);
+					if (CMWeb_MenuPlanPage.chckboxMPSeason().isDisplayed()) {
+						logger.pass(sName + " season was successfully searched");
+					} else {
+						logger.fail("No records existing");
+					}
+			}
+			
+			// delete config Season
+			public static void DeleteConfigSeason(int iTestCaseRow) throws Exception{
+				String sName = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Name);
+				// tick item to delete
+				CMWeb_MenuPlanPage.chckboxMPSeason().click();
+				logger.info("Item to delete was selected");
+
+					
+				//click delete button
+				CMWeb_MenuPlanPage.btnDeleteMPConfig().click();
+				Thread.sleep(5000);
+				CMWeb_ConfigurationPage.alertOkay().accept();
+				Thread.sleep(5000);
+				CMWeb_ConfigurationPage.alertOkay().accept();
+				logger.info(sName + " was successfully deleted");
+				
+			}
+						
 			
 }
