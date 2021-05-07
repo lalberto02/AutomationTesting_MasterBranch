@@ -4,11 +4,9 @@ package ObjectRepository;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 
 public class CMWeb_MenuPlanPage extends BaseClass {
 	private static WebElement Element;
-	private static Select select;
     
 	public CMWeb_MenuPlanPage(WebDriver driver) {
 		super(driver);
@@ -724,5 +722,49 @@ public class CMWeb_MenuPlanPage extends BaseClass {
     	return Element;
     }
     
+    // menuplan Season Button
+    public static WebElement btnMPSeason() throws Exception {
+    	Element = null;
+    	try {
+    		// change frame
+    		driver.switchTo().defaultContent();
+    		WebElement frame  = driver.findElement(By.name("main"));
+	    	driver.switchTo().frame(frame);
+    	    	Element = driver.findElement(By.xpath("//*[@id=\"ctl00_cphPageContent_ucDLN_Grid_ctl02_hypname\"]"));
+    	} catch (Exception e) {
+    		throw(e);
+    	}
+    	return Element;
+    }
+    
+    // txtFrenchSeasonName
+    public static WebElement txtFrenchSeasonName() throws Exception {
+    	Element = null;
+    	try {
+    		// change frame
+    		/*driver.switchTo().defaultContent();
+    	    WebElement frame  = driver.findElement(By.id("main"));
+    	    	driver.switchTo().frame(frame);*/
+    	    	Element = driver.findElement(By.xpath("//*[@id=\"EnglishTextfield\"]"));
+    	} catch (Exception e) {
+    		throw(e);
+    	}
+    	return Element;
+    }
+    
+    // menuplan season checkbox
+    public static WebElement chckboxMPSeason() throws Exception {
+    	Element = null;
+    	try {
+    		// change frame
+    		/*driver.switchTo().defaultContent();
+    	    WebElement frame  = driver.findElement(By.id("main"));
+    	    	driver.switchTo().frame(frame);*/
+    	    	Element = driver.findElement(By.xpath("//*[@id=\"tblgGneric\"]/tbody/tr/td[1]/input"));
+    	} catch (Exception e) {
+    		throw(e);
+    	}
+    	return Element;
+    }
     
 }
