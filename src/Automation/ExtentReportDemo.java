@@ -15,7 +15,7 @@ public class ExtentReportDemo
 	@Test
 	public void loginTest() throws IOException
 	{    
-            // Create Object of ExtentHtmlReporter and provide the path where you want to generate the report 
+            //  Create Object of ExtentHtmlReporter and provide the path where you want to generate the report 
             // I used (.) in path where represent the current working directory
 	    ExtentHtmlReporter reporter=new ExtentHtmlReporter("./Test_report/learn_automation1.html");
 		
