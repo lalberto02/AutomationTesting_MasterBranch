@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestCases.Configuration_Module.RecipeCookbook_Tab.AUT_CMWeb_CreateNewRecipeCookbook">
+      <class name="TestCases.MenuPlan_Module.AUT_CMWeb_EditMenuPlanService">
         <methods>
-          <include name="afterMethod"/>
           <include name="setUpReport"/>
           <include name="beforeMethod"/>
           <include name="main"/>
+          <include name="afterMethod"/>
         </methods>
-      </class> <!-- TestCases.Configuration_Module.RecipeCookbook_Tab.AUT_CMWeb_CreateNewRecipeCookbook -->
+      </class> <!-- TestCases.MenuPlan_Module.AUT_CMWeb_EditMenuPlanService -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
