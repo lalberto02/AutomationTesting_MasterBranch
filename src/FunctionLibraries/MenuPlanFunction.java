@@ -475,6 +475,87 @@ public class MenuPlanFunction extends Report {
 				logger.info(sName + " was successfully deleted");
 				
 			}
+			
+			//Go to type of service
+			public static void GoToMenuPlanServiceTab(int iTestCaseRow) throws Exception{
+				
+				// Click Category
+				CMWeb_MenuPlanPage.btnMPService().click();
+				if (CMWeb_MenuPlanPage.btnNewMPConfig().isDisplayed()) {
+					logger.pass("Menu Plan Type of Service tab is displayed");
+				} else {
+					logger.fail("Menu Plan Type of Service button was not click");
+				}				
+			}
+			
+			//Create new service
+			public static void CreateNewService(int iTestCaseRow) throws Exception{
+				 
+				// Click add type of service
+				CMWeb_MenuPlanPage.btnNewMPConfig().click();
+				if (CMWeb_MenuPlanPage.txtEnglishName().isDisplayed()) {
+					logger.pass("Type of service create page was displayed");
+				} else {
+					logger.fail("New Button was not clicked.");
+				}	
+				
+				// Input Type of service name
+				 String sName = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Name);
+				CMWeb_MenuPlanPage.txtEnglishName().sendKeys(sName);
+				logger.info("Type of service name: " + sName + " was entered");
+
+			}
+			
+		    // Search Config Type of service
+			public static void SearchConfigService(int iTestCaseRow) throws Exception{
+
+				// search config
+				String sName = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Name);
+				CMWeb_MenuPlanPage.txtSearchMPConfig().sendKeys(sName);
+				logger.info(sName + " was entered");
+				CMWeb_MenuPlanPage.btnSearchMPConfig().click();
+				Thread.sleep(5000);
+					if (CMWeb_MenuPlanPage.chckboxMPService().isDisplayed()) {
+						logger.pass(sName + " type of service was successfully searched");
+					} else {
+						logger.fail("No records existing");
+					}
+			}
+			
+			// Edit type of service
+			public static void EditService(int iTestCaseRow) throws Exception {
+
+				// tick type of service to edit
+				CMWeb_MenuPlanPage.chckboxMPService().click();
+				if (CMWeb_MenuPlanPage.txtFrenchSeasonName().isDisplayed()) {
+					logger.pass("Type of service was able to edit.");
+				} else {
+					logger.fail("Edit button was not clicked.");
+				}
+
+				// add french Translation
+				 String sFrench = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_French);
+				CMWeb_MenuPlanPage.txtFrenchSeasonName().sendKeys(sFrench);
+				logger.info("Type of service french translation: " + sFrench + " was added");
+			}
+			
+			// delete config type of service
+			public static void DeleteConfigService(int iTestCaseRow) throws Exception{
+				String sName = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Name);
+				// tick item to delete
+				CMWeb_MenuPlanPage.chckboxMPService().click();
+				logger.info("Item to delete was selected");
+
+					
+				//click delete button
+				CMWeb_MenuPlanPage.btnDeleteMPConfig().click();
+				Thread.sleep(5000);
+				CMWeb_ConfigurationPage.alertOkay().accept();
+				Thread.sleep(5000);
+				CMWeb_ConfigurationPage.alertOkay().accept();
+				logger.info(sName + " was successfully deleted");
+				
+			}
 						
 			
 }

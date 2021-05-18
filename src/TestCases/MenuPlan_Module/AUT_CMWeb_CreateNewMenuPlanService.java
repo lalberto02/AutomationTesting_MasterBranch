@@ -18,7 +18,7 @@ import Utility.ExcelUtils;
 import Utility.Report;
 import Utility.Utils;
 
-public class AUT_CMWeb_SearchMenuPlanSeason extends Report{
+public class AUT_CMWeb_CreateNewMenuPlanService extends Report{
 	public WebDriver driver;
 	private int iTestCaseRow;
 	private String sTestCaseName;
@@ -47,7 +47,7 @@ public class AUT_CMWeb_SearchMenuPlanSeason extends Report{
 
 				// Fetching the Test Case row number from the Test Data Sheet
 				// This row number will be feed to so many functions, to get the relevant data
-				// from the Test Data sheet	
+				// from the Test Data sheet
 				 iTestCaseRow = ExcelUtils.getRowContains(sTestCaseName,
 				 Constant.Col_TestCaseName);
 
@@ -55,7 +55,7 @@ public class AUT_CMWeb_SearchMenuPlanSeason extends Report{
 				driver = Utils.OpenBrowser(iTestCaseRow);
 
 				// Initializing the Base Class for Selenium driver
-				// Now we do need to provide the Selenium driver to any of the Page classes o78r
+				// Now we do need to provide the Selenium driver to any of the Page classes or
 				// Module Actions
 				// Will soon write a post on Base Class
 				new BaseClass(driver);  
@@ -67,11 +67,13 @@ public class AUT_CMWeb_SearchMenuPlanSeason extends Report{
 		//UserLogin
 		LoginFunction.Execute(iTestCaseRow);
 		
-		// Search Season
+		// Create new type of service
 		MenuPlanFunction.GoToMenuPlan(iTestCaseRow);
 		MenuPlanFunction.GoToConfiguration(iTestCaseRow);
-		MenuPlanFunction.GoToMenuPlanSeasonTab(iTestCaseRow);
-		MenuPlanFunction.SearchConfigSeason(iTestCaseRow);
+		MenuPlanFunction.GoToMenuPlanServiceTab(iTestCaseRow);
+		MenuPlanFunction.CreateNewService(iTestCaseRow);
+		MenuPlanFunction.SaveConfiguration(iTestCaseRow);
+		MenuPlanFunction.SearchConfigService(iTestCaseRow);
 		
 		
 		if(BaseClass.bResult==true){
@@ -102,6 +104,5 @@ public class AUT_CMWeb_SearchMenuPlanSeason extends Report{
 		// Closing the opened driver
 		// driver.close();
 	}
-
 
 }

@@ -767,4 +767,33 @@ public class CMWeb_MenuPlanPage extends BaseClass {
     	return Element;
     }
     
+    // menuplan Type of Service Button
+    public static WebElement btnMPService() throws Exception {
+    	Element = null;
+    	try {
+    		// change frame
+    		driver.switchTo().defaultContent();
+    		WebElement frame  = driver.findElement(By.name("main"));
+	    	driver.switchTo().frame(frame);
+    	    	Element = driver.findElement(By.xpath("//*[@id=\"ctl00_cphPageContent_ucDLN_Grid_ctl03_hypname\"]"));
+    	} catch (Exception e) {
+    		throw(e);
+    	}
+    	return Element;
+    }
+    
+    // menuplan type of service checkbox
+    public static WebElement chckboxMPService() throws Exception {
+    	Element = null;
+    	try {
+    		// change frame
+    		/*driver.switchTo().defaultContent();
+    	    WebElement frame  = driver.findElement(By.id("main"));
+    	    	driver.switchTo().frame(frame);*/
+    	    	Element = driver.findElement(By.xpath("//*[@id=\"tblgGneric\"]/tbody/tr/td[1]/input"));
+    	} catch (Exception e) {
+    		throw(e);
+    	}
+    	return Element;
+    }
 }
