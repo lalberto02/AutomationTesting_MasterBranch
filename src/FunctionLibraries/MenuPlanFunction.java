@@ -334,7 +334,7 @@ public class MenuPlanFunction extends Report {
 
 			}
 			
-		    // Save Configuration
+		    // Save Configuration 
 			public static void SaveConfiguration(int iTestCaseRow) throws Exception{
 				String sName = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Name);
 				// Click Save
