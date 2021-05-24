@@ -340,7 +340,7 @@ public class MenuPlanFunction extends Report {
 				// Click Save
 				CMWeb_MenuPlanPage.btnSaveMPConfig().click();
 				Thread.sleep(5000);
-				CMWeb_ConfigurationPage.alertOkay().accept();
+				CMWeb_ConfigurationPage.alertOkay().accept(); 
 				logger.info(sName + " was successfully saved");		
 			}
 			
