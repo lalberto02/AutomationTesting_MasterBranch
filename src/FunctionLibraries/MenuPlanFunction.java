@@ -334,13 +334,13 @@ public class MenuPlanFunction extends Report {
 
 			}
 			
-		    // Save Configuration
+		    // Save Configuration 
 			public static void SaveConfiguration(int iTestCaseRow) throws Exception{
 				String sName = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Name);
 				// Click Save
 				CMWeb_MenuPlanPage.btnSaveMPConfig().click();
 				Thread.sleep(5000);
-				CMWeb_ConfigurationPage.alertOkay().accept();
+				CMWeb_ConfigurationPage.alertOkay().accept(); 
 				logger.info(sName + " was successfully saved");		
 			}
 			
