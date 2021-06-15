@@ -28,7 +28,7 @@ public class ManagingCategoryFunction extends Report {
 	}
 
 	public static void AddNewCategory(int iTestCaseRow) throws Exception {
-		// Click New Button
+		// Click New Button0
 		CMWeb_ConfigurationPage.btnNewKeyword().click();
 		if (CMWeb_ConfigurationPage.txtEnglishCategory().isDisplayed()) {
 			logger.pass("Category create page was displayed");
