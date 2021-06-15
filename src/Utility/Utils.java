@@ -35,7 +35,7 @@ public class Utils extends Report {
 		    driver.get(sURL);
 		    driver.manage().window().maximize();
 		    Thread.sleep(1000);
-		    logger.info("Chrome application launched successfully");
+		    //logger.info("Chrome application launched successfully");
 		}
 		
 		else if
@@ -49,7 +49,7 @@ public class Utils extends Report {
 		    driver.get(sURL1);
 		    driver.manage().window().maximize();
 		    Thread.sleep(1000);
-		    logger.info("Edge application launched successfully");
+		   // logger.info("Edge application launched successfully");
 			}
 		
 		return driver;
