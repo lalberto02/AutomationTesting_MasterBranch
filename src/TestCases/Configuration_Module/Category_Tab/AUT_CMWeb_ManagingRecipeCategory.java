@@ -20,7 +20,7 @@ import Utility.ExcelUtils;
 import Utility.Report;
 import Utility.Utils;
 
-public class AUT_CMWeb_ManagingMerchandiseCategory extends Report {
+public class AUT_CMWeb_ManagingRecipeCategory extends Report {
 	public WebDriver driver;
 	private int iTestCaseRow;
 	private String sTestCaseName;
@@ -66,7 +66,7 @@ public class AUT_CMWeb_ManagingMerchandiseCategory extends Report {
 	// Start of the test script	
 	@Test (priority=1)	
 	public void create() throws Exception {
-		String sTestCaseName1 = "AUT_CMWeb_Merchandise_NewCategory";
+		String sTestCaseName1 = "AUT_CMWeb_Recipe_NewCategory";
 		
 		// Start printing the logs and printing the Test Case name
 		logger = report.createTest(sTestCaseName1);
@@ -83,9 +83,9 @@ public class AUT_CMWeb_ManagingMerchandiseCategory extends Report {
 		// UserLogin
 			LoginFunction.Execute(iTestCaseRow);
 
-		// Create merchandise category
+		// Create recipe category
 		ManagingRolesFunction.GoToConfiguration(iTestCaseRow);
-		ManagingKeywordFunction.GoToMerchandiseTab(iTestCaseRow);
+		ManagingKeywordFunction.GoToRecipeTab(iTestCaseRow);
 		ManagingCategoryFunction.GoToCategory(iTestCaseRow);
 		ManagingCategoryFunction.AddNewCategory(iTestCaseRow);
 		ManagingCategoryFunction.SaveCategory(iTestCaseRow);
@@ -106,7 +106,7 @@ public class AUT_CMWeb_ManagingMerchandiseCategory extends Report {
 	
 	@Test (priority=2)	
 	public void search() throws Exception {
-		String sTestCaseName2 = "AUT_CMWeb_Merchandise_SearchCategory";
+		String sTestCaseName2 = "AUT_CMWeb_Recipe_SearchCategory";
 		
 		// Start printing the logs and printing the Test Case name
 		logger = report.createTest(sTestCaseName2);
@@ -123,9 +123,9 @@ public class AUT_CMWeb_ManagingMerchandiseCategory extends Report {
 		// UserLogin
 			LoginFunction.Execute(iTestCaseRow);
 
-		// search merchandise category
+		// search recipe category
 		ManagingRolesFunction.GoToConfiguration(iTestCaseRow);
-		ManagingKeywordFunction.GoToMerchandiseTab(iTestCaseRow);
+		ManagingKeywordFunction.GoToRecipeTab(iTestCaseRow);
 		ManagingCategoryFunction.GoToCategory(iTestCaseRow);
 		ManagingCategoryFunction.SearchCategory(iTestCaseRow);
 			
@@ -146,7 +146,7 @@ public class AUT_CMWeb_ManagingMerchandiseCategory extends Report {
 	
 	@Test (priority=3)	
 	public void edit() throws Exception {
-		String sTestCaseName3 = "AUT_CMWeb_Merchandise_ModifyCategory";
+		String sTestCaseName3 = "AUT_CMWeb_Recipe_ModifyCategory";
 		
 		// Start printing the logs and printing the Test Case name
 		logger = report.createTest(sTestCaseName3);
@@ -163,9 +163,9 @@ public class AUT_CMWeb_ManagingMerchandiseCategory extends Report {
 		// UserLogin
 			LoginFunction.Execute(iTestCaseRow);
 
-		// edit merchandise category - change french translation
+		// edit recipe category - change french translation
 		ManagingRolesFunction.GoToConfiguration(iTestCaseRow);
-		ManagingKeywordFunction.GoToMerchandiseTab(iTestCaseRow);
+		ManagingKeywordFunction.GoToRecipeTab(iTestCaseRow);
 		ManagingCategoryFunction.GoToCategory(iTestCaseRow);
 		ManagingCategoryFunction.SearchCategory(iTestCaseRow);
 		ManagingCategoryFunction.EditCategory(iTestCaseRow);
@@ -191,7 +191,7 @@ public class AUT_CMWeb_ManagingMerchandiseCategory extends Report {
 		// Printing beautiful logs to end the test case
 		logger.info("Execution done");
 
-		// Capture screenshot
+		// Capturse screenshot
 		if (result.getStatus() == ITestResult.FAILURE) {
 			logger.fail("Test Failed",
 					MediaEntityBuilder.createScreenCaptureFromPath(Utils.takeScreenshot(driver)).build());

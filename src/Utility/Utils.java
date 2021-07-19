@@ -87,7 +87,8 @@ public class Utils extends Report {
 	 public static String takeScreenshot(WebDriver driver) {
 			try{
 				File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-				FileHandler.copy(scrFile,new File(Constant.Path_ScreenShot ));
+				FileHandler.copy(scrFile,new File(Constant.Path_ScreenShot));
+				//new File(Constant.Path_ScreenShot ));
 				//new File(Constant.Path_ScreenShot + sTestCaseName +".jpg"
 			} catch (Exception e){
 				logger.error("Class Utils | Method takeScreenshot | Exception occured while capturing ScreenShot : "+e.getMessage());
