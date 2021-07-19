@@ -58,7 +58,7 @@ public class ManagingTranslationFunction extends Report {
 		// search print profile
 		String sName = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Name);
 		CMWeb_ConfigurationPage.txtSearch().sendKeys(sName);
-		logger.info("Print Profile name: " + sName + " was entered");
+		logger.info("Translation name: " + sName + " was entered");
 		CMWeb_ConfigurationPage.btnSearch().click();
 		if (CMWeb_ConfigurationPage.chckboxTranslation().isDisplayed()) {
 			logger.pass("Translation was successfully searched");

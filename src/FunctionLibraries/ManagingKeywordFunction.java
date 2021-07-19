@@ -169,6 +169,7 @@ public class ManagingKeywordFunction extends Report {
 		// change English Translation
 		String sEnglish = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_English);
 		String sNewEnglish = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_NewEnglish);
+		Thread.sleep(5000);
 		CMWeb_ConfigurationPage.txtEnglish().clear();
 		CMWeb_ConfigurationPage.txtEnglish().sendKeys(sNewEnglish);
 		logger.info(sEnglish + " was changed to " + sNewEnglish);
@@ -191,6 +192,7 @@ public class ManagingKeywordFunction extends Report {
 		logger.info(sEnglish + " was entered");
 
 		// tick keyword to edit
+		Thread.sleep(5000);
 		CMWeb_ConfigurationPage.chckboxKeyword().click();
 		if (CMWeb_ConfigurationPage.txtParent().isDisplayed()) {
 			logger.pass("Keyword was able to edit.");

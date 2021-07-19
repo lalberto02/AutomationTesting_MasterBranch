@@ -1,4 +1,4 @@
-package TestCases.Configuration_Module.Category_Tab;
+package TestCases.Configuration_Module.PurchasingSet_Tab;
 
 import java.io.IOException;
 
@@ -11,16 +11,16 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.MediaEntityBuilder;
 
 import FunctionLibraries.LoginFunction;
-import FunctionLibraries.ManagingCategoryFunction;
-import FunctionLibraries.ManagingKeywordFunction;
+import FunctionLibraries.ManagingNutrientSetFunction;
 import FunctionLibraries.ManagingRolesFunction;
+import FunctionLibraries.ManagingSetofPriceFunction;
 import ObjectRepository.BaseClass;
 import Utility.Constant;
 import Utility.ExcelUtils;
 import Utility.Report;
 import Utility.Utils;
 
-public class AUT_CMWeb_ManagingMerchandiseCategory extends Report {
+public class AUT_CMWeb_ManagingPurchasingSet extends Report {
 	public WebDriver driver;
 	private int iTestCaseRow;
 	private String sTestCaseName;
@@ -45,7 +45,7 @@ public class AUT_CMWeb_ManagingMerchandiseCategory extends Report {
 		// For setting up Excel for Data driven testing, please see
 		// http://www.toolsqa.com/data-driven-testing-excel-poi/
 		 ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData,
-		 "Category");
+		 "Configuration");
 
 		// Fetching the Test Case row number from the Test Data Sheet
 		// This row number will be feed to so many functions, to get the relevant data
@@ -66,7 +66,7 @@ public class AUT_CMWeb_ManagingMerchandiseCategory extends Report {
 	// Start of the test script	
 	@Test (priority=1)	
 	public void create() throws Exception {
-		String sTestCaseName1 = "AUT_CMWeb_Merchandise_NewCategory";
+		String sTestCaseName1 = "AUT_CMWeb_CreatePurchasingSetofPrice";
 		
 		// Start printing the logs and printing the Test Case name
 		logger = report.createTest(sTestCaseName1);
@@ -74,7 +74,7 @@ public class AUT_CMWeb_ManagingMerchandiseCategory extends Report {
 		
 		// Setting up the Test Data Excel file using Constants variables
 		 ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData,
-		 "Category");
+		 "Configuration");
 
 		// Fetching the Test Case row number from the Test Data Sheet
 		 iTestCaseRow = ExcelUtils.getRowContains(sTestCaseName1,
@@ -83,12 +83,12 @@ public class AUT_CMWeb_ManagingMerchandiseCategory extends Report {
 		// UserLogin
 			LoginFunction.Execute(iTestCaseRow);
 
-		// Create merchandise category
+		// Create purchasing set of price
 		ManagingRolesFunction.GoToConfiguration(iTestCaseRow);
-		ManagingKeywordFunction.GoToMerchandiseTab(iTestCaseRow);
-		ManagingCategoryFunction.GoToCategory(iTestCaseRow);
-		ManagingCategoryFunction.AddNewCategory(iTestCaseRow);
-		ManagingCategoryFunction.SaveCategory(iTestCaseRow);
+		ManagingSetofPriceFunction.GoToPurchasingSetTab(iTestCaseRow);
+		ManagingSetofPriceFunction.CreatePurchasingSet(iTestCaseRow);
+		ManagingSetofPriceFunction.SavePurchasingPrice(iTestCaseRow);
+
 		
 
 		if (BaseClass.bResult == true) {
@@ -106,30 +106,29 @@ public class AUT_CMWeb_ManagingMerchandiseCategory extends Report {
 	
 	@Test (priority=2)	
 	public void search() throws Exception {
-		String sTestCaseName2 = "AUT_CMWeb_Merchandise_SearchCategory";
+		String sTestCaseName2 = "AUT_CMWeb_SearchPurchasingSetofPrice";
 		
 		// Start printing the logs and printing the Test Case name
 		logger = report.createTest(sTestCaseName2);
 		logger.info("Test Case has started.");
 		
 		// Setting up the Test Data Excel file using Constants variables
-		 ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData,
-		 "Category");
+		 ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData, 
+		 "Configuration");
 
 		// Fetching the Test Case row number from the Test Data Sheet
 		 iTestCaseRow = ExcelUtils.getRowContains(sTestCaseName2,
 		 Constant.Col_TestCaseName);
 		
 		// UserLogin
-			LoginFunction.Execute(iTestCaseRow);
+		LoginFunction.Execute(iTestCaseRow);
 
-		// search merchandise category
+		// Search purchasing set of price
 		ManagingRolesFunction.GoToConfiguration(iTestCaseRow);
-		ManagingKeywordFunction.GoToMerchandiseTab(iTestCaseRow);
-		ManagingCategoryFunction.GoToCategory(iTestCaseRow);
-		ManagingCategoryFunction.SearchCategory(iTestCaseRow);
+		ManagingSetofPriceFunction.GoToPurchasingSetTab(iTestCaseRow);
+		ManagingSetofPriceFunction.SearchPurchaseSet(iTestCaseRow);
 			
-	
+			
 
 		if (BaseClass.bResult == true) {
 			// If the value of boolean variable is True, then your test is complete pass and
@@ -146,7 +145,7 @@ public class AUT_CMWeb_ManagingMerchandiseCategory extends Report {
 	
 	@Test (priority=3)	
 	public void edit() throws Exception {
-		String sTestCaseName3 = "AUT_CMWeb_Merchandise_ModifyCategory";
+		String sTestCaseName3 = "AUT_CMWeb_EditPurchasingSetofPrice";
 		
 		// Start printing the logs and printing the Test Case name
 		logger = report.createTest(sTestCaseName3);
@@ -154,22 +153,21 @@ public class AUT_CMWeb_ManagingMerchandiseCategory extends Report {
 		
 		// Setting up the Test Data Excel file using Constants variables
 		 ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData,
-		 "Category");
+		 "Configuration");
 
 		// Fetching the Test Case row number from the Test Data Sheet
 		 iTestCaseRow = ExcelUtils.getRowContains(sTestCaseName3,
 		 Constant.Col_TestCaseName);
 		
 		// UserLogin
-			LoginFunction.Execute(iTestCaseRow);
+		LoginFunction.Execute(iTestCaseRow);
 
-		// edit merchandise category - change french translation
+		// Edit purchasing set of price - change Factor of Purchasing Set of Price to Main Purchasing Set of Price
 		ManagingRolesFunction.GoToConfiguration(iTestCaseRow);
-		ManagingKeywordFunction.GoToMerchandiseTab(iTestCaseRow);
-		ManagingCategoryFunction.GoToCategory(iTestCaseRow);
-		ManagingCategoryFunction.SearchCategory(iTestCaseRow);
-		ManagingCategoryFunction.EditCategory(iTestCaseRow);
-		ManagingCategoryFunction.SaveCategory(iTestCaseRow);
+		ManagingSetofPriceFunction.GoToPurchasingSetTab(iTestCaseRow);
+		ManagingSetofPriceFunction.SearchPurchaseSet(iTestCaseRow);
+		ManagingSetofPriceFunction.EditPurchasingSet(iTestCaseRow);
+		ManagingSetofPriceFunction.SavePurchasingPrice(iTestCaseRow);
 	
 
 		if (BaseClass.bResult == true) {
